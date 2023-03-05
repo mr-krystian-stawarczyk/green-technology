@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { client } from "../../lib/client";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 
 const ProductDetails = ({ product }) => {
