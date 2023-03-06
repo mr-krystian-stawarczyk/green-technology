@@ -7,39 +7,10 @@ import {
 	AiOutlineFacebook,
 } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
-
+import { Navbar, Nav } from "react-bootstrap";
 function Footer() {
 	return (
 		<Container fluid className="  p-5 header-bg rounded shadow-lg ">
-			<Row className="justify-content-center text-center">
-				<Col>
-					<Button variant="success" className="m-2 shadow-lg hover">
-						<Link href="/products/#product1" className="text-light ">
-							Product 1
-						</Link>
-					</Button>
-					<Button variant="success" className="m-2 shadow-lg hover">
-						<Link href="/products/#product2" className="text-light">
-							Product 2
-						</Link>
-					</Button>
-					<Button variant="success" className="m-2 shadow-lg hover">
-						<Link href="/products/#product3" className="text-light">
-							Product 3
-						</Link>
-					</Button>
-					<Button variant="success" className="m-2 shadow-lg hover">
-						<Link href="/products/#product4" className="text-light">
-							Product 4
-						</Link>
-					</Button>
-					<Button variant="success" className="m-2 shadow-lg hover">
-						<Link href="/products/#product5" className="text-light">
-							Product 5
-						</Link>
-					</Button>
-				</Col>
-			</Row>
 			<Row className="text-center m-5 justify-content-center ">
 				<Col>
 					<span className="icons">

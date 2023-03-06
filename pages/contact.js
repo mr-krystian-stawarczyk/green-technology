@@ -1,10 +1,7 @@
 import React from "react";
 
-import { useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import SplitTextJS from "split-text-js";
-import gsap from "gsap";
-import AboutMe from "../components/AboutMe";
+
 import {
 	AiFillInstagram,
 	AiOutlineTwitter,

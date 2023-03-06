@@ -27,6 +27,7 @@
 		"react-dom": "18.2.0",
 		"react-icons": "^4.7.1",
 		"react-scroll": "^1.8.9",
+		"react-spring": "^9.7.1",
 		"split-text-js": "^1.0.3"
 	},
 	"devDependencies": {

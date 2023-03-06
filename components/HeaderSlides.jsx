@@ -1,58 +1,67 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import Image from "next/image";
+import Nav from "react-bootstrap/Nav";
 
+import Link from "next/link";
 function HeaderSlides() {
 	return (
-		<Container fluid className="shadow-lg   my-5 rounded">
-			<Row className="align-items-center pt-5">
-				<Col md={10} className="mx-auto ">
-					<Carousel className="m-4">
-						<Carousel.Item>
+		<Container fluid className="shadow-lg  rounded  mx-0 px-0  h-100">
+			<Row className="align-items-center ">
+				<Col className="mx-auto ">
+					<Carousel className=" vertical" loop>
+						<Carousel.Item className="text-center">
 							<Image
 								src="/assets/header.jpg"
 								alt="me"
-								width="350"
-								height="550"
+								width="450"
+								height="800"
 								className="d-block w-100"
 							/>
+							<Carousel.Caption className="text-center">
+								<h3>Baterie </h3>
 
-							<Carousel.Caption>
-								<h3>First slide label</h3>
 								<p>
-									Nulla vitae elit libero, a pharetra augue mollis interdum.
+									<Nav.Link as={Link} href="/products">
+										<Button variant="success">Baterie</Button>
+									</Nav.Link>
 								</p>
 							</Carousel.Caption>
 						</Carousel.Item>
-						<Carousel.Item>
+						<Carousel.Item className="text-center">
 							<Image
 								src="/assets/header.jpg"
 								alt="me"
-								width="350"
-								height="550"
+								width="450"
+								height="800"
 								className="d-block w-100"
 							/>
+							<Carousel.Caption className="text-center">
+								<h3>Solary </h3>
 
-							<Carousel.Caption>
-								<h3>Second slide label</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<p>
+									<Nav.Link as={Link} href="/products">
+										<Button variant="success">Solary</Button>
+									</Nav.Link>
+								</p>
 							</Carousel.Caption>
 						</Carousel.Item>
-						<Carousel.Item>
+						<Carousel.Item className="text-center">
 							<Image
 								src="/assets/header.jpg"
 								alt="me"
-								width="350"
-								height="550"
+								width="450"
+								height="800"
 								className="d-block w-100"
 							/>
+							<Carousel.Caption className="text-center">
+								<h3>Pompy Ciepla </h3>
 
-							<Carousel.Caption>
-								<h3>Third slide label</h3>
 								<p>
-									Praesent commodo cursus magna, vel scelerisque nisl
-									consectetur.
+									<Nav.Link as={Link} href="/products">
+										<Button variant="success">Pompy Ciepla</Button>
+									</Nav.Link>
 								</p>
 							</Carousel.Caption>
 						</Carousel.Item>

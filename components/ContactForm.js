@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col, Container, Card } from "react-bootstrap";
 import emailjs from "emailjs-com";
 
-const ContactForm = () => {
+export const ContactForm = () => {
 	const [formData, setFormData] = useState({
 		name: "",
 		email: "",
@@ -44,7 +44,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<Row className="align-items-center justify-content-center vh-100">
+		<Row className="align-items-center justify-content-center vh-100 text-center">
 			<Col lg={5} className="">
 				<Card
 					style={{

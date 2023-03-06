@@ -51,7 +51,7 @@ function Work() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={4} className="">
+				<Col lg={5} className="">
 					<Card
 						style={{
 							border: "none",
@@ -66,13 +66,18 @@ function Work() {
 								}}
 								className=" header-text"
 							>
-								Tutaj Bedzie sekcja o Pracy
+								Working in green technologies involves developing and
+								implementing sustainable solutions that minimize the negative
+								impact of human activities on the environment. This field
+								encompasses a wide range of disciplines, including renewable
+								energy, energy efficiency, waste management, and sustainable
+								transportation.
 							</Card.Title>
 							<Card.Text className="mt-5 bg-transparent"></Card.Text>
 						</Card.Body>
 					</Card>
 				</Col>
-				<Col lg={4} className="">
+				<Col lg={5} className="">
 					<Card
 						style={{
 							border: "none",
@@ -100,7 +105,7 @@ function Work() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={4} className="">
+				<Col lg={5} className="">
 					<Card
 						style={{
 							border: "none",
@@ -120,7 +125,7 @@ function Work() {
 						</Card.Body>
 					</Card>
 				</Col>
-				<Col lg={4} className="">
+				<Col lg={5} className="">
 					<Card
 						style={{
 							border: "none",
@@ -135,7 +140,12 @@ function Work() {
 								}}
 								className=" header-text"
 							>
-								Zapoznaj sie ponizej z naszymi najnowszymi pracami
+								Green technologies offer a unique opportunity to combine
+								innovative thinking with environmental stewardship, creating a
+								better world for present and future generations. As such,
+								working in green technologies can be a fulfilling and rewarding
+								career path for individuals who are passionate about making a
+								positive impact on the planet.
 							</Card.Title>
 							<Card.Text className="mt-5 bg-transparent"></Card.Text>
 						</Card.Body>

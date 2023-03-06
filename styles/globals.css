@@ -67,3 +67,51 @@ body,
 	opacity: 0;
 	transition: opacity 300ms;
 }
+
+.product-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem 3rem;
+	border-radius: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: #2bff00;
+	color: #fff;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s ease-in-out;
+}
+
+.product-button:hover {
+	transform: translateY(-0.25rem);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.slider-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.card-image-container {
+	position: relative;
+}
+
+.card-text-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.card-image-container:hover .card-text-container {
+	opacity: 1;
+}
