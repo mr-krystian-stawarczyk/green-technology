@@ -7,10 +7,10 @@ import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 function HeaderSlides() {
 	return (
-		<Container fluid className="shadow-lg  rounded  mx-0 px-0  h-100">
+		<Container fluid className="shadow-lg  rounded  mx-0 px-0  overflow-hidden">
 			<Row className="align-items-center ">
 				<Col className="mx-auto ">
-					<Carousel className=" vertical" loop>
+					<Carousel className=" vertical" loop fade>
 						<Carousel.Item className="text-center">
 							<Image
 								src="/assets/header.jpg"

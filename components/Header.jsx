@@ -32,7 +32,7 @@ function Header() {
 	return (
 		<Container
 			fluid
-			className=" header-bg vh-100 rounded shadow-lg mt-5 d-flex flex-column"
+			className=" header-bg vh-100 rounded shadow-lg d-flex flex-column"
 		>
 			<Row
 				className=" text-center d-flex justify-content-center align-items-center h-100"

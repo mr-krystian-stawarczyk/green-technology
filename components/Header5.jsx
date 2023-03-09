@@ -3,7 +3,10 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 function Header5() {
 	return (
-		<Container fluid className="pt-5 secondary-bg pb-5 rounded shadow-lg">
+		<Container
+			fluid
+			className="pt-5 secondary-bg pb-5 rounded shadow-lg vh-100"
+		>
 			<Row
 				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center text-light"
 				style={{
@@ -19,14 +22,15 @@ function Header5() {
 						}}
 						className="bg-transparent "
 					>
-						<div className="card-image-container">
-							<Card.Img
-								src="/assets/header.jpg"
-								className="shadow-lg card-image"
-							/>
-							<div className="card-text-container ">
+						<div className="card-container">
+							<div className="card-front">
+								<Card.Img
+									src="/assets/header.jpg"
+									className="shadow-lg card-image"
+								/>
+							</div>
+							<div className="card-back">
 								<Card.Text className="mt-5 bg-transparent">
-									{" "}
 									<span>
 										Our team of skilled technicians and engineers are dedicated
 										to providing exceptional customer service and support. Were
@@ -35,6 +39,7 @@ function Header5() {
 										and budget.
 									</span>
 								</Card.Text>
+								<Button>Product1</Button>
 							</div>
 						</div>
 					</Card>
@@ -47,12 +52,14 @@ function Header5() {
 						}}
 						className="bg-transparent "
 					>
-						<div className="card-image-container">
-							<Card.Img
-								src="/assets/header.jpg"
-								className="shadow-lg card-image"
-							/>
-							<div className="card-text-container ">
+						<div className="card-container">
+							<div className="card-front">
+								<Card.Img
+									src="/assets/header.jpg"
+									className="shadow-lg card-image"
+								/>{" "}
+							</div>
+							<div className="card-back">
 								<Card.Text className="mt-5  rounded m-2">
 									<span>
 										We understand that every customer has unique requirements
@@ -62,24 +69,21 @@ function Header5() {
 										commercial installations.
 									</span>
 								</Card.Text>
+								<Button>Product2</Button>
 							</div>
 						</div>
 					</Card>
 				</Col>
 				<Col lg={4} className="">
-					<Card
-						style={{
-							border: "none",
-							fontWeight: "bold",
-						}}
-						className="bg-transparent "
-					>
-						<div className="card-image-container">
-							<Card.Img
-								src="/assets/header.jpg"
-								className="shadow-lg card-image"
-							/>
-							<div className="card-text-container ">
+					<Card className="bg-transparent">
+						<div className="card-container">
+							<div className="card-front">
+								<Card.Img
+									src="/assets/header.jpg"
+									className="shadow-lg card-image"
+								/>
+							</div>
+							<div className="card-back">
 								<Card.Text className="mt-5 bg-transparent">
 									<span>
 										At our company, were committed to sustainability and
@@ -89,6 +93,7 @@ function Header5() {
 										our products.
 									</span>
 								</Card.Text>
+								<Button>Product3</Button>
 							</div>
 						</div>
 					</Card>

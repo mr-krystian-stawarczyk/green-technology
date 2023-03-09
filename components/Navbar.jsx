@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { AiOutlineShopping } from "react-icons/ai";
@@ -8,14 +9,34 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
 
 const NavbarComp = () => {
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 0) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
 		<Navbar
 			expand="lg"
 			fixed="top"
 			style={{
 				height: "70px",
+				backgroundColor: scrolled ? "white" : "transparent",
+				transition: "background-color 0.5s ease",
 			}}
-			className="bg-transparent "
+			className="nav-transition rounded-bottom"
 			collapseOnSelect
 		>
 			<Container>
@@ -43,25 +64,30 @@ const NavbarComp = () => {
 							<Button variant="outline-success btn-lg">Home</Button>
 						</Nav.Link>
 
-						<Button variant="outline-success " className=" mt-2 ">
-							<NavDropdown title="Products" id="basic-nav-dropdown">
-								<NavDropdown.Item href="#action/3.1">
-									<Nav.Link as={Link} href="/products" className="mx-2">
-										Solar Panels
-									</Nav.Link>
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									<Nav.Link as={Link} href="/products" className="mx-2">
-										Bateries
-									</Nav.Link>
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									<Nav.Link as={Link} href="/products" className="mx-2">
-										Heating Pumps
-									</Nav.Link>
-								</NavDropdown.Item>
-							</NavDropdown>
-						</Button>
+						<NavDropdown
+							title="Products"
+							id="basic-nav-dropdown"
+							as={Button}
+							variant="outline-success"
+							className=" mt-2 custom-dropdown pb-4"
+						>
+							<NavDropdown.Item href="#action/3.1">
+								<Nav.Link as={Link} href="/products" className="mx-2">
+									Solar Panels
+								</Nav.Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.2">
+								<Nav.Link as={Link} href="/products" className="mx-2">
+									Bateries
+								</Nav.Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item href="#action/3.3">
+								<Nav.Link as={Link} href="/products" className="mx-2">
+									Heating Pumps
+								</Nav.Link>
+							</NavDropdown.Item>
+						</NavDropdown>
+
 						<Nav.Link as={Link} href="/about" className="mx-2">
 							<Button variant="outline-success btn-lg">About</Button>
 						</Nav.Link>

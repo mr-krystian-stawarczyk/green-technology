@@ -9,3 +9,7 @@ export { default as Header5 } from "./Header5";
 export { default as Footer } from "./Footer";
 export { default as Interrested } from "./Interrested";
 export { default as ContactForm } from "./ContactForm";
+export { default as Product1 } from "./Product1";
+export { default as Product2 } from "./Product2";
+export { default as Product3 } from "./Product3";
+export { default as Product4 } from "./Product4";

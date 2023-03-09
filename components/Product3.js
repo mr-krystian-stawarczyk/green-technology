@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+
+import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { useSpring, animated } from "react-spring";
+
 import { useRouter } from "next/router";
-function Header4() {
+import { useSpring, animated } from "react-spring";
+function Product3() {
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -40,20 +43,18 @@ function Header4() {
 		delay: 1000,
 	});
 	return (
-		<Container
-			fluid
-			className="pt-5 shadow-lg vh-100 text-dark rounded d-flex align-items-center"
-			ref={sectionRef}
-		>
+		<div ref={sectionRef}>
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center"
+				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center secondary-bg vh-100"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
 				}}
+				id="product4"
 			>
 				<Col lg={5} className="">
 					<animated.div style={animationProps}>
+						{" "}
 						<Card
 							style={{
 								border: "none",
@@ -64,31 +65,45 @@ function Header4() {
 								<Card.Title
 									style={{
 										fontWeight: "bold",
+										color: "white",
 									}}
 									className=" header-text"
 								>
-									With years of experience in the industry, we pride ourselves
-									on producing high-quality, reliable products that are built to
-									last. We use only the best materials and cutting-edge
-									technology to ensure that our products meet the highest
-									standards of performance and efficiency.
+									Our solar panels are a sustainable and cost-effective solution
+									for powering your home or business, helping you reduce your
+									carbon footprint and save on electricity bills.
 								</Card.Title>
 								<Card.Text className="mt-5 bg-transparent"></Card.Text>
 							</Card.Body>
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className=" ">
+				<Col lg={5} className="">
 					<animated.div style={imgAnimationProps}>
 						{" "}
-						<Card className="border-0">
+						<Card
+							style={{
+								border: "none",
+							}}
+							className="bg-transparent "
+						>
 							<Card.Img src="/assets/header.jpg" className="shadow-lg" />
+							<Card.Body className="text-center">
+								<Card.Title
+									style={{
+										fontWeight: "bold",
+										color: "white",
+									}}
+									className=" header-text"
+								></Card.Title>
+								<Card.Text className="mt-5 bg-transparent"></Card.Text>
+							</Card.Body>
 						</Card>{" "}
 					</animated.div>
 				</Col>
 			</Row>
-		</Container>
+		</div>
 	);
 }
 
-export default Header4;
+export default Product3;
