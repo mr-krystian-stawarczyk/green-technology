@@ -1,87 +1,99 @@
 import Link from "next/link";
 import React from "react";
 import { Container, Row, Col, Button, Card, ListGroup } from "react-bootstrap";
-import {
-	AiFillInstagram,
-	AiOutlineTwitter,
-	AiOutlineFacebook,
-} from "react-icons/ai";
+import { AiFillInstagram, AiOutlineFacebook } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
-import { Navbar, Nav } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
+
 function Footer() {
 	return (
-		<Container fluid className="  p-5 header-bg rounded shadow-lg ">
-			<Row className="text-center m-5 justify-content-center align-items-center text-center">
-				<Col>
-					{" "}
-					<Card style={{ maxWidth: "18rem" }} className="border-0">
+		<Container fluid className="p-5 footer-bg rounded shadow-lg mt-5 ">
+			<Row className="justify-content-center align-items-center text-center">
+				<Col lg={3} sm={6}>
+					<Card
+						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
+						style={{ height: "20rem" }}
+					>
 						<Card.Body>
 							<Card.Title>About us</Card.Title>
 							<Card.Text>
-								Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum has been the industrys standard dummy text
-								ever since the 1500 text of the printing.
+								With over 20 years of experience in the industry, were committed
+								to providing the highest quality products and services to our
+								customers.
 							</Card.Text>
 						</Card.Body>
+
+						<Nav.Link as={Link} href="/about">
+							<Button variant="success btn-md m-1">About </Button>
+						</Nav.Link>
 					</Card>
 				</Col>
-				<Col>
-					{" "}
-					<Card style={{ maxWidth: "18rem" }} className="border-0">
+				<Col lg={3} sm={6}>
+					<Card
+						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
+						style={{ height: "20rem" }}
+					>
 						<Card.Body>
-							<Card.Title>Latest themes</Card.Title>
+							<Card.Title>Latest Work</Card.Title>
 							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the cards content.
+								Here You Can check our latest work that we have done
 							</Card.Text>
 						</Card.Body>
-						<ListGroup className="list-group-flush">
-							<ListGroup.Item>Cras justo odio</ListGroup.Item>
-							<ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-							<ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-						</ListGroup>
-						<Card.Body>
-							<Card.Link href="#">Card Link</Card.Link>
-							<Card.Link href="#">Another Link</Card.Link>
-						</Card.Body>
+						<Nav.Link as={Link} href="/about">
+							<Button variant="success btn-md m-1">Work</Button>
+						</Nav.Link>
 					</Card>
 				</Col>
-				<Col>
-					{" "}
-					<Card style={{ maxWidth: "18rem" }} className="border-0">
+				<Col lg={3} sm={6}>
+					<Card
+						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
+						style={{ height: "20rem" }}
+					>
 						<Card.Body>
-							<Card.Title>Quick Links</Card.Title>
+							<Card.Title>Contact</Card.Title>
 							<Card.Text>
-								Some quick example text to build on the card title and make up
-								the bulk of the cards content.
+								Here You can find our contact informations, or get a
+								personalized price for your needs
 							</Card.Text>
 						</Card.Body>
-						<ListGroup className="list-group-flush">
-							<ListGroup.Item>Cras justo odio</ListGroup.Item>
-							<ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-							<ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-						</ListGroup>
-						<Card.Body>
-							<Card.Link href="#">Card Link</Card.Link>
-							<Card.Link href="#">Another Link</Card.Link>
-						</Card.Body>
+						<Nav.Link as={Link} href="/about">
+							<Button variant="success btn-md m-1">Contact</Button>
+						</Nav.Link>
 					</Card>
 				</Col>
-				<Col>
-					<span className="icons d-block">
+				<Col lg={3} sm={6}>
+					<Card
+						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
+						style={{ height: "20rem" }}
+					>
+						<Card.Body>
+							<Card.Title>Products</Card.Title>
+							<Card.Text>Ready to check prices for Your products</Card.Text>
+						</Card.Body>
+						<Nav.Link as={Link} href="/about">
+							<Button variant="success btn-md m-1">Products</Button>
+						</Nav.Link>
+					</Card>
+				</Col>
+			</Row>
+			<Row className="justify-content-center text-center blur rounded m-2 bg-transparent shadow-lg">
+				<Row className="justify-content-center text-center ">
+					<Col className="icons ">
 						<AiFillInstagram className="hover" />
 
 						<FaTiktok className="hover" />
 
 						<AiOutlineFacebook className="hover" />
+					</Col>
+				</Row>
+				<Row className="justify-content-center align-items-center text-center rounded ">
+					<Link href="/terms" className="m-1 text-uppercase">
+						Terms & Conditions
+					</Link>
+					<span className="m-1 text-white ">
+						2023 AMgreenenergy® All Rights Reserved
 					</span>
-				</Col>
-				<Col></Col>
-			</Row>
-			<Row className="bg-primary justify-content-center align-items-center text-center">
-				{" "}
-				<Link href="/terms">Terms & Conditions</Link>
-				<span>2023 AMgreenenergy® All Rights Reserved</span>
+				</Row>
 			</Row>
 		</Container>
 	);

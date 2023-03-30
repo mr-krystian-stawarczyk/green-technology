@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
 				classNames="page-transition"
 				loadingComponent={<div>Loading...</div>}
 				loadingDelay={500}
+				loadingClassNames="loading"
 				loadingTimeout={{
 					enter: 400,
 					exit: 0,

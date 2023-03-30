@@ -1,10 +1,13 @@
 import React from "react";
 
 import { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 import { useRouter } from "next/router";
 import { useSpring, animated } from "react-spring";
+import Nav from "react-bootstrap/Nav";
+
+import Link from "next/link";
 
 function Product2() {
 	const router = useRouter();
@@ -55,7 +58,7 @@ function Product2() {
 				id="product3"
 			>
 				{" "}
-				<Col lg={5} className="">
+				<Col lg={5} className="blur shadow-lg rounded p-3 mx-2">
 					<animated.div style={animationProps}>
 						{" "}
 						<Card
@@ -64,24 +67,36 @@ function Product2() {
 							}}
 							className="bg-transparent "
 						>
-							<Card.Body className="text-center">
+							<Card.Body className="text-center justify-content-center">
 								<Card.Title
 									style={{
 										fontWeight: "bold",
 										color: "black",
+										fontSize: "1.5rem",
 									}}
-									className=" header-text"
+									className=" header-text "
 								>
 									Our klimatization systems provide precise temperature and
 									humidity control, creating a comfortable and healthy
 									environment for your home or office.
 								</Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
+								<Col className="d-flex align-items-center text-center justify-content-center">
+									<Nav.Link as={Link} href="/about">
+										<Button variant="success btn-md m-2 text-uppercase text-bold">
+											About
+										</Button>
+									</Nav.Link>
+									<Nav.Link as={Link} href="/klimatization">
+										<Button variant="success btn-md m-2 text-uppercase text-bold">
+											Cooling
+										</Button>
+									</Nav.Link>{" "}
+								</Col>
 							</Card.Body>
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="">
+				<Col lg={5} className="blur p-3 shadow-lg rounded">
 					<animated.div style={imgAnimationProps}>
 						{" "}
 						<Card
@@ -90,17 +105,7 @@ function Product2() {
 							}}
 							className="bg-transparent "
 						>
-							<Card.Img src="/assets/header.jpg" className="shadow-lg" />
-							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "black",
-									}}
-									className=" header-text"
-								></Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
-							</Card.Body>
+							<Card.Img src="/assets/klimatyzacje.jpg" className="shadow-lg" />
 						</Card>{" "}
 					</animated.div>
 				</Col>

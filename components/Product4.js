@@ -1,10 +1,13 @@
 import React from "react";
 
 import { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 import { useRouter } from "next/router";
 import { useSpring, animated } from "react-spring";
+import Nav from "react-bootstrap/Nav";
+
+import Link from "next/link";
 
 function Product4() {
 	const router = useRouter();
@@ -51,32 +54,8 @@ function Product4() {
 					alignItems: "center",
 					justifyContent: "center",
 				}}
-				id="product5"
 			>
-				<Col lg={5} className="">
-					<animated.div style={imgAnimationProps}>
-						{" "}
-						<Card
-							style={{
-								border: "none",
-							}}
-							className="bg-transparent "
-						>
-							<Card.Img src="/assets/header.jpg" className="shadow-lg" />
-							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "black",
-									}}
-									className=" header-text"
-								></Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
-							</Card.Body>
-						</Card>{" "}
-					</animated.div>
-				</Col>
-				<Col lg={5} className="">
+				<Col lg={5} className="blur p-3 shadow-lg rounded">
 					<animated.div style={animationProps}>
 						{" "}
 						<Card
@@ -90,6 +69,7 @@ function Product4() {
 									style={{
 										fontWeight: "bold",
 										color: "black",
+										fontSize: "1.5rem",
 									}}
 									className=" header-text"
 								>
@@ -97,9 +77,36 @@ function Product4() {
 									accessories and services to help you get the most out of your
 									heating and cooling systems, from installation to maintenance
 									and repair.
-								</Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
+								</Card.Title>{" "}
+								<Col className="d-flex align-items-center text-center justify-content-center">
+									<Nav.Link as={Link} href="/contact">
+										<Button variant="success btn-md m-2 text-uppercase text-bold">
+											{" "}
+											Contact
+										</Button>
+									</Nav.Link>{" "}
+									<Nav.Link as={Link} href="/bateries">
+										<Button variant="success btn-md m-2 text-uppercase text-bold">
+											Bateries
+										</Button>
+									</Nav.Link>{" "}
+								</Col>
 							</Card.Body>
+						</Card>
+					</animated.div>
+				</Col>
+				<Col lg={5} className="bg-transparent blur p-3 rounded shadow-lg mx-2">
+					<animated.div style={imgAnimationProps}>
+						<Card
+							style={{
+								border: "none",
+							}}
+							className="bg-transparent "
+						>
+							<Card.Img
+								src="/assets/szafa.png"
+								className="shadow-lg bg-transparent "
+							/>
 						</Card>
 					</animated.div>
 				</Col>

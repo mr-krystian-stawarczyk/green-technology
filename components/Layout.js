@@ -8,7 +8,7 @@ const Layout = ({ children, pageProps }) => {
 	return (
 		<div className="layout">
 			<Head>
-				<title>Kuchnie</title>
+				<title>AMGreenenergy</title>
 			</Head>
 			<header>
 				<NavbarComp {...pageProps} />

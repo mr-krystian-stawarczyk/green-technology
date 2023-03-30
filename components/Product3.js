@@ -1,10 +1,14 @@
 import React from "react";
 
 import { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 import { useRouter } from "next/router";
 import { useSpring, animated } from "react-spring";
+
+import Nav from "react-bootstrap/Nav";
+
+import Link from "next/link";
 function Product3() {
 	const router = useRouter();
 	const { id } = router.query;
@@ -45,16 +49,30 @@ function Product3() {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center secondary-bg vh-100"
+				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center secondary-bg vh-100 shadow-lg"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
 				}}
 				id="product4"
 			>
-				<Col lg={5} className="">
+				<Col lg={5} className="blur p-3 shadow-lg rounded">
+					<animated.div style={imgAnimationProps}>
+						<Card
+							style={{
+								border: "none",
+							}}
+							className="bg-transparent rounded"
+						>
+							<Card.Img
+								src="/assets/solary.jpg"
+								className="shadow-lg rounded"
+							/>
+						</Card>{" "}
+					</animated.div>
+				</Col>
+				<Col lg={5} className="blur p-3 shadow-lg mx-2 rounded">
 					<animated.div style={animationProps}>
-						{" "}
 						<Card
 							style={{
 								border: "none",
@@ -66,6 +84,7 @@ function Product3() {
 									style={{
 										fontWeight: "bold",
 										color: "white",
+										fontSize: "1.5rem",
 									}}
 									className=" header-text"
 								>
@@ -73,32 +92,20 @@ function Product3() {
 									for powering your home or business, helping you reduce your
 									carbon footprint and save on electricity bills.
 								</Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
+								<Col className="d-flex align-items-center text-center justify-content-center">
+									<Nav.Link as={Link} href="/work">
+										<Button variant="light btn-md m-2 text-uppercase text-bold">
+											Work
+										</Button>
+									</Nav.Link>
+									<Nav.Link as={Link} href="/solar">
+										<Button variant="light btn-md m-2 text-uppercase text-bold">
+											Panels
+										</Button>
+									</Nav.Link>{" "}
+								</Col>
 							</Card.Body>
 						</Card>
-					</animated.div>
-				</Col>
-				<Col lg={5} className="">
-					<animated.div style={imgAnimationProps}>
-						{" "}
-						<Card
-							style={{
-								border: "none",
-							}}
-							className="bg-transparent "
-						>
-							<Card.Img src="/assets/header.jpg" className="shadow-lg" />
-							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "white",
-									}}
-									className=" header-text"
-								></Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
-							</Card.Body>
-						</Card>{" "}
 					</animated.div>
 				</Col>
 			</Row>

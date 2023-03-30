@@ -32,36 +32,32 @@ function Header() {
 	return (
 		<Container
 			fluid
-			className=" header-bg vh-100 rounded shadow-lg d-flex flex-column"
+			className=" typewriter-bg vh-100 rounded shadow-lg d-flex flex-column mt-5"
 		>
 			<Row
-				className=" text-center d-flex justify-content-center align-items-center h-100"
+				className=" text-center d-flex justify-content-center align-items-center h-100 text-center"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={5} className="typewriter shadow-lg">
+				<Col md={2}></Col>
+				<Col md={6} className="typewriter shadow-lg">
 					<p className=" ">Klimatyzacje </p>
 					<p>Pompy Ciepla </p>
 					<p>Foto Woltaika </p>
 					<p>Sterownie </p>
 					<p>Eco Friendly </p>
 				</Col>
-				<Col lg={5} className=" ">
-					<Card className="border-0 shadow-lg">
-						<Card.Img src="/assets/header.jpg" className="shadow-lg" />
-					</Card>
-				</Col>
-				<Row className="justify-content-center ">
-					<Col md={4}>
-						<Button variant="success" size="lg" className="shadow-lg">
-							<Link to="#section2" smooth={true} duration={200}>
-								Discover More !
-							</Link>
-						</Button>
-					</Col>
-				</Row>
+			</Row>
+			<Row className="justify-content-center text-center m-2 pb-5">
+				<Col md={4}>
+					<Button variant="success" size="lg" className="shadow-lg">
+						<Link to="#section2" smooth={true} duration={200}>
+							Discover More !
+						</Link>
+					</Button>
+				</Col>{" "}
 			</Row>
 		</Container>
 	);

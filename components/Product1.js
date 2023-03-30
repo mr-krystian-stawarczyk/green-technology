@@ -1,10 +1,12 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 import { useRouter } from "next/router";
 import { useSpring, animated } from "react-spring";
+import Nav from "react-bootstrap/Nav";
 
+import Link from "next/link";
 function Product1() {
 	const router = useRouter();
 	const { id } = router.query;
@@ -43,38 +45,22 @@ function Product1() {
 		delay: 1000,
 	});
 	return (
-		<div ref={sectionRef}>
+		<div ref={sectionRef} id="#pompa">
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center vh-100 secondary-bg text-white"
+				className="text-center d-flex justify-content-center align-items-center vh-100 secondary-bg text-white shadow-lg"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
 				}}
-				id="product1"
 			>
-				<Col lg={5} className="">
+				<Col lg={5} className=" rounded blur shadow-lg p-3">
 					<animated.div style={imgAnimationProps}>
-						{" "}
-						<Card
-							style={{
-								border: "none",
-							}}
-							className="bg-transparent "
-						>
-							<Card.Img src="/assets/header.jpg" className="shadow-lg" />
-							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-									}}
-									className=" header-text"
-								></Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
-							</Card.Body>
-						</Card>{" "}
+						<Card className="bg-transparent">
+							<Card.Img src="/assets/pompa.jpg" className="" />
+						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="">
+				<Col lg={5} className="blur p-3 shadow-lg mx-2 rounded">
 					<animated.div style={animationProps}>
 						{" "}
 						<Card
@@ -94,7 +80,18 @@ function Product1() {
 									reliable heating solutions for homes and businesses, using the
 									latest technology to help you save on energy bills.
 								</Card.Title>
-								<Card.Text className="mt-5 bg-transparent"></Card.Text>
+								<Col className="d-flex align-items-center text-center justify-content-center">
+									<Nav.Link as={Link} href="#price">
+										<Button variant="light btn-md m-2 text-uppercase text-bold">
+											Prices
+										</Button>
+									</Nav.Link>
+									<Nav.Link as={Link} href="/pumps">
+										<Button variant="light btn-md m-2 text-uppercase text-bold">
+											Pumps
+										</Button>
+									</Nav.Link>
+								</Col>
 							</Card.Body>
 						</Card>
 					</animated.div>

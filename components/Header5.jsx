@@ -1,36 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-
+import Nav from "react-bootstrap/Nav";
+import CardFlip from "react-card-flip";
+import Link from "next/link";
 function Header5() {
+	const [isFlipped, setIsFlipped] = useState(false);
+
+	const handleCardHover = (isHovering) => {
+		setIsFlipped(isHovering);
+	};
 	return (
-		<Container
-			fluid
-			className="pt-5 secondary-bg pb-5 rounded shadow-lg vh-100"
-		>
-			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center text-light"
-				style={{
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				<Col lg={4} className="">
-					<Card
-						style={{
-							border: "none",
-							fontWeight: "bold",
-						}}
-						className="bg-transparent "
+		<Container fluid className="pt-5 header-bg pb-5  rounded shadow-lg mt-5">
+			<Row className="justify-content-center align-items-center text-center">
+				<Col lg={5} className=" m-5">
+					{" "}
+					<CardFlip
+						flipDirection="horizontal"
+						onMouseEnter={() => handleCardHover(true)}
+						onMouseLeave={() => handleCardHover(false)}
 					>
-						<div className="card-container">
-							<div className="card-front">
+						<Card
+							className="my-card front border-0 blur p-3 shadow-lg bg-transparent"
+							onClick={() => setIsFlipped(!isFlipped)}
+						>
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+
+										fontSize: "5rem",
+									}}
+								></Card.Text>{" "}
 								<Card.Img
-									src="/assets/header.jpg"
+									src="/assets/Logo.png"
 									className="shadow-lg card-image"
 								/>
-							</div>
-							<div className="card-back">
-								<Card.Text className="mt-5 bg-transparent">
+							</Card.Body>
+						</Card>
+						<Card className="my-card back border-0 blur p-3 shadow-lg bg-light blur">
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+									}}
+								>
 									<span>
 										Our team of skilled technicians and engineers are dedicated
 										to providing exceptional customer service and support. Were
@@ -39,28 +52,42 @@ function Header5() {
 										and budget.
 									</span>
 								</Card.Text>
-								<Button>Product1</Button>
-							</div>
-						</div>
-					</Card>
+							</Card.Body>
+						</Card>
+					</CardFlip>
 				</Col>
-				<Col lg={4} className="">
-					<Card
-						style={{
-							border: "none",
-							fontWeight: "bold",
-						}}
-						className="bg-transparent "
+				<Col lg={5} className=" m-5">
+					{" "}
+					<CardFlip
+						flipDirection="horizontal"
+						onMouseEnter={() => handleCardHover(true)}
+						onMouseLeave={() => handleCardHover(false)}
 					>
-						<div className="card-container">
-							<div className="card-front">
+						<Card
+							className="my-card front border-0 blur p-3 shadow-lg bg-transparent"
+							onClick={() => setIsFlipped(!isFlipped)}
+						>
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+
+										fontSize: "5rem",
+									}}
+								></Card.Text>{" "}
 								<Card.Img
-									src="/assets/header.jpg"
+									src="/assets/money.jpg"
 									className="shadow-lg card-image"
-								/>{" "}
-							</div>
-							<div className="card-back">
-								<Card.Text className="mt-5  rounded m-2">
+								/>
+							</Card.Body>
+						</Card>
+						<Card className="my-card back border-0 blur p-3 shadow-lg bg-light blur">
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+									}}
+								>
 									<span>
 										We understand that every customer has unique requirements
 										when it comes to heating and cooling their space. Thats why
@@ -69,22 +96,43 @@ function Header5() {
 										commercial installations.
 									</span>
 								</Card.Text>
-								<Button>Product2</Button>
-							</div>
-						</div>
-					</Card>
+							</Card.Body>
+						</Card>
+					</CardFlip>
 				</Col>
-				<Col lg={4} className="">
-					<Card className="bg-transparent">
-						<div className="card-container">
-							<div className="card-front">
+
+				<Col lg={5} className=" m-5">
+					{" "}
+					<CardFlip
+						flipDirection="horizontal"
+						onMouseEnter={() => handleCardHover(true)}
+						onMouseLeave={() => handleCardHover(false)}
+					>
+						<Card
+							className="my-card front border-0 blur p-3 shadow-lg bg-transparent"
+							onClick={() => setIsFlipped(!isFlipped)}
+						>
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+
+										fontSize: "5rem",
+									}}
+								></Card.Text>{" "}
 								<Card.Img
-									src="/assets/header.jpg"
+									src="/assets/foot.jpg"
 									className="shadow-lg card-image"
 								/>
-							</div>
-							<div className="card-back">
-								<Card.Text className="mt-5 bg-transparent">
+							</Card.Body>
+						</Card>
+						<Card className="my-card back border-0 blur p-3 shadow-lg bg-light blur">
+							<Card.Body>
+								<Card.Text
+									style={{
+										fontWeight: "bold",
+									}}
+								>
 									<span>
 										At our company, were committed to sustainability and
 										environmental responsibility. We strive to minimize our
@@ -93,10 +141,9 @@ function Header5() {
 										our products.
 									</span>
 								</Card.Text>
-								<Button>Product3</Button>
-							</div>
-						</div>
-					</Card>
+							</Card.Body>
+						</Card>
+					</CardFlip>
 				</Col>
 			</Row>
 		</Container>

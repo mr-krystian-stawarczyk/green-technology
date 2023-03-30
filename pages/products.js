@@ -6,7 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import { useSpring, animated } from "react-spring";
 
 import { useRouter } from "next/router";
-import { Product1, Product2, Product3, Product4 } from "../components";
+import {
+	Product1,
+	Product2,
+	Product3,
+	Product4,
+	ProductBrands,
+} from "../components";
 function Products() {
 	const router = useRouter();
 	const { id } = router.query;
@@ -42,9 +48,11 @@ function Products() {
 				<ContactForm />
 
 				<Product1 />
+
 				<Product2 />
 				<Product3 />
 				<Product4 />
+				<ProductBrands />
 			</Container>
 		</>
 	);

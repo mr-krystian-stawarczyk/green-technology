@@ -26,10 +26,29 @@ body,
 
 .icons {
 	font-size: 5rem;
+	color: white;
+}
+
+.logo {
+	background-image: url("../public/assets/Logo.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
 }
 
 .header-bg {
 	background-image: url("../public/assets/Curve\ Line.svg");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.footer-bg {
+	background-image: url("../public/assets/digital-screen-with-environment-day.jpg");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.typewriter-bg {
+	background-image: url("../public/assets/typewriter-bg.jpg");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
 }
@@ -43,9 +62,19 @@ body,
 	background-image: url("../public/assets/Curve\ Line\ \(1\).svg");
 }
 
+.secondary-bg2 {
+	background-image: url("../public/assets/secondary.svg");
+}
+
+.footer-card {
+	background-color: #16830079 !important;
+	font-weight: bold;
+}
+
 .hover:hover {
 	transform: scale(1.2);
 	transition: 0.3s ease-in-out;
+	z-index: 1;
 }
 
 .hover2:hover {
@@ -67,6 +96,23 @@ body,
 	opacity: 0;
 	transition: opacity 300ms;
 }
+.text-slide {
+	animation: fade-in 2s ease-in-out;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	display: none;
+}
 
 .product-button {
 	display: inline-flex;
@@ -81,6 +127,10 @@ body,
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	transition: transform 0.3s ease-in-out;
 }
+.blur {
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+}
 
 .product-button:hover {
 	transform: translateY(-0.25rem);
@@ -93,8 +143,16 @@ body,
 	height: 100%;
 }
 
+.card-glass {
+	background-color: rgba(255, 255, 255, 0.5); /* white color overlay */
+	background-image: linear-gradient(
+			rgba(134, 134, 134, 0.5),
+			rgba(1, 8, 1, 0.5)
+		),
+		url("/path/to/image.jpg"); /* blue background */
+}
+
 .card-container {
-	position: relative;
 	width: 100%;
 	height: 100%;
 	transition: 0.9s ease-in-out;
@@ -102,14 +160,18 @@ body,
 }
 
 .card-front {
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
 }
 
+.card-back span {
+	text-align: center;
+	font-size: 1.2rem;
+}
+
 .card-back {
-	position: absolute;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
@@ -121,7 +183,7 @@ body,
 }
 
 .custom-dropdown {
-	background-color: #28a745;
+	background-color: #ffffff52;
 	color: #fff !important	;
 	border: none;
 	border-radius: 0;
@@ -134,4 +196,51 @@ body,
 .custom-dropdown:hover {
 	background-color: #218838;
 	color: white !important;
+}
+
+.my-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: 1s ease-in-out;
+}
+
+.my-card.front {
+	z-index: 2;
+	border: 1px solid green !important;
+}
+
+.my-card.back {
+	transform: rotateY(180deg);
+	z-index: 1;
+}
+
+.my-card:hover {
+	transform: rotateY(180deg);
+}
+
+@media (max-width: 991.98px) {
+	.navbar-collapse {
+		background-color: #ffffff !important; /* set the new background color */
+	}
+}
+
+.carousel-image {
+	height: 100vh !important;
+	width: 100vw !important;
+}
+
+@media (max-width: 968px) {
+	.carousel-image {
+		height: 50vh !important;
+		width: 100vw !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-image {
+		height: 100vh !important;
+		width: 100vw !important;
+	}
 }

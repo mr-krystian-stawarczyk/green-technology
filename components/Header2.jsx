@@ -1,7 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
+import Nav from "react-bootstrap/Nav";
+import Link from "next/link";
+
 function Header2() {
 	const router = useRouter();
 	const { id } = router.query;
@@ -47,16 +50,16 @@ function Header2() {
 				className="pt-5 mt-5 secondary-bg vh-100 d-flex flex-column justify-content-center rounded shadow-lg"
 				id="#section2"
 			>
-				<Row className="mt-5 pt-5 text-center justify-content-center align-items-center ">
-					<Col lg={5} className=" ">
+				<Row className=" text-center justify-content-center align-items-center ">
+					<Col xl={5} lg={5} className=" p-3 rounded blur shadow-lg rounded">
 						<animated.div style={imgAnimationProps}>
 							{" "}
 							<Card className="border-0 shadow-lg">
-								<Card.Img src="/assets/header.jpg" className="shadow-lg" />
+								<Card.Img src="/assets/pompa1.jpg" className="shadow-lg" />
 							</Card>{" "}
 						</animated.div>
 					</Col>
-					<Col lg={5} className="">
+					<Col xl={5} lg={5} className="blur p-3 mx-2 shadow-lg">
 						<animated.div style={animationProps}>
 							<Card
 								style={{
@@ -80,7 +83,11 @@ function Header2() {
 											systems with ease.
 										</span>
 									</Card.Title>
-									<Card.Text className="mt-5 bg-transparent"></Card.Text>
+									<Nav.Link as={Link} href="/products">
+										<Button variant="light btn-md p-2 text-uppercase text-bold shadow-lg">
+											Products
+										</Button>
+									</Nav.Link>{" "}
 								</Card.Body>
 							</Card>
 						</animated.div>
