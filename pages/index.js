@@ -8,20 +8,23 @@ import {
 	Header5,
 	ProductBrands,
 	Header3,
+	Reviews,
+	Header6,
+	HeaderCards,
 } from "../components";
 
 export default function Home() {
 	return (
-		<>
+		<div className="wrapper">
 			<HeaderSlides />
-			<Header />
-
+			<Reviews />
 			<Header2 />
 			<Header4 />
 			<Header3 />
+			<Header6 />
+			<HeaderCards />
 
-			<Header5 />
 			<ProductBrands />
-		</>
+		</div>
 	);
 }

@@ -7,12 +7,12 @@ import Nav from "react-bootstrap/Nav";
 
 function Footer() {
 	return (
-		<Container fluid className="p-5 footer-bg rounded shadow-lg mt-5 ">
+		<Container fluid className="p-5 footer-bg  shadow-lg  ">
 			<Row className="justify-content-center align-items-center text-center">
 				<Col lg={3} sm={6}>
 					<Card
 						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
-						style={{ height: "20rem" }}
+						style={{ maxHeight: "20rem", minHeight: "16rem" }}
 					>
 						<Card.Body>
 							<Card.Title>About us</Card.Title>
@@ -31,7 +31,7 @@ function Footer() {
 				<Col lg={3} sm={6}>
 					<Card
 						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
-						style={{ height: "20rem" }}
+						style={{ maxHeight: "20rem", minHeight: "16rem" }}
 					>
 						<Card.Body>
 							<Card.Title>Latest Work</Card.Title>
@@ -47,29 +47,31 @@ function Footer() {
 				<Col lg={3} sm={6}>
 					<Card
 						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
-						style={{ height: "20rem" }}
+						style={{ maxHeight: "20rem", minHeight: "16rem" }}
 					>
 						<Card.Body>
-							<Card.Title>Contact</Card.Title>
-							<Card.Text>
-								Here You can find our contact informations, or get a
-								personalized price for your needs
-							</Card.Text>
+							<Card.Title>Social Media</Card.Title>
+							<Card.Text>Here You can find our contact informations</Card.Text>
+
+							<AiFillInstagram className="hover display-3" />
+							<FaTiktok className="hover display-3" />
+							<AiOutlineFacebook className="hover display-3" />
 						</Card.Body>
 						<Nav.Link as={Link} href="/about">
-							<Button variant="success btn-md m-1">Contact</Button>
+							<Button variant="success btn-md m-1 display-3">Contact</Button>
 						</Nav.Link>
 					</Card>
 				</Col>
 				<Col lg={3} sm={6}>
 					<Card
 						className="  blur bg-transparent text-white  shadow-lg m-2 border-dark border-lg p-2 hover"
-						style={{ height: "20rem" }}
+						style={{ maxHeight: "20rem", minHeight: "16rem" }}
 					>
 						<Card.Body>
 							<Card.Title>Products</Card.Title>
 							<Card.Text>Ready to check prices for Your products</Card.Text>
 						</Card.Body>
+
 						<Nav.Link as={Link} href="/about">
 							<Button variant="success btn-md m-1">Products</Button>
 						</Nav.Link>
@@ -77,15 +79,6 @@ function Footer() {
 				</Col>
 			</Row>
 			<Row className="justify-content-center text-center blur rounded m-2 bg-transparent shadow-lg">
-				<Row className="justify-content-center text-center ">
-					<Col className="icons ">
-						<AiFillInstagram className="hover" />
-
-						<FaTiktok className="hover" />
-
-						<AiOutlineFacebook className="hover" />
-					</Col>
-				</Row>
 				<Row className="justify-content-center align-items-center text-center rounded ">
 					<Link href="/terms" className="m-1 text-uppercase">
 						Terms & Conditions

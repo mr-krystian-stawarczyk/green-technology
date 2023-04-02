@@ -10,7 +10,7 @@ function Header5() {
 		setIsFlipped(isHovering);
 	};
 	return (
-		<Container fluid className="pt-5 header-bg pb-5  rounded shadow-lg mt-5">
+		<Container fluid className="  header-bg pb-5   p-2">
 			<Row className="justify-content-center align-items-center text-center">
 				<Col lg={5} className=" m-5">
 					{" "}
@@ -44,7 +44,7 @@ function Header5() {
 										fontWeight: "bold",
 									}}
 								>
-									<span>
+									<span className="lead">
 										Our team of skilled technicians and engineers are dedicated
 										to providing exceptional customer service and support. Were
 										always available to answer any questions you may have and to
@@ -88,7 +88,7 @@ function Header5() {
 										fontWeight: "bold",
 									}}
 								>
-									<span>
+									<span className="lead">
 										We understand that every customer has unique requirements
 										when it comes to heating and cooling their space. Thats why
 										we offer a wide range of products and solutions to suit any
@@ -133,7 +133,7 @@ function Header5() {
 										fontWeight: "bold",
 									}}
 								>
-									<span>
+									<span className="lead">
 										At our company, were committed to sustainability and
 										environmental responsibility. We strive to minimize our
 										carbon footprint and reduce waste in everything we do, from

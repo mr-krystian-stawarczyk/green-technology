@@ -6,7 +6,7 @@ import Link from "next/link";
 function Pumps5() {
 	return (
 		<Row className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center rounded shadow-lg">
-			<Col lg={3} className="hover2 m-2 shadow-lg p-2 blur rounded">
+			<Col lg={3} sm={5} className="hover2 m-2 shadow-lg p-2 blur rounded">
 				<Card
 					style={{
 						border: "none",
@@ -24,7 +24,7 @@ function Pumps5() {
 					</Card.Body>
 				</Card>
 			</Col>
-			<Col lg={3} className="hover2 m-2 shadow-lg p-2 blur rounded">
+			<Col lg={3} sm={5} className="hover2 m-2 shadow-lg p-2 blur rounded">
 				<Card
 					style={{
 						border: "none",
@@ -41,7 +41,7 @@ function Pumps5() {
 					</Card.Body>
 				</Card>
 			</Col>
-			<Col lg={3} className="hover2 m-2 shadow-lg p-2 blur rounded">
+			<Col lg={3} sm={5} className="hover2 m-2 shadow-lg p-2 blur rounded">
 				<Card
 					style={{
 						border: "none",

@@ -32,7 +32,7 @@ function Header() {
 	return (
 		<Container
 			fluid
-			className=" typewriter-bg vh-100 rounded shadow-lg d-flex flex-column mt-5"
+			className=" typewriter-bg vh-100 rounded d-flex flex-column "
 		>
 			<Row
 				className=" text-center d-flex justify-content-center align-items-center h-100 text-center"
@@ -42,8 +42,8 @@ function Header() {
 				}}
 			>
 				<Col md={2}></Col>
-				<Col md={6} className="typewriter shadow-lg">
-					<p className=" ">Klimatyzacje </p>
+				<Col md={6} className="typewriter shadow-lg bg-light rounded">
+					<p>Klimatyzacje </p>
 					<p>Pompy Ciepla </p>
 					<p>Foto Woltaika </p>
 					<p>Sterownie </p>
@@ -52,9 +52,9 @@ function Header() {
 			</Row>
 			<Row className="justify-content-center text-center m-2 pb-5">
 				<Col md={4}>
-					<Button variant="success" size="lg" className="shadow-lg">
-						<Link to="#section2" smooth={true} duration={200}>
-							Discover More !
+					<Button size="lg" className="shadow-lg btn-green">
+						<Link to="#question" smooth={true} duration={200}>
+							Question ?
 						</Link>
 					</Button>
 				</Col>{" "}

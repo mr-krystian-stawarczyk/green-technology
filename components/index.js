@@ -6,9 +6,10 @@ export { default as Header3 } from "./Header3";
 export { default as HeaderSlides } from "./HeaderSlides";
 export { default as Header4 } from "./Header4";
 export { default as Header5 } from "./Header5";
+export { default as Header6 } from "./Header6";
 
 export { default as Footer } from "./Footer";
-export { default as Interrested } from "./Interrested";
+
 export { default as ContactForm } from "./ContactForm";
 export { default as Product1 } from "./Product1";
 export { default as Product2 } from "./Product2";
@@ -34,3 +35,6 @@ export { default as Solar2 } from "./Solar2";
 export { default as Solar3 } from "./Solar3";
 export { default as Solar4 } from "./Solar4";
 export { default as Solar5 } from "./Solar5";
+
+export { default as Reviews } from "./Reviews";
+export { default as HeaderCards } from "./HeaderCards";

@@ -49,7 +49,7 @@ function Product4() {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center vh-100"
+				className=" text-center d-flex justify-content-center align-items-center vh-full rounded my-2 shadow-lg"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
@@ -65,19 +65,13 @@ function Product4() {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "black",
-										fontSize: "1.5rem",
-									}}
-									className=" header-text"
-								>
+								<p className="lead">
+									{" "}
 									In addition to our core products, we offer a range of
 									accessories and services to help you get the most out of your
 									heating and cooling systems, from installation to maintenance
 									and repair.
-								</Card.Title>{" "}
+								</p>
 								<Col className="d-flex align-items-center text-center justify-content-center">
 									<Nav.Link as={Link} href="/contact">
 										<Button variant="success btn-md m-2 text-uppercase text-bold">

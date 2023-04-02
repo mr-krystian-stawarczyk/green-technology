@@ -60,40 +60,22 @@ function Contact() {
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
 	return (
-		<Container fluid className="header-bg rounded">
-			<Row className="text-center align-items-center justify-content-center rounded">
-				<Row className=" text-center justify-content-center align-items-center ">
-					<Row className=" text-center justify-content-center align-items-center  pt-5">
+		<Container fluid className=" ">
+			<Row className="text-center align-items-center justify-content-center rounded ">
+				<Row className=" text-center justify-content-center align-items-center header-bg pb-5">
+					<Row className=" text-center justify-content-center align-items-center  pt-5 m-2">
 						<Col lg={3} className="">
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent rounded"
-							>
-								<Card.Body className="text-center ">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-
-											fontSize: "4rem",
-										}}
-										className="  blur "
-									>
-										Contact
-									</Card.Title>
-								</Card.Body>
-							</Card>
+							<p className="display-1">Contact</p>
 						</Col>
 					</Row>
-					<Row className=" text-center justify-content-center align-items-center">
+					<Row className=" text-center justify-content-center align-items-center ">
 						<Col
-							lg={3}
-							className=" m-5"
+							lg={6}
 							style={{
-								width: "18rem",
-								height: "18rem",
+								maxWidth: "18rem",
+								maxHeight: "18rem",
 							}}
+							className="m-3"
 						>
 							{" "}
 							<CardFlip
@@ -135,9 +117,12 @@ function Contact() {
 							</CardFlip>
 						</Col>
 						<Col
-							lg={3}
-							className=" m-5"
-							style={{ width: "18rem", height: "18rem" }}
+							lg={6}
+							style={{
+								maxWidth: "18rem",
+								maxHeight: "18rem",
+							}}
+							className="m-3"
 						>
 							{" "}
 							<CardFlip
@@ -182,9 +167,12 @@ function Contact() {
 							</CardFlip>
 						</Col>
 						<Col
-							lg={3}
-							className=" m-5"
-							style={{ width: "18rem", height: "18rem" }}
+							lg={5}
+							style={{
+								maxWidth: "18rem",
+								maxHeight: "18rem",
+							}}
+							className="m-3"
 						>
 							{" "}
 							<CardFlip
@@ -229,9 +217,12 @@ function Contact() {
 							</CardFlip>
 						</Col>
 						<Col
-							lg={4}
-							className=" m-5"
-							style={{ width: "18rem", height: "18rem" }}
+							lg={5}
+							style={{
+								maxWidth: "18rem",
+								maxHeight: "18rem",
+							}}
+							className="m-2"
 						>
 							{" "}
 							<CardFlip
@@ -278,37 +269,22 @@ function Contact() {
 					</Row>
 				</Row>
 				<Row
-					className="align-items-center justify-content-center vh-100 text-center "
+					className="align-items-center justify-content-center text-center header-bg vh-full pb-5"
 					id="price"
 				>
-					<Row className=" text-center justify-content-center align-items-center  pt-5">
+					<Row className=" text-center justify-content-center align-items-center pt-5 ">
 						<Col className="">
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent rounded"
-							>
-								<Card.Body className="text-center ">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-
-											fontSize: "4rem",
-										}}
-										className="  blur "
-									>
-										Fill the form to get a personalized prices and advice
-									</Card.Title>
-								</Card.Body>
-							</Card>
+							<p className="display-1">
+								{" "}
+								Fill the form to get a personalized prices and advice
+							</p>
 						</Col>
 					</Row>
 
 					<Col
 						lg={5}
 						sm={8}
-						className=" rounded  p-5 blur  shadow-lg"
+						className=" rounded  p-5 blur m-2 shadow-lg"
 						style={{
 							border: "1px solid green",
 						}}
@@ -396,28 +372,10 @@ function Contact() {
 						)}
 					</Col>
 				</Row>
-				<Row className=" text-center justify-content-center align-items-center vh-100">
-					<Row className=" text-center justify-content-center align-items-center  pt-5">
+				<Row className=" text-center justify-content-center align-items-center header-bg vh-full pb-5">
+					<Row className=" text-center justify-content-center align-items-center m-2  pt-5">
 						<Col lg={5} className=" ">
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent rounded"
-							>
-								<Card.Body className="text-center ">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-
-											fontSize: "4rem",
-										}}
-										className="  blur "
-									>
-										Social Media
-									</Card.Title>
-								</Card.Body>
-							</Card>
+							<p className="display-1"> Social Media</p>
 						</Col>
 					</Row>
 					<Col lg={5} className="p-2 m-1 shadow-lg">

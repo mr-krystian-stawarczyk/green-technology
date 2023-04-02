@@ -47,7 +47,7 @@ function Product1() {
 	return (
 		<div ref={sectionRef} id="#pompa">
 			<Row
-				className="text-center d-flex justify-content-center align-items-center vh-100 secondary-bg text-white shadow-lg"
+				className="text-center d-flex justify-content-center align-items-center  vh-full secondary-bg text-white"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
@@ -70,24 +70,21 @@ function Product1() {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-									}}
-									className=" header-text"
-								>
+								<p className="lead text-dark">
+									{" "}
 									Our heating pumps are designed to provide efficient and
 									reliable heating solutions for homes and businesses, using the
 									latest technology to help you save on energy bills.
-								</Card.Title>
+								</p>
+
 								<Col className="d-flex align-items-center text-center justify-content-center">
 									<Nav.Link as={Link} href="#price">
-										<Button variant="light btn-md m-2 text-uppercase text-bold">
+										<Button className="btn-green btn-md m-2 text-uppercase text-bold">
 											Prices
 										</Button>
 									</Nav.Link>
 									<Nav.Link as={Link} href="/pumps">
-										<Button variant="light btn-md m-2 text-uppercase text-bold">
+										<Button className="btn-green btn-md m-2 text-uppercase text-bold">
 											Pumps
 										</Button>
 									</Nav.Link>

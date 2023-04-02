@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Solar2() {
 	return (
-		<Row className=" text-center justify-content-center align-items-center vh-100 bg-primary">
+		<Row className=" text-center justify-content-center align-items-center vh-full my-2 bg-primary shadow-lg rounded">
 			<Col xl={5} lg={5} className=" p-3 rounded blur shadow-lg rounded">
 				{" "}
 				<Card className="border-0 shadow-lg">
@@ -19,24 +19,16 @@ function Solar2() {
 					}}
 					className="bg-transparent "
 				>
-					<Card.Body className="text-center">
-						<Card.Title
-							style={{
-								fontWeight: "bold",
-								color: "white",
-							}}
-							className=" header-text"
-						>
-							<span className="">
-								SolarEdge is a leading manufacturer of solar panels, known for
-								their innovative technology and exceptional performance. Their
-								solar panels are designed with a unique power optimizer
-								technology that maximizes energy production and ensures maximum
-								efficiency, even in low-light conditions. SolarEdges panels are
-								also durable and long-lasting, with a 25-year warranty on
-								performance and materials.
-							</span>
-						</Card.Title>
+					<Card.Body className="text-center ">
+						<p className="lead text-white">
+							SolarEdge is a leading manufacturer of solar panels, known for
+							their innovative technology and exceptional performance. Their
+							solar panels are designed with a unique power optimizer technology
+							that maximizes energy production and ensures maximum efficiency,
+							even in low-light conditions. SolarEdges panels are also durable
+							and long-lasting, with a 25-year warranty on performance and
+							materials.
+						</p>
 						<Nav.Link
 							as={Link}
 							href="https://www.solaredge.com/en/products/residential/smart-solar-modules"

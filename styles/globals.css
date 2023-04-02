@@ -4,10 +4,15 @@ body,
 	padding: 0;
 	margin: 0;
 	font-family: "Monserat", sans-serif;
+
 	box-sizing: border-box;
 }
 ::-webkit-scrollbar {
 	width: 0px;
+}
+
+.wrapper {
+	overflow: hidden;
 }
 
 .typewriter p {
@@ -20,8 +25,47 @@ body,
 	text-shadow: 2px 2px #2bff0011;
 }
 
+#basic-nav-dropdown {
+	font-size: 1.2rem;
+	color: black !important;
+}
+
+.nav {
+	overflow: visible !important;
+}
+
+.vh-full {
+	min-height: 100vh;
+}
+
+@media (max-width: 368px) {
+	.typewriter p {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 992px) {
+	.typewriter p {
+		font-size: 3rem;
+	}
+}
+
 .typewriter p:nth-of-type(5) {
-	color: green;
+	color: rgba(40, 167, 69, 1);
+}
+
+.btn-green {
+	background-color: rgba(40, 167, 69, 1) !important;
+	color: black !important;
+	border: none !important;
+}
+
+.btn-green:hover {
+	background-color: orange !important;
+}
+
+.star {
+	color: gold !important;
 }
 
 .icons {
@@ -36,7 +80,13 @@ body,
 }
 
 .header-bg {
-	background-image: url("../public/assets/Curve\ Line.svg");
+	background-image: url("../public/assets/side-wave_background.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.testimonial-bg {
+	background-image: url("../public/assets/side-wave_background (1).png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
 }
@@ -59,7 +109,9 @@ body,
 }
 
 .secondary-bg {
-	background-image: url("../public/assets/Curve\ Line\ \(1\).svg");
+	background-image: url("../public/assets/side-wave_background.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
 }
 
 .secondary-bg2 {
@@ -74,7 +126,7 @@ body,
 .hover:hover {
 	transform: scale(1.2);
 	transition: 0.3s ease-in-out;
-	z-index: 1;
+	z-index: 1 !important;
 }
 
 .hover2:hover {
@@ -241,6 +293,20 @@ body,
 @media (max-width: 768px) {
 	.carousel-image {
 		height: 100vh !important;
+		width: 100vw !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-image {
+		height: 100vh !important;
+		width: 100% !important;
+	}
+}
+
+@media (max-width: 368px) {
+	.carousel-image {
+		height: 60vh !important;
 		width: 100vw !important;
 	}
 }

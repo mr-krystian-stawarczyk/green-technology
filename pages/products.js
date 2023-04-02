@@ -44,11 +44,9 @@ function Products() {
 
 	return (
 		<>
-			<Container fluid className="mt-5 pt-5 products-bg " ref={sectionRef}>
+			<Container fluid className="my-2 pt-5 " ref={sectionRef}>
 				<ContactForm />
-
 				<Product1 />
-
 				<Product2 />
 				<Product3 />
 				<Product4 />

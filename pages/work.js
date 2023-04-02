@@ -87,7 +87,7 @@ function Work() {
 		<div ref={sectionRef}>
 			<Container fluid className=" ">
 				<Row
-					className="text-center pt-5 d-flex justify-content-center align-items-center vh-100 secondary-bg rounded"
+					className="text-center pt-5 d-flex vh-full justify-content-center align-items-center  testimonial-bg "
 					style={{
 						alignItems: "center",
 						justifyContent: "center",
@@ -103,20 +103,14 @@ function Work() {
 								className="bg-transparent "
 							>
 								<Card.Body className="text-center">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-											color: "white",
-										}}
-										className=" header-text  rounded "
-									>
+									<p className="lead text-dark text-uppercase">
 										Working in green technologies involves developing and
 										implementing sustainable solutions that minimize the
 										negative impact of human activities on the environment. This
 										field encompasses a wide range of disciplines, including
 										renewable energy, energy efficiency, waste management, and
 										sustainable transportation.
-									</Card.Title>
+									</p>
 								</Card.Body>
 							</Card>{" "}
 						</animated.div>
@@ -136,7 +130,7 @@ function Work() {
 					</Col>
 				</Row>
 				<Row
-					className=" text-center d-flex justify-content-center align-items-center vh-100 header-bg text-dark mt-5 shadow-lg rounded"
+					className=" text-center d-flex justify-content-center align-items-center vh-full header-bg text-dark "
 					style={{
 						alignItems: "center",
 						justifyContent: "center",
@@ -164,32 +158,28 @@ function Work() {
 								className="bg-transparent "
 							>
 								<Card.Body className="text-center p-3 ">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-										}}
-										className="  "
-									>
+									<p className="lead">
+										{" "}
 										Green technologies offer a unique opportunity to combine
 										innovative thinking with environmental stewardship, creating
 										a better world for present and future generations. As such,
 										working in green technologies can be a fulfilling and
 										rewarding career path for individuals who are passionate
 										about making a positive impact on the planet.
-									</Card.Title>
+									</p>
 								</Card.Body>
 							</Card>
 						</animated.div>
 					</Col>
 				</Row>
-				<Row className="d-flex align-items-center justify-content-center vh-100 secondary-bg2 mt-5 rounded shadow-lg">
+				<Row className="d-flex align-items-center justify-content-center  header-bg vh-full  pb-5">
 					<Row className="align-items-center justify-content-center text-center">
 						<Col
-							lg={4}
-							className="text-light text-center blur shadow-sm  rounded "
+							lg={10}
+							className="text-dark text-center blur shadow-sm  rounded "
 						>
 							{" "}
-							<h1>Check Out Our Latest Work:</h1>
+							<p className="display-1 m-2 mt-3">Check Out Our Latest Work</p>
 						</Col>
 					</Row>
 					{products.map((product) => (
@@ -200,15 +190,15 @@ function Work() {
 						>
 							<Card
 								key={product._id}
-								className=" bg-transparent text-white border-0  hover p-3 "
+								className=" bg-transparent text-dark border-0  hover p-3 "
 							>
 								<Card.Img
 									variant="top"
 									src={urlFor(product.image && product.image[0])}
-									style={{ maxHeight: "18rem" }}
+									style={{ maxHeight: "20rem", minHeight: "16rem" }}
 									className="rounded"
 								/>
-								<Card.Body>
+								<Card.Body className="bg-white rounded">
 									<Card.Title>Name:{product.name}</Card.Title>
 									<Card.Text>Details:{product.details}</Card.Text>
 								</Card.Body>

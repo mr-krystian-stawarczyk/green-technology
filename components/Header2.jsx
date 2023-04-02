@@ -44,57 +44,47 @@ function Header2() {
 	});
 
 	return (
-		<div ref={sectionRef}>
-			<Container
-				fluid
-				className="pt-5 mt-5 secondary-bg vh-100 d-flex flex-column justify-content-center rounded shadow-lg"
-				id="#section2"
-			>
-				<Row className=" text-center justify-content-center align-items-center ">
-					<Col xl={5} lg={5} className=" p-3 rounded blur shadow-lg rounded">
-						<animated.div style={imgAnimationProps}>
-							{" "}
-							<Card className="border-0 shadow-lg">
-								<Card.Img src="/assets/pompa1.jpg" className="shadow-lg" />
-							</Card>{" "}
-						</animated.div>
-					</Col>
-					<Col xl={5} lg={5} className="blur p-3 mx-2 shadow-lg">
-						<animated.div style={animationProps}>
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent "
-							>
-								<Card.Body className="text-center">
-									<Card.Title
-										style={{
-											fontWeight: "bold",
-											color: "white",
-										}}
-										className=" header-text"
-									>
-										<span className="shadow-lg">
-											Our company specializes in creating innovative solutions
-											for heating and climate control. We design and manufacture
-											heating pumps, as well as advanced control units that
-											enable our customers to manage their heating and cooling
-											systems with ease.
-										</span>
-									</Card.Title>
-									<Nav.Link as={Link} href="/products">
-										<Button variant="light btn-md p-2 text-uppercase text-bold shadow-lg">
-											Products
-										</Button>
-									</Nav.Link>{" "}
-								</Card.Body>
-							</Card>
-						</animated.div>
-					</Col>
-				</Row>
-			</Container>
-		</div>
+		<Container
+			fluid
+			className=" header-bg vh-full d-flex flex-column justify-content-center  border-0  p-2 "
+			ref={sectionRef}
+		>
+			<Row className=" text-center justify-content-center align-items-center ">
+				<Col xl={5} lg={5} className=" p-3 rounded blur shadow-lg rounded">
+					<animated.div style={imgAnimationProps}>
+						{" "}
+						<Card className="border-0 shadow-lg hover">
+							<Card.Img src="/assets/pompa1.jpg" className="shadow-lg" />
+						</Card>{" "}
+					</animated.div>
+				</Col>
+				<Col xl={5} lg={5} className="blur p-3 mx-2 shadow-lg">
+					<animated.div style={animationProps}>
+						<Card
+							style={{
+								border: "none",
+							}}
+							className="bg-transparent "
+						>
+							<Card.Body className="text-center">
+								<p className="lead text-dark text-uppercase">
+									Our company specializes in creating innovative solutions for
+									heating and climate control. We design and manufacture heating
+									pumps, as well as advanced control units that enable our
+									customers to manage their heating and cooling systems with
+									ease.
+								</p>
+								<Nav.Link as={Link} href="/products">
+									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg border-0">
+										Products
+									</Button>
+								</Nav.Link>{" "}
+							</Card.Body>
+						</Card>
+					</animated.div>
+				</Col>
+			</Row>
+		</Container>
 	);
 }
 

@@ -45,7 +45,7 @@ function Header3() {
 	return (
 		<Container
 			fluid
-			className="mt-5 pt-5 shadow-lg vh-100 text-dark rounded d-flex align-items-center secondary-bg"
+			className=" vh-full text-dark  d-flex align-items-center secondary-bg  p-2"
 			ref={sectionRef}
 		>
 			<Row
@@ -59,7 +59,7 @@ function Header3() {
 					<animated.div style={imgAnimationProps}>
 						{" "}
 						<Card className="border-0">
-							<Card.Img src="/assets/solary.jpg" className="shadow-lg" />
+							<Card.Img src="/assets/pompa4.jpg" className="shadow-lg" />
 						</Card>{" "}
 					</animated.div>
 				</Col>
@@ -71,19 +71,15 @@ function Header3() {
 							}}
 							className="bg-transparent "
 						>
-							<Card.Body className="text-center text-white">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-									}}
-								>
+							<Card.Body className="text-center text-dark">
+								<p className="lead text-uppercase">
 									Our heating pumps use advanced technology to provide efficient
 									and cost-effective heating solutions, while our solar panels
 									harness the power of the sun to provide renewable energy for
 									your property.
-								</Card.Title>
+								</p>
 								<Nav.Link as={Link} href="/work">
-									<Button variant="light btn-md p-2 text-uppercase text-bold shadow-lg">
+									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg">
 										Work
 									</Button>
 								</Nav.Link>{" "}

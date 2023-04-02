@@ -4,8 +4,8 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 function ProductBrands() {
 	return (
-		<Container fluid>
-			<Row className="bg-dark justify-content-center align-items-center text-center p-3 my-3 shadow-lg">
+		<Container fluid className="overflow-hidden">
+			<Row className="bg-dark justify-content-center align-items-center text-center p-3  shadow-lg ">
 				<Col className="text-white bg-transparent">
 					<Card className="bg-transparent border-0">
 						<Card.Img

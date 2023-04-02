@@ -10,7 +10,7 @@ import {
 } from "../components";
 function solar() {
 	return (
-		<Container fluid className="mt-5 pt-5 products-bg ">
+		<Container fluid className="mt-5 rounded ">
 			<Solar1 />
 			<Solar2 />
 			<Solar3 />

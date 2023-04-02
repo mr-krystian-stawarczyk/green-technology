@@ -49,7 +49,7 @@ function Product3() {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center secondary-bg vh-100 shadow-lg"
+				className=" text-center d-flex justify-content-center align-items-center secondary-bg my-2  vh-full shadow-lg rounded"
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
@@ -80,18 +80,11 @@ function Product3() {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "white",
-										fontSize: "1.5rem",
-									}}
-									className=" header-text"
-								>
+								<p className="lead text-white">
 									Our solar panels are a sustainable and cost-effective solution
 									for powering your home or business, helping you reduce your
 									carbon footprint and save on electricity bills.
-								</Card.Title>
+								</p>
 								<Col className="d-flex align-items-center text-center justify-content-center">
 									<Nav.Link as={Link} href="/work">
 										<Button variant="light btn-md m-2 text-uppercase text-bold">

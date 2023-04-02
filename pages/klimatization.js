@@ -11,7 +11,7 @@ import {
 } from "../components";
 function klimatization() {
 	return (
-		<Container fluid className="mt-5 pt-5 products-bg ">
+		<Container fluid className="mt-5 rounded">
 			<Klima1 />
 			<Klima2 />
 			<Klima3 />

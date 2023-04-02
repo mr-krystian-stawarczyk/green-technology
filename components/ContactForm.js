@@ -85,7 +85,7 @@ export const ContactForm = () => {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="align-items-center justify-content-center vh-100 text-center "
+				className="align-items-center justify-content-center vh-full text-center  testimonial-bg"
 				id="price"
 			>
 				<Col lg={5} className="blur p-3 mx-2 shadow-lg rounded">
@@ -97,24 +97,17 @@ export const ContactForm = () => {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center ">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "black",
-										fontSize: "2rem",
-									}}
-									className=" header-text"
-								>
+								<p className="lead">
 									Fill the form to get a personalized prices and advice to go
 									green the most efficient way !
-								</Card.Title>
+								</p>
 							</Card.Body>
 						</Card>{" "}
 					</animated.div>
 				</Col>
 				<Col
-					md={5}
-					className=" rounded  p-5 blur  shadow-lg"
+					lg={5}
+					className=" rounded  p-5 blur  shadow-lg m-2"
 					style={{
 						border: "1px solid green",
 					}}
@@ -185,11 +178,7 @@ export const ContactForm = () => {
 
 							<Row className="justify-content-center align-items-center">
 								<Col>
-									<Button
-										type="submit"
-										variant="success"
-										className="p-text m-2"
-									>
+									<Button type="submit" className="p-text m-2 btn-green btn-lg">
 										{loading ? "Sending..." : "Get Indyvidual Price"}
 									</Button>
 								</Col>

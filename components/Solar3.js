@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function Solar3() {
 	return (
-		<Row className=" text-center justify-content-center align-items-center vh-100 bg-light">
+		<Row className=" text-center justify-content-center align-items-center vh-full my-2 bg-light shadow-lg rounded">
 			<Col xl={5} lg={5} className="blur p-3 mx-2 shadow-lg">
 				<Card
 					style={{
@@ -14,21 +14,14 @@ function Solar3() {
 					className="bg-transparent "
 				>
 					<Card.Body className="text-center">
-						<Card.Title
-							style={{
-								fontWeight: "bold",
-							}}
-							className=" header-text"
-						>
-							<span className="">
-								Deye solar panels are also made with high-quality materials and
-								are backed by a strong warranty, giving you peace of mind that
-								youre making a smart investment in your home or businesss energy
-								future. Additionally, Deye offers monitoring tools that allow
-								you to track your energy production and optimize your system for
-								maximum efficiency.
-							</span>
-						</Card.Title>
+						<p className="lead">
+							Deye solar panels are also made with high-quality materials and
+							are backed by a strong warranty, giving you peace of mind that
+							youre making a smart investment in your home or businesss energy
+							future. Additionally, Deye offers monitoring tools that allow you
+							to track your energy production and optimize your system for
+							maximum efficiency.
+						</p>
 						<Nav.Link as={Link} href="https://www.deyeinverter.com/">
 							<Button variant="light btn-md p-2 text-uppercase text-bold shadow-lg">
 								Deye.com

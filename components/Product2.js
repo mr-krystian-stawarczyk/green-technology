@@ -50,7 +50,7 @@ function Product2() {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="mt-5 pt-5 text-center d-flex justify-content-center align-items-center header-bg vh-100"
+				className=" text-center d-flex justify-content-center align-items-center header-bg vh-full "
 				style={{
 					alignItems: "center",
 					justifyContent: "center",
@@ -68,18 +68,12 @@ function Product2() {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center justify-content-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-										color: "black",
-										fontSize: "1.5rem",
-									}}
-									className=" header-text "
-								>
+								<p className="lead ">
 									Our klimatization systems provide precise temperature and
 									humidity control, creating a comfortable and healthy
 									environment for your home or office.
-								</Card.Title>
+								</p>
+
 								<Col className="d-flex align-items-center text-center justify-content-center">
 									<Nav.Link as={Link} href="/about">
 										<Button variant="success btn-md m-2 text-uppercase text-bold">

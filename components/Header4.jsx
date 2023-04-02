@@ -45,7 +45,7 @@ function Header4() {
 	return (
 		<Container
 			fluid
-			className="mt-5 pt-5 shadow-lg vh-100 text-dark rounded d-flex align-items-center header-bg"
+			className=" vh-full text-dark  d-flex align-items-center header-bg border-0 p-2"
 			ref={sectionRef}
 		>
 			<Row
@@ -64,19 +64,16 @@ function Header4() {
 							className="bg-transparent "
 						>
 							<Card.Body className="text-center">
-								<Card.Title
-									style={{
-										fontWeight: "bold",
-									}}
-								>
+								<p className="lead text-uppercase">
+									{" "}
 									With years of experience in the industry, we pride ourselves
 									on producing high-quality, reliable products that are built to
 									last. We use only the best materials and cutting-edge
 									technology to ensure that our products meet the highest
 									standards of performance and efficiency.
-								</Card.Title>
+								</p>
 								<Nav.Link as={Link} href="/about">
-									<Button variant="success btn-md p-2 text-uppercase text-bold shadow-lg">
+									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg">
 										About
 									</Button>
 								</Nav.Link>{" "}
@@ -87,7 +84,7 @@ function Header4() {
 				<Col lg={5} className="p-3 rounded  shadow-lg ">
 					<animated.div style={imgAnimationProps}>
 						{" "}
-						<Card className="border-0">
+						<Card className="border-0 hover">
 							<Card.Img src="/assets/solary1.jpg" className="shadow-lg" />
 						</Card>{" "}
 					</animated.div>

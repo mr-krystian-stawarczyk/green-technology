@@ -13,7 +13,7 @@ import {
 
 function pumps() {
 	return (
-		<Container fluid className="mt-5 pt-5 products-bg ">
+		<Container fluid className="mt-5 rounded">
 			<Pumps1 />
 			<Pumps2 />
 			<Pumps3 />
