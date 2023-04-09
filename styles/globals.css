@@ -15,6 +15,25 @@ body,
 	overflow: hidden;
 }
 
+.truck {
+	position: inherit;
+
+	animation: truck-move 5s linear infinite;
+}
+
+.truck-road {
+	border-bottom: 5px dotted rgba(40, 167, 69, 1);
+}
+
+@keyframes truck-move {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
 .typewriter p {
 	font-size: 5rem;
 	text-align: center;
@@ -38,6 +57,14 @@ body,
 	min-height: 100vh;
 }
 
+.bg-am-green {
+	background-color: rgba(40, 167, 69, 1);
+}
+
+.bg-am-blue {
+	background-color: rgb(17, 147, 246);
+}
+
 @media (max-width: 368px) {
 	.typewriter p {
 		font-size: 2rem;
@@ -55,13 +82,13 @@ body,
 }
 
 .btn-green {
-	background-color: rgba(40, 167, 69, 1) !important;
+	background-color: #28a745 !important;
 	color: black !important;
 	border: none !important;
 }
 
 .btn-green:hover {
-	background-color: orange !important;
+	background-color: rgb(17, 147, 246) !important;
 }
 
 .star {
@@ -79,6 +106,18 @@ body,
 	background-size: cover;
 }
 
+.windmil {
+	background-image: url("../public/assets/Projekt\ bez\ tytułu\ \(2\).png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.sanity-work {
+	background-image: url("../public/assets/sanity-work.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
 .header-bg {
 	background-image: url("../public/assets/side-wave_background.png");
 	background-repeat: no-repeat, repeat;
@@ -92,9 +131,9 @@ body,
 }
 
 .footer-bg {
-	background-image: url("../public/assets/digital-screen-with-environment-day.jpg");
-	background-repeat: no-repeat, repeat;
-	background-size: cover;
+	background-image: url("../public/assets/Projekt\ bez\ tytułu\ \(3\).png");
+	background-repeat: no-repeat, repeat !important;
+	background-size: cover !important;
 }
 
 .typewriter-bg {
@@ -124,7 +163,7 @@ body,
 }
 
 .hover:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 	transition: 0.3s ease-in-out;
 	z-index: 1 !important;
 }

@@ -7,9 +7,10 @@ import { useSpring, animated } from "react-spring";
 
 import { useRouter } from "next/router";
 const client = sanityClient({
-	projectId: "3go1z0b0",
+	projectId: process.env.NEXT_PUBLIC_PROJECTID,
 	dataset: "production",
-	useCdn: true, // useCdn is set to true by default, so you can omit this line
+	useCdn: true,
+	apiVersion: "2022-03-09",
 });
 
 function Work() {

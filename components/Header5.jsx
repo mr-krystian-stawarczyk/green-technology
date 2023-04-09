@@ -10,7 +10,7 @@ function Header5() {
 		setIsFlipped(isHovering);
 	};
 	return (
-		<Container fluid className="  header-bg pb-5   p-2">
+		<Container fluid className="  pb-5   p-2">
 			<Row className="justify-content-center align-items-center text-center">
 				<Col lg={5} className=" m-5">
 					{" "}

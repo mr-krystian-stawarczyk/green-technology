@@ -27,25 +27,28 @@ function Header3() {
 	}, []);
 
 	const animationProps = useSpring({
-		from: { opacity: 0, transform: "translateY(-100px)" },
+		from: { opacity: 0, transform: "translateX(-50%)" },
 		to: {
 			opacity: animate ? 1 : 0,
-			transform: animate ? "translateY(0)" : "translateY(-100px)",
+			transform: animate ? "translateX(0)" : "translateX(-50%)",
 		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 
 	const imgAnimationProps = useSpring({
-		from: { opacity: 0 },
-		to: { opacity: animateImg ? 1 : 0 },
+		from: { opacity: 0, transform: "translateX(50%)" },
+		to: {
+			opacity: animate ? 1 : 0,
+			transform: animate ? "translateX(0)" : "translateX(50%)",
+		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 	return (
 		<Container
 			fluid
-			className=" vh-full text-dark  d-flex align-items-center secondary-bg  p-2"
+			className=" vh-full text-dark  d-flex align-items-center  p-2"
 			ref={sectionRef}
 		>
 			<Row
@@ -55,31 +58,31 @@ function Header3() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={5} className="p-3 rounded  shadow-lg ">
-					<animated.div style={imgAnimationProps}>
+				<Col lg={5} className="p-3 rounded   m-2">
+					<animated.div style={animationProps}>
 						{" "}
 						<Card className="border-0">
-							<Card.Img src="/assets/pompa4.jpg" className="shadow-lg" />
+							<Card.Img src="/assets/pompa4.jpg" className="hover" />
 						</Card>{" "}
 					</animated.div>
 				</Col>
-				<Col lg={5} className="blur p-3 mx-2 shadow-lg rounded">
-					<animated.div style={animationProps}>
+				<Col lg={5} className="blur p-3 mx-2  rounded bg-am-green m-2">
+					<animated.div style={imgAnimationProps}>
 						<Card
 							style={{
 								border: "none",
 							}}
-							className="bg-transparent "
+							className=""
 						>
 							<Card.Body className="text-center text-dark">
-								<p className="lead text-uppercase">
-									Our heating pumps use advanced technology to provide efficient
-									and cost-effective heating solutions, while our solar panels
-									harness the power of the sun to provide renewable energy for
-									your property.
+								<p className="lead">
+									Onze warmtepompen gebruiken geavanceerde technologie om
+									efficiënte en kosteneffectieve verwarmingsoplossingen te
+									bieden, terwijl onze zonnepanelen de kracht van de zon
+									benutten om hernieuwbare energie voor uw eigendom te leveren
 								</p>
 								<Nav.Link as={Link} href="/work">
-									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg">
+									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg hover">
 										Work
 									</Button>
 								</Nav.Link>{" "}

@@ -1,54 +1,108 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { useState, useEffect, useRef } from "react";
+import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
-import Carousel from "react-bootstrap/Carousel";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
+import sanityClient from "@sanity/client";
+import CountUp from "react-countup";
 
-function Reviews() {
-	const router = useRouter();
-	const { id } = router.query;
+import { urlFor } from "../lib/client";
 
+function Reviews({}) {
 	const sectionRef = useRef(null);
+	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const handleIntersection = (entries) => {
-		if (entries[0].isIntersecting) {
-			setAnimate(true);
-			setAnimateImg(true);
-		}
+	const options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.5,
 	};
 
+	const client = sanityClient({
+		projectId: process.env.NEXT_PUBLIC_PROJECTID,
+		dataset: "production",
+		useCdn: true,
+		apiVersion: "2022-03-09",
+	});
+
+	const [liczba_klientow, setLiczbaKlientow] = useState(0);
+
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection);
-		observer.observe(sectionRef.current);
-		return () => observer.disconnect();
-	}, []);
+		const observer = new IntersectionObserver(handleIntersection, options);
+
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
+
+		// Fetch the happy client count from Sanity
+		client
+			.fetch(
+				`*[_type == "counts"] {
+          liczba_klientow
+        }`
+			)
+			.then((data) => {
+				const count = data[0]?.liczba_klientow ?? 0;
+				setLiczbaKlientow(count);
+			})
+			.catch((error) => {
+				console.error("Error fetching happy client count:", error);
+			});
+
+		return () => {
+			observer.disconnect();
+		};
+	}, [sectionRef, options]);
+
+	const handleIntersection = (entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				setIsVisible(true);
+			} else {
+				setIsVisible(false);
+			}
+			if (entries[0].isIntersecting) {
+				setAnimate(true);
+				setAnimateImg(true);
+			}
+		});
+	};
 
 	const animationProps = useSpring({
-		from: { opacity: 0, transform: "translateY(-100px)" },
+		from: { opacity: 0, transform: "translateX(-50%)" },
 		to: {
 			opacity: animate ? 1 : 0,
-			transform: animate ? "translateY(0)" : "translateY(-100px)",
+			transform: animate ? "translateX(0)" : "translateX(-50%)",
 		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 
 	const imgAnimationProps = useSpring({
+		from: { opacity: 0, transform: "translateX(50%)" },
+		to: {
+			opacity: animate ? 1 : 0,
+			transform: animate ? "translateX(0)" : "translateX(50%)",
+		},
+		config: { duration: 1000 },
+		delay: 1000,
+	});
+
+	const animationPropsMiddle = useSpring({
 		from: { opacity: 0 },
-		to: { opacity: animateImg ? 1 : 0 },
+		to: {
+			opacity: animate ? 1 : 0,
+		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 	return (
 		<Container
 			fluid
-			className=" vh-full text-dark  d-flex align-items-center testimonial-bg  p-2 border-0"
+			className=" vh-full text-dark  d-flex align-items-center  p-2 border-0 mt-5 shadow-lg"
 			ref={sectionRef}
 		>
 			<Row
@@ -58,35 +112,60 @@ function Reviews() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={5} className="blur p-3 mx-2 shadow-lg rounded">
+				{" "}
+				<Row className="py-3 ">
+					<animated.div style={animationPropsMiddle}>
+						<h1>Sluit je aan bij onze tevreden klanten uit heel Nederland!</h1>
+					</animated.div>
+				</Row>
+				<Col lg={5} className="p-3 mx-2  rounded bg-am-green">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
 							}}
-							className="bg-transparent "
+							className=" "
 						>
 							<Card.Body className="text-center text-dark">
-								<p className="lead text-uppercase">
-									Having many happy clients is one of the most important
-									achievements for any business. It not only indicates the
-									quality of the products or services being offered but also
-									reflects the level of customer satisfaction and loyalty.
-								</p>{" "}
-								<Col className="btn-light btn-lg p-2 text-uppercase text-bold shadow-lg rounded">
-									<p>300+ </p>
+								<p className="lead ">
+									Veel tevreden klanten hebben is een van de belangrijkste
+									prestaties voor elk bedrijf
+								</p>
+								<p className="lead">
+									Het geeft niet alleen de kwaliteit van de aangeboden producten
+									of diensten aan, maar weerspiegelt ook het niveau van
+									klanttevredenheid en loyaliteit
+								</p>
+								<Col className="btn-light btn-lg p-2 text-uppercase text-bold  rounded">
+									<span className="lead text-bold">
+										<Card.Title>
+											<span className="display-4">+</span>
+											{isVisible && (
+												<CountUp start={0} end={300} duration={12} delay={0}>
+													{({ countUpRef }) => (
+														<span
+															className="count display-4"
+															ref={countUpRef}
+														/>
+													)}
+												</CountUp>
+											)}
+										</Card.Title>
+									</span>
 									<p className="lead">Happy Clients !</p>
-									<FaStar className="star" />
-									<FaStar className="star" />
-									<FaStar className="star" />
-									<FaStar className="star" />
-									<FaStar className="star" />
+									<span>
+										<FaStar className="star " />
+										<FaStar className="star " />
+										<FaStar className="star " />
+										<FaStar className="star " />
+										<FaStar className="star " />
+									</span>
 								</Col>
 							</Card.Body>
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="p-3 rounded  shadow-lg bg-light">
+				<Col lg={5} className="p-3 rounded  ">
 					<animated.div style={imgAnimationProps}>
 						<Carousel>
 							<Carousel.Item>
@@ -113,7 +192,7 @@ function Reviews() {
 
 								<Carousel.Caption>
 									<h3>Toon</h3>
-									<p>You can coun on them !</p>
+									<p>Je kunt op hen rekenen!</p>
 								</Carousel.Caption>
 							</Carousel.Item>
 							<Carousel.Item>

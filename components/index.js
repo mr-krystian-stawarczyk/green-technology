@@ -37,4 +37,6 @@ export { default as Solar4 } from "./Solar4";
 export { default as Solar5 } from "./Solar5";
 
 export { default as Reviews } from "./Reviews";
+export { default as HeaderCounted } from "./HeaderCounted";
 export { default as HeaderCards } from "./HeaderCards";
+export { default as SanityWork } from "./SanityWork";

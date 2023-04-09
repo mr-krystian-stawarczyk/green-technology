@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Header, ProductBrands } from "../components";
+import { Header, Header5, ProductBrands } from "../components";
 
 function About() {
 	const [fade, setFade] = React.useState(false);
@@ -11,7 +11,7 @@ function About() {
 
 	return (
 		<>
-			<Container fluid className="testimonial-bg">
+			<Container fluid className="">
 				<Row>
 					<Row className="text-center align-items-center justify-content-center text-dark blur pt-5 mb-2 vh-full">
 						<Col
@@ -53,6 +53,7 @@ function About() {
 				</Row>
 			</Container>
 			<Header />
+			<Header5 />
 			<ProductBrands />
 		</>
 	);

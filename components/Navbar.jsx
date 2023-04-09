@@ -48,7 +48,9 @@ const NavbarComp = () => {
 						height="50"
 						className="d-inline-block align-top "
 					/>
-					<span style={{ fontSize: "2rem" }}> AMgreenergy</span>
+					<span style={{ fontSize: "2rem", color: "#1196f6" }}> AM</span>
+					<span style={{ color: "#35b915" }}>Green</span>
+					<span style={{ color: "#1196f6" }}>ergy</span>
 				</Navbar.Brand>
 
 				<Navbar.Toggle aria-controls="responsive-navbar-nav " />
@@ -73,24 +75,33 @@ const NavbarComp = () => {
 							}} // add custom styles
 						>
 							<NavDropdown.Item as={Link} href="products" className="">
-								<Button variant=" btn-lg btn-green shadow-lg"> Products</Button>
+								<Button variant=" btn-lg btn-green shadow-lg">
+									{" "}
+									Producten
+								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Divider />
 							<NavDropdown.Item as={Link} href="/solar">
 								<Button variant="" className="w-100 btn-green">
-									Solar Panels
+									Zonnepanelen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/pumps">
 								<Button variant="" className="w-100 btn-green">
-									Heat Pumps
+									Warmtepompen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
-							<NavDropdown.Item as={Link} href="klimatization">
+							<NavDropdown.Item as={Link} href="/klimatization">
 								<Button variant="" className="w-100 btn-green">
-									Klimatization
+									Airconditioning
+								</Button>{" "}
+								{/* add Bootstrap classes */}
+							</NavDropdown.Item>
+							<NavDropdown.Item as={Link} href="/bateries">
+								<Button variant="" className="w-100 btn-green">
+									Batterijen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>

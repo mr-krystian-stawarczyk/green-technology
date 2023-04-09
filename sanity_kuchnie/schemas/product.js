@@ -17,15 +17,6 @@ export default {
       title: 'Name',
       type: 'string',
     },
-    {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 90,
-      },
-    },
 
     {
       name: 'details',

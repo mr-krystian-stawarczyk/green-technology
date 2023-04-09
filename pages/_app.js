@@ -3,10 +3,12 @@ import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Layout } from "../components";
 import { PageTransition } from "next-page-transitions";
-
+import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
 
-export default function App({ Component, pageProps }) {
+export default function App(props) {
+	const { Component, pageProps, router } = props;
+
 	useEffect(() => {
 		require("bootstrap/dist/js/bootstrap.bundle.min.js");
 	}, []);
@@ -25,7 +27,7 @@ export default function App({ Component, pageProps }) {
 				}}
 				skipInitialTransition={false}
 			>
-				<Component {...pageProps} />
+				<Component {...pageProps} key={router.route} />
 			</PageTransition>
 		</Layout>
 	);

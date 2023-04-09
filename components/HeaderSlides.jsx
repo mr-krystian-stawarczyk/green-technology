@@ -28,7 +28,7 @@ function HeaderSlides() {
 							<Carousel.Caption className="text-center">
 								<Nav.Link as={Link} href="/solar">
 									<Button className="blur  btn-lg text-lg btn-green  shadow-lg border-0 rounded ">
-										<h2>Solary</h2>
+										<h2>Zonnepanelen</h2>
 									</Button>
 								</Nav.Link>
 							</Carousel.Caption>
@@ -44,7 +44,7 @@ function HeaderSlides() {
 							<Carousel.Caption className="text-center">
 								<Nav.Link as={Link} href="/bateries">
 									<Button className="blur  btn-lg text-lg btn-green  shadow-lg border-0 rounded ">
-										<h2>Baterie</h2>
+										<h2>Batterijen</h2>
 									</Button>
 								</Nav.Link>
 							</Carousel.Caption>
@@ -60,7 +60,7 @@ function HeaderSlides() {
 							<Carousel.Caption className="text-center">
 								<Nav.Link as={Link} href="/pumps">
 									<Button className="blur  btn-lg text-lg btn-green  shadow-lg border-0 rounded ">
-										<h2>Pompy Ciepla</h2>
+										<h2>Warmtepompen</h2>
 									</Button>
 								</Nav.Link>
 							</Carousel.Caption>

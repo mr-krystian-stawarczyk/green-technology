@@ -43,11 +43,11 @@ function Header() {
 			>
 				<Col md={2}></Col>
 				<Col md={6} className="typewriter shadow-lg bg-light rounded">
-					<p>Klimatyzacje </p>
-					<p>Pompy Ciepla </p>
-					<p>Foto Woltaika </p>
-					<p>Sterownie </p>
-					<p>Eco Friendly </p>
+					<p>Airconditioning </p>
+					<p>Warmtepompen </p>
+					<p>Zonne-energie</p>
+					<p>Besturingssystemen </p>
+					<p>Ecovriendelijk </p>
 				</Col>
 			</Row>
 			<Row className="justify-content-center text-center m-2 pb-5">

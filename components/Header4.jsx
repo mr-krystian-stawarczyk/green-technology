@@ -27,25 +27,28 @@ function Header4() {
 	}, []);
 
 	const animationProps = useSpring({
-		from: { opacity: 0, transform: "translateY(-100px)" },
+		from: { opacity: 0, transform: "translateX(-50%)" },
 		to: {
 			opacity: animate ? 1 : 0,
-			transform: animate ? "translateY(0)" : "translateY(-100px)",
+			transform: animate ? "translateX(0)" : "translateX(-50%)",
 		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 
 	const imgAnimationProps = useSpring({
-		from: { opacity: 0 },
-		to: { opacity: animateImg ? 1 : 0 },
+		from: { opacity: 0, transform: "translateX(50%)" },
+		to: {
+			opacity: animate ? 1 : 0,
+			transform: animate ? "translateX(0)" : "translateX(50%)",
+		},
 		config: { duration: 1000 },
 		delay: 1000,
 	});
 	return (
 		<Container
 			fluid
-			className=" vh-full text-dark  d-flex align-items-center header-bg border-0 p-2"
+			className=" vh-full text-dark  d-flex align-items-center  border-0 p-2"
 			ref={sectionRef}
 		>
 			<Row
@@ -55,25 +58,27 @@ function Header4() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={5} className="blur p-3 mx-2 shadow-lg rounded">
+				<Col lg={5} className="blur p-3 mx-2  rounded bg-am-green ">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
 							}}
-							className="bg-transparent "
+							className=""
 						>
 							<Card.Body className="text-center">
-								<p className="lead text-uppercase">
-									{" "}
-									With years of experience in the industry, we pride ourselves
-									on producing high-quality, reliable products that are built to
-									last. We use only the best materials and cutting-edge
-									technology to ensure that our products meet the highest
-									standards of performance and efficiency.
+								<p className="lead ">
+									Met jarenlange ervaring in de branche zijn we er trots op
+									hoogwaardige, betrouwbare producten te produceren die zijn
+									gebouwd om lang mee te gaan
+								</p>
+								<p className="lead ">
+									We gebruiken alleen de beste materialen en de nieuwste
+									technologie om ervoor te zorgen dat onze producten voldoen aan
+									de hoogste normen van prestaties en efficiëntie
 								</p>
 								<Nav.Link as={Link} href="/about">
-									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg">
+									<Button className="btn-green btn-lg p-2 text-uppercase text-bold shadow-lg hover">
 										About
 									</Button>
 								</Nav.Link>{" "}
@@ -81,11 +86,11 @@ function Header4() {
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="p-3 rounded  shadow-lg ">
+				<Col lg={5} className="p-3 rounded   ">
 					<animated.div style={imgAnimationProps}>
 						{" "}
 						<Card className="border-0 hover">
-							<Card.Img src="/assets/solary1.jpg" className="shadow-lg" />
+							<Card.Img src="/assets/solary1.jpg" className="" />
 						</Card>{" "}
 					</animated.div>
 				</Col>

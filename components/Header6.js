@@ -12,53 +12,34 @@ function Header6() {
 					{" "}
 					<Accordion defaultActiveKey="0">
 						<Accordion.Item eventKey="0">
-							<Accordion.Header>
-								Are You Working in all Netherlands?
-							</Accordion.Header>
+							<Accordion.Header>Werkt u in heel Nederland?</Accordion.Header>
 							<Accordion.Body>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Onze diensten zijn beschikbaar in heel Nederland, van aankoop
+								tot installatie, inclusief garantie.
 							</Accordion.Body>
 						</Accordion.Item>
 						<Accordion.Item eventKey="1">
-							<Accordion.Header>What is Wait Time?</Accordion.Header>
+							<Accordion.Header>Wat is de wachttijd?</Accordion.Header>
 							<Accordion.Body>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Vanaf de aankoop tot de volledige installatie duurt het proces
+								maximaal twee weken.
 							</Accordion.Body>
 						</Accordion.Item>
 						<Accordion.Item eventKey="2">
-							<Accordion.Header>How we Offer Best Prices</Accordion.Header>
+							<Accordion.Header>
+								Hoe bieden wij de beste prijzen aan?
+							</Accordion.Header>
 							<Accordion.Body>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Onze producten komen rechtstreeks van de fabrikanten. Zonder
+								tussenpersonen is de prijs voordelig
 							</Accordion.Body>
 						</Accordion.Item>
 						<Accordion.Item eventKey="3">
-							<Accordion.Header>Do You Offer Discounts ?</Accordion.Header>
+							<Accordion.Header>Bieden jullie kortingen aan?</Accordion.Header>
 							<Accordion.Body>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Helaas niet. De prijs is aantrekkelijk omdat de producten
+								rechtstreeks van de fabrikanten komen en van de hoogste
+								kwaliteit zijn.
 							</Accordion.Body>
 						</Accordion.Item>
 					</Accordion>
