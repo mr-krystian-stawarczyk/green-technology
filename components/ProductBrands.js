@@ -7,12 +7,7 @@ function ProductBrands() {
 		<Container fluid className="overflow-hidden rounded shadow-lg my-3">
 			<Row className="truck-road bg-dark">
 				<Col className="truck">
-					<Image
-						width={80}
-						height={80}
-						src="/assets/Bez tytułu (80×80 px).png"
-						alt="truck"
-					/>
+					<Image width="80" height="80" src="/assets/truck.png" alt="truck" />
 				</Col>
 			</Row>
 			<Row
