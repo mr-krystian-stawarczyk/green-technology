@@ -40,3 +40,19 @@ export { default as Reviews } from "./Reviews";
 export { default as HeaderCounted } from "./HeaderCounted";
 export { default as HeaderCards } from "./HeaderCards";
 export { default as SanityWork } from "./SanityWork";
+
+export { default as HeaderN1 } from "./HeaderN1";
+
+export { default as HeaderN2 } from "./HeaderN2";
+export { default as Offer } from "./Offer";
+export { default as Solar2N } from "./Solar2N";
+export { default as Solar3N } from "./Solar3N";
+
+export { default as About1 } from "./About1";
+export { default as About2 } from "./About2";
+export { default as About3 } from "./About3";
+export { default as About4 } from "./About4";
+
+export { default as SanitySolar } from "./SanitySolar";
+export { default as SanityPump } from "./SanityPump";
+export { default as SanityKlima } from "./SanityKlima";

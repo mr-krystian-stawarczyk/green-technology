@@ -101,8 +101,7 @@ function Reviews({}) {
 	});
 	return (
 		<Container
-			fluid
-			className=" vh-full text-dark  d-flex align-items-center  p-2 border-0 mt-5 shadow-lg"
+			className=" vh-full text-dark  d-flex align-items-center  p-2 border-0 mt-5 "
 			ref={sectionRef}
 		>
 			<Row
@@ -115,10 +114,14 @@ function Reviews({}) {
 				{" "}
 				<Row className="py-3 ">
 					<animated.div style={animationPropsMiddle}>
-						<h1>Sluit je aan bij onze tevreden klanten uit heel Nederland!</h1>
+						<Col lg={7}>
+							<h1>
+								Sluit je aan bij onze tevreden klanten uit heel Nederland!
+							</h1>
+						</Col>
 					</animated.div>
 				</Row>
-				<Col lg={5} className="p-3 mx-2  rounded bg-am-green">
+				<Col lg={5} className="p-3 mx-2  rounded ">
 					<animated.div style={animationProps}>
 						<Card
 							style={{

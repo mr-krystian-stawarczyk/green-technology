@@ -1,11 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Card, Carousel, Button } from "react-bootstrap";
+import {
+	Container,
+	Row,
+	Col,
+	Card,
+	Carousel,
+	Button,
+	CardGroup,
+} from "react-bootstrap";
 import { urlFor } from "../lib/client";
 import sanityClient from "@sanity/client";
 import { useSpring, animated } from "react-spring";
+import Nav from "react-bootstrap/Nav";
+import Link from "next/link";
 
 function SanityWork() {
-	const [products, setProducts] = useState([]);
+	const [all, setAll] = useState([]);
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -18,8 +28,8 @@ function SanityWork() {
 	const [animateImg, setAnimateImg] = useState(false);
 
 	const fetchData = async () => {
-		const result = await client.fetch(`*[_type == "product"]`);
-		setProducts(result);
+		const result = await client.fetch(`*[_type == "all"]`);
+		setAll(result);
 	};
 
 	useEffect(() => {
@@ -59,49 +69,53 @@ function SanityWork() {
 		delay: 1000,
 	});
 
+	const animationPropsMiddle = useSpring({
+		from: { opacity: 0 },
+		to: {
+			opacity: animate ? 1 : 0,
+		},
+		config: { duration: 1000 },
+		delay: 1000,
+	});
+
 	return (
-		<Container fluid className=" shadow-lg py-3 " ref={sectionRef}>
+		<Container className=" py-3 vh-full  my-2" ref={sectionRef}>
 			<Row className="justify-content-center align-items-center text-center mt-5 text-dark">
-				<h1 className="py-3">Bekijk onze nieuwste projecten</h1>
-			</Row>
-			<Row className="justify-content-center align-items-center text-center">
-				<Col lg={6}>
+				<Col>
 					{" "}
 					<animated.div style={animationProps}>
-						<Carousel loop indicators={false}>
-							{products.map((product) => (
-								<Carousel.Item
-									key={product._id}
-									className="justify-content-center align-items-center text-center"
-								>
-									<Card
-										key={product._id}
-										className=" bg-transparent text-dark border-0   "
-									>
-										<Card.Img
-											src={urlFor(product.image && product.image[0])}
-											style={{ maxHeight: "30rem", maxWidth: "40rem" }}
-											className="rounded justify-content-center mx-auto"
-										/>
-										<Card.Body className="bg-transparent text-dark rounded">
-											<Card.Title>{product.name}</Card.Title>
-											<Card.Text>{product.details}</Card.Text>
-										</Card.Body>
-									</Card>
+						<h1 className="py-3 text-start">Bekijk onze nieuwste projecten</h1>{" "}
+					</animated.div>
+				</Col>
+			</Row>
+			<Row className="justify-content-center align-items-center text-center">
+				<Col lg={8}>
+					<animated.div style={animationPropsMiddle}>
+						<Carousel className="shadow-lg">
+							{all.map((item) => (
+								<Carousel.Item key={item._id} style={{ height: "500px" }}>
+									<img
+										className="d-block w-100 carousel-imgs "
+										src={urlFor(item.image && item.image[0])}
+										alt={item.name}
+									/>
+									<Carousel.Caption>
+										<h3>{item.name}</h3>
+										<p>{item.details}</p>
+									</Carousel.Caption>
 								</Carousel.Item>
 							))}
-						</Carousel>
+						</Carousel>{" "}
 					</animated.div>
 				</Col>
-				<Col lg={6}>
-					<animated.div style={imgAnimationProps}>
-						<Card.Img
-							variant="top"
-							src="/assets/sanity-work.png"
-							style={{ maxHeight: "30rem", maxWidth: "40rem" }}
-						/>
-					</animated.div>
-				</Col>
+
+				<Row className="my-2">
+					<Col>
+						<Nav.Link as={Link} href="#contact" className="mx-2">
+							<Button className="nav-blue-bg border-0">Meer Projecten</Button>
+						</Nav.Link>
+					</Col>
+				</Row>
 			</Row>
 		</Container>
 	);

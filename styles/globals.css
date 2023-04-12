@@ -34,6 +34,10 @@ body,
 	}
 }
 
+.text-green {
+	color: #34c00f;
+}
+
 .typewriter p {
 	font-size: 5rem;
 	text-align: center;
@@ -58,7 +62,7 @@ body,
 }
 
 .bg-am-green {
-	background-color: rgba(40, 167, 69, 1);
+	background-color: #28a745;
 }
 
 .bg-am-blue {
@@ -91,13 +95,76 @@ body,
 	background-color: rgb(17, 147, 246) !important;
 }
 
+.second-bg {
+	background-color: #174873 !important;
+}
+.bg-amg {
+	background-color: #28a745 !important;
+}
+
 .star {
 	color: gold !important;
+}
+
+.offer-bg {
+	background-color: #174873;
 }
 
 .icons {
 	font-size: 5rem;
 	color: white;
+}
+
+.header-card {
+	position: absolute !important;
+	top: 50%;
+	left: 10%;
+}
+
+@media (max-width: 768px) {
+	.header-card {
+		max-width: 35rem !important;
+		display: flex;
+	}
+}
+
+.carousel-imgs {
+	height: 100%; /* make the image fill the container height */
+	object-fit: cover; /* make the image cover the container without distorting aspect ratio */
+}
+
+@media (max-width: 368px) {
+	.header-card {
+		max-width: 15rem !important;
+		display: flex;
+	}
+}
+
+.header-card-bg {
+	background-color: #174873e5 !important;
+}
+
+.counted-bg {
+	background-image: url("../public/assets/header-bg.png");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
+.nav-blue-bg {
+	background-color: #28a745 !important;
+}
+
+.nav-blue-bg:hover {
+	background-color: #174873 !important;
+}
+.nav-blue-btn {
+	background-color: white !important;
+	color: black !important;
+}
+
+.nav-blue-btn:hover {
+	background-color: #174873 !important;
+	color: rgb(255, 255, 255) !important;
 }
 
 .logo {
@@ -119,7 +186,7 @@ body,
 }
 
 .header-bg {
-	background-image: url("../public/assets/side-wave_background.png");
+	background-image: url("../public/assets/header-bg.png");
 	background-repeat: no-repeat, repeat;
 	background-size: cover;
 }
@@ -130,10 +197,14 @@ body,
 	background-size: cover;
 }
 
+.about-bg {
+	background-image: url("../public/assets/bateria2.jpg");
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+}
+
 .footer-bg {
-	background-image: url("../public/assets/Projekt\ bez\ tytułu\ \(3\).png");
-	background-repeat: no-repeat, repeat !important;
-	background-size: cover !important;
+	background-color: rgb(23, 72, 115);
 }
 
 .typewriter-bg {

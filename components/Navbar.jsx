@@ -1,16 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Container, Button, Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
+import Link from "next/link";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
-
+import { AiOutlineHome } from "react-icons/ai";
+import { MdPhoneInTalk } from "react-icons/md";
 const NavbarComp = () => {
 	const [scrolled, setScrolled] = useState(false);
-
+	function handleCall() {
+		window.location.href = "tel:+31649932604";
+		// Replace +1234567890 with the phone number that you want to call
+	}
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 0) {
@@ -33,14 +38,12 @@ const NavbarComp = () => {
 			fixed="top"
 			style={{
 				height: "70px",
-				backgroundColor: scrolled ? "#ffffffff" : "transparent",
-				transition: "background-color 0.5s ease",
 			}}
-			className="nav-transition rounded-bottom "
+			className="nav-transition  bg-white"
 			collapseOnSelect
 		>
 			<Container>
-				<Navbar.Brand as={Link} href="/" className="blur rounded p-1 ">
+				<Navbar.Brand as={Link} href="/" className=" rounded p-1 ">
 					<Image
 						alt=""
 						src="/assets/logo2.png"
@@ -61,13 +64,14 @@ const NavbarComp = () => {
 				>
 					<Nav className="navbar-collapse justify-content-end text-center rounded">
 						<Nav.Link as={Link} href="/" className="mx-2 ">
-							<Button variant=" btn-lg btn-green shadow-lg">Home</Button>
+							<Button variant=" btn-lg   py-2 shadow-lg nav-blue-btn border-0">
+								<AiOutlineHome />
+							</Button>
 						</Nav.Link>
-
 						<NavDropdown
-							title="Products"
+							title="Producten"
 							id="basic-nav-dropdown"
-							className=" rounded shadow-lg  mx-2 text-dark btn-green "
+							className=" rounded shadow-lg  mx-2   nav-blue-btn"
 							style={{
 								borderColor: "#cccccc",
 								borderWidth: 1,
@@ -75,48 +79,60 @@ const NavbarComp = () => {
 							}} // add custom styles
 						>
 							<NavDropdown.Item as={Link} href="products" className="">
-								<Button variant=" btn-lg btn-green shadow-lg">
+								<Button className="w-100 border-0 nav-blue-btn ">
 									{" "}
 									Producten
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Divider />
 							<NavDropdown.Item as={Link} href="/solar">
-								<Button variant="" className="w-100 btn-green">
+								<Button className="w-100 border-0 nav-blue-btn ">
 									Zonnepanelen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/pumps">
-								<Button variant="" className="w-100 btn-green">
+								<Button className="w-100 border-0 nav-blue-btn ">
 									Warmtepompen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/klimatization">
-								<Button variant="" className="w-100 btn-green">
+								<Button className="w-100 border-0 nav-blue-btn ">
 									Airconditioning
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/bateries">
-								<Button variant="" className="w-100 btn-green">
+								<Button className="w-100 border-0 nav-blue-btn ">
 									Batterijen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 						</NavDropdown>
-
-						<Nav.Link as={Link} href="/about" className="mx-2">
-							<Button variant=" btn-lg btn-green  shadow-lg">About</Button>
-						</Nav.Link>
-
 						<Nav.Link as={Link} href="/work" className="mx-2">
-							<Button variant=" btn-lg btn-green shadow-lg"> Work</Button>
+							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
+								{" "}
+								Werk
+							</Button>
 						</Nav.Link>
-
-						<Nav.Link as={Link} href="/contact" className="mx-2">
-							<Button variant=" btn-lg btn-green  shadow-lg">Contact</Button>
+						<Nav.Link as={Link} href="/about" className="mx-2">
+							<Button variant=" btn-lg   shadow-lg nav-blue-btn ">
+								Over Ons
+							</Button>
+						</Nav.Link>{" "}
+						<Button
+							className="btn-lg   shadow-lg nav-blue-btn border-0"
+							onClick={handleCall}
+						>
+							<MdPhoneInTalk className="m-1" />
+							649 932 604
+						</Button>
+						<Nav.Link as={Link} href="#contact" className="mx-2">
+							<Button variant=" btn-lg nav-blue-bg text-white shadow-lg">
+								{" "}
+								Snel Kontakt
+							</Button>
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

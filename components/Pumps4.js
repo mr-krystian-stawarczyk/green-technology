@@ -5,33 +5,36 @@ import Link from "next/link";
 
 function Pumps4() {
 	return (
-		<Row className=" text-center justify-content-center align-items-center vh-full my-2 shadow-lg bg-primary">
-			<Col xl={5} lg={5} className=" p-3 rounded blur shadow-lg rounded">
+		<Row className=" text-center justify-content-center align-items-center my-2  ">
+			<Col xl={5} lg={5} className=" p-3 rounded   rounded">
 				{" "}
-				<Card className="border-0 shadow-lg">
-					<Card.Img src="/assets/Heikopump.jpg" className="shadow-lg" />
+				<Card className="border-0 ">
+					<Card.Img src="/assets/Heikopump.jpg" className="" />
 				</Card>{" "}
 			</Col>{" "}
-			<Col xl={5} lg={5} className="blur p-3 mx-2 shadow-lg">
+			<Col xl={5} lg={5} className=" p-3 mx-2 ">
 				<Card
 					style={{
 						border: "none",
 					}}
 					className="bg-transparent "
 				>
-					<Card.Body className="text-center">
-						<p className="lead text-white">
-							THERMAL monoblock heat pumps are energy efficient devices which
-							draw energy from the air and use it to heat or cool the building
-							and prepare heat utility water. They can be used in single- family
-							houses as well as commercial buildings. Heiko’s heat pumps are
-							advanced devices, which guarantee efficient and safe operation.
-						</p>
-						<Nav.Link as={Link} href="https://heiko.pl/en/offer/heat-pumps/">
-							<Button variant="light btn-md p-2 text-uppercase text-bold shadow-lg">
-								Haeiko.pl
-							</Button>
-						</Nav.Link>{" "}
+					<Card.Body className="text-start">
+						<h4 className=" text-dark">Wij voeren een betrouwbare audit uit</h4>{" "}
+						<h4 className=" text-dark">
+							Elk van onze offertes wordt voorafgegaan betrouwbare controle
+						</h4>{" "}
+						<h5>
+							{" "}
+							We kiezen niet zomaar een toestel. Iedereen die bij ons komt de
+							klant moet voorbereid zijn op een reeks uitputtende vragen met
+							betrekking tot het gebouw en een bezoek van een
+							installateur/monteur/simpelweg leuke knappe meneer 😀 om de C.O.
+						</h5>
+						<h5>
+							Pas na deze twee belangrijke stappen kunnen we het halen
+							verantwoorde keuze van het apparaat en een bindende offerte.
+						</h5>
 					</Card.Body>
 				</Card>
 			</Col>{" "}

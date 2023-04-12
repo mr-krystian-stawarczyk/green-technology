@@ -10,8 +10,8 @@ import {
 	Form,
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { AiFillInstagram, AiOutlineFacebook } from "react-icons/ai";
-import { FaTiktok } from "react-icons/fa";
+import { AiOutlineCheckCircle } from "react-icons/ai";
+
 import Nav from "react-bootstrap/Nav";
 import ContactForm from "./ContactForm";
 import emailjs from "emailjs-com";
@@ -98,14 +98,19 @@ function Footer() {
 		delay: 1000,
 	});
 	return (
-		<Container fluid className="overflow-hidden shadow-md" ref={sectionRef}>
+		<Container
+			fluid
+			className="overflow-hidden shadow-md"
+			ref={sectionRef}
+			id="contact"
+		>
 			<Row className="justify-content-center align-items-center text-center">
 				{" "}
 				<Col lg={6} sm={12} className="footer-bg p-4">
 					<animated.div style={animationProps}>
 						{" "}
 						<Row className="text-start">
-							<Col>
+							<Col className="text-white">
 								<Card className="border-0 bg-transparent">
 									<Card.Body>
 										<span className="display-5">AM Greenenergy</span>
@@ -116,38 +121,30 @@ function Footer() {
 										<h4>Wij zullen zo snel mogelijk contact met u opnemen</h4>
 										Hier voeren we het adres in
 										<h3>Bel ons:</h3>
-										<h2 className="bg-dark p-2 text-primary rounded hover">
-											692 467 909
-										</h2>
+										<a href="tel:+31649932604">
+											<h1 className="p-2 text-green rounded hover">
+												649 932 604
+											</h1>
+										</a>
 										<Card.Text className="hover">
-											{" "}
-											<Image
-												src="/assets/check-img.png"
-												height={30}
-												width={30}
-												alt="check"
-												className="mr-1 pr-2"
-											></Image>
+											<AiOutlineCheckCircle
+												className="text-green m-1 "
+												style={{ height: "28px", width: "28px" }}
+											/>
 											<span className="">Snelle en efficiënte installatie</span>
 										</Card.Text>
 										<Card.Text className="hover">
-											<Image
-												src="/assets/check-img.png"
-												height={30}
-												width={30}
-												alt="check"
-												className="mr-1 pr-2"
-											></Image>
+											<AiOutlineCheckCircle
+												className="text-green m-1 "
+												style={{ height: "28px", width: "28px" }}
+											/>
 											<span className="">Volledig aanbod</span>
 										</Card.Text>
 										<Card.Text className="hover">
-											<Image
-												src="/assets/check-img.png"
-												height={30}
-												width={30}
-												alt="check"
-												className="mr-1 pr-2"
-											></Image>
+											<AiOutlineCheckCircle
+												className="text-green m-1 "
+												style={{ height: "28px", width: "28px" }}
+											/>
 											<span className="">Professioneel team</span>
 										</Card.Text>
 									</Card.Body>
@@ -166,7 +163,7 @@ function Footer() {
 							>
 								<Row>
 									<Row>
-										<h1 className="py-3">Snelle Contact </h1>
+										<h1 className="py-3">Snel Konakt </h1>
 									</Row>
 									<Col>
 										<Form.Group
@@ -233,7 +230,7 @@ function Footer() {
 									<Col>
 										<Button
 											type="submit"
-											className="p-text m-2 btn-green btn-lg text-uppercase"
+											className="p-text m-2 nav-blue-bg border-0"
 										>
 											{loading ? "Verzenden ..." : "Stuur"}
 										</Button>

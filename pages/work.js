@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import { urlFor } from "../lib/client";
-import { Product } from "../components";
+import { Product, Reviews } from "../components";
 import sanityClient from "@sanity/client";
 import { useSpring, animated } from "react-spring";
 
@@ -20,37 +20,23 @@ function Work() {
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
-	const [projects, setProjects] = useState([]);
-	const [products, setProducts] = useState([]);
-	useEffect(() => {
-		const fetchProjects = async () => {
-			const query = `*[_type == "project"]{
-		  title,
-		  description,
-		  mainImage{
-			asset->{
-			  _id,
-			  url
-			},
-			alt
-		  }
-		}`;
-
-			const results = await client.fetch(query);
-			setProjects(results);
-		};
-
-		fetchProjects();
-	}, []);
+	const [all, setAll] = useState([]);
+	const [solar, setSolar] = useState([]);
+	const [pump, setPump] = useState([]);
+	const [klima, setKlima] = useState([]);
+	const fetchData = async () => {
+		const result = await client.fetch(
+			`*[_type in ["all", "solar", "pumps","klima"]]`
+		);
+		setAll(result.filter((all) => all._type === "all"));
+		setSolar(result.filter((solar) => solar._type === "solar"));
+		setPump(result.filter((pump) => pump._type === "pumps"));
+		setKlima(result.filter((klima) => klima._type === "klima"));
+	};
 
 	useEffect(() => {
-		const fetchData = async () => {
-			const result = await client.fetch(`*[_type == "product"]`);
-			setProducts(result);
-		};
 		fetchData();
 	}, []);
-
 	const handleIntersection = (entries) => {
 		if (entries[0].isIntersecting) {
 			setAnimate(true);
@@ -86,127 +72,136 @@ function Work() {
 
 	return (
 		<div ref={sectionRef}>
-			<Container fluid className=" ">
+			<Container className=" ">
 				<Row
-					className="text-center pt-5 d-flex vh-full justify-content-center align-items-center  testimonial-bg "
+					className="text-center pt-5 d-flex vh-full justify-content-center align-items-center  "
 					style={{
 						alignItems: "center",
 						justifyContent: "center",
 					}}
 				>
-					<Col lg={5} className="blur p-3 mx-2 shadow-lg blur">
-						<animated.div style={animationProps}>
-							{" "}
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent "
+					<Row className="mt-5 pt-5 text-start">
+						<Col lg={6}>
+							<h1>We presenteren hier onze laatste projecten</h1>
+						</Col>
+						<Col lg={6}>
+							<Button href="#pumps" className="m-2 nav-blue-bg border-0 btn-lg">
+								Pumps
+							</Button>
+							<Button href="#solar" className="m-2 nav-blue-bg border-0 btn-lg">
+								Solar
+							</Button>
+							<Button href="#klima" className="m-2 nav-blue-bg border-0 btn-lg">
+								Klima
+							</Button>
+							<Button
+								href="#newest"
+								className="m-2 nav-blue-bg border-0 btn-lg"
 							>
-								<Card.Body className="text-center">
-									<p className="lead text-dark text-uppercase">
-										Working in green technologies involves developing and
-										implementing sustainable solutions that minimize the
-										negative impact of human activities on the environment. This
-										field encompasses a wide range of disciplines, including
-										renewable energy, energy efficiency, waste management, and
-										sustainable transportation.
-									</p>
-								</Card.Body>
-							</Card>{" "}
-						</animated.div>
-					</Col>
-					<Col lg={5} className="blur p-3 shadow-lg rounded">
-						<animated.div style={animationProps}>
-							{" "}
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent "
-							>
-								<Card.Img src="/assets/work1.jpg" className="shadow-lg" />
-							</Card>{" "}
-						</animated.div>
-					</Col>
-				</Row>
-				<Row
-					className=" text-center d-flex justify-content-center align-items-center vh-full header-bg text-dark "
-					style={{
-						alignItems: "center",
-						justifyContent: "center",
-					}}
-				>
-					<Col lg={5} className="blur p-3 shadow-lg rounded">
-						<animated.div style={animationProps2}>
-							{" "}
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent shadow-lg"
-							>
-								<Card.Img src="/assets/work2.jpg" className="shadow-lg" />
-							</Card>{" "}
-						</animated.div>
-					</Col>
-					<Col lg={5} className="blur p-3 shadow-lg rounded mx-2">
-						<animated.div style={animationProps2}>
-							<Card
-								style={{
-									border: "none",
-								}}
-								className="bg-transparent "
-							>
-								<Card.Body className="text-center p-3 ">
-									<p className="lead">
-										{" "}
-										Green technologies offer a unique opportunity to combine
-										innovative thinking with environmental stewardship, creating
-										a better world for present and future generations. As such,
-										working in green technologies can be a fulfilling and
-										rewarding career path for individuals who are passionate
-										about making a positive impact on the planet.
-									</p>
-								</Card.Body>
-							</Card>
-						</animated.div>
-					</Col>
-				</Row>
-				<Row className="d-flex align-items-center justify-content-center  header-bg vh-full  pb-5">
-					<Row className="align-items-center justify-content-center text-center">
-						<Col
-							lg={10}
-							className="text-dark text-center blur shadow-sm  rounded "
-						>
-							{" "}
-							<p className="display-1 m-2 mt-3">Check Out Our Latest Work</p>
+								Neu
+							</Button>
 						</Col>
 					</Row>
-					{products.map((product) => (
-						<Col
-							lg={5}
-							key={product._id}
-							className="m-2 col-md-10 blur p-3 shadow-lg rounded"
-						>
-							<Card
-								key={product._id}
-								className=" bg-transparent text-dark border-0  hover p-3 "
-							>
-								<Card.Img
-									variant="top"
-									src={urlFor(product.image && product.image[0])}
-									style={{ maxHeight: "20rem", minHeight: "16rem" }}
-									className="rounded"
-								/>
-								<Card.Body className="bg-white rounded">
-									<Card.Title>Name:{product.name}</Card.Title>
-									<Card.Text>Details:{product.details}</Card.Text>
-								</Card.Body>
-							</Card>
+
+					<Row
+						id="newest"
+						className="vh-full justify-content-center align-items-center"
+					>
+						<Col lg={8}>
+							<Carousel className="shadow-lg">
+								{all.map((all) => (
+									<Carousel.Item key={all._id} style={{ height: "500px" }}>
+										<img
+											className="d-block w-100 carousel-imgs "
+											src={urlFor(all.image && all.image[0])}
+											alt={all.name}
+										/>
+										<Carousel.Caption>
+											<h3>{all.name}</h3>
+											<p>{all.details}</p>
+										</Carousel.Caption>
+									</Carousel.Item>
+								))}
+							</Carousel>{" "}
 						</Col>
-					))}
+					</Row>
+
+					<Row
+						id="pumps"
+						className="vh-full justify-content-center align-items-center"
+					>
+						<h1>Pump</h1>{" "}
+						<Col lg={8}>
+							<Carousel className="shadow-lg">
+								{pump.map((pump) => (
+									<Carousel.Item key={pump._id} style={{ height: "500px" }}>
+										<img
+											className="d-block w-100 carousel-imgs "
+											src={urlFor(pump.image && pump.image[0])}
+											alt={pump.name}
+										/>
+										<Carousel.Caption>
+											<h3>{pump.name}</h3>
+											<p>{pump.details}</p>
+										</Carousel.Caption>
+									</Carousel.Item>
+								))}
+							</Carousel>{" "}
+						</Col>
+					</Row>
+					<Row
+						id="solar"
+						className="vh-full justify-content-center align-items-center"
+					>
+						<Row>
+							<h1>Solar</h1>{" "}
+						</Row>
+						<Col lg={8}>
+							<Carousel className="shadow-lg">
+								{solar.map((solar) => (
+									<Carousel.Item key={solar._id} style={{ height: "500px" }}>
+										<img
+											className="d-block w-100 carousel-imgs "
+											src={urlFor(solar.image && solar.image[0])}
+											alt={solar.name}
+										/>
+										<Carousel.Caption>
+											<h3>{solar.name}</h3>
+											<p>{solar.details}</p>
+										</Carousel.Caption>
+									</Carousel.Item>
+								))}
+							</Carousel>{" "}
+						</Col>
+					</Row>
+					<Row
+						id="klima"
+						className="vh-full justify-content-center align-items-center"
+					>
+						<Row>
+							<h1>Klima</h1>{" "}
+						</Row>
+						<Col lg={8}>
+							<Carousel className="shadow-lg">
+								{klima.map((klima) => (
+									<Carousel.Item key={klima._id} style={{ height: "500px" }}>
+										<img
+											className="d-block w-100 carousel-imgs "
+											src={urlFor(klima.image && klima.image[0])}
+											alt={klima.name}
+										/>
+										<Carousel.Caption>
+											<h3>{klima.name}</h3>
+											<p>{klima.details}</p>
+										</Carousel.Caption>
+									</Carousel.Item>
+								))}
+							</Carousel>{" "}
+						</Col>
+					</Row>
 				</Row>
+
+				<Reviews />
 			</Container>
 		</div>
 	);

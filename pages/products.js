@@ -7,11 +7,13 @@ import { useSpring, animated } from "react-spring";
 
 import { useRouter } from "next/router";
 import {
+	Offer,
 	Product1,
 	Product2,
 	Product3,
 	Product4,
 	ProductBrands,
+	Reviews,
 } from "../components";
 function Products() {
 	const router = useRouter();
@@ -45,12 +47,9 @@ function Products() {
 	return (
 		<>
 			<Container fluid className="my-2 pt-5 " ref={sectionRef}>
+				<Offer />
 				<ContactForm />
-				<Product1 />
-				<Product2 />
-				<Product3 />
-				<Product4 />
-				<ProductBrands />
+				<Reviews />
 			</Container>
 		</>
 	);

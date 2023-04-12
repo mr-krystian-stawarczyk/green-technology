@@ -1,4 +1,6 @@
-import product from './product'
 import counts from './counts'
-
-export const schemaTypes = [product, counts]
+import solar from './solar'
+import pumps from './pumps'
+import klima from './klima'
+import all from './all'
+export const schemaTypes = [solar, counts, pumps, klima, all]

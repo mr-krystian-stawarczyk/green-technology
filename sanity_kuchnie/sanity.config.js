@@ -6,7 +6,7 @@ import {schemaTypes} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'kuchnie',
-  projectId: process.env.NEXT_PUBLIC_PROJECTID,
+  projectId: '3go1z0b0',
   dataset: 'production',
   plugins: [deskTool(), visionTool()],
 

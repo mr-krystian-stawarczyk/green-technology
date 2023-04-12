@@ -8,17 +8,18 @@ import {
 	Klima5,
 	Klima6,
 	ProductBrands,
+	Reviews,
+	SanityKlima,
+	SanityWork,
 } from "../components";
 function klimatization() {
 	return (
 		<Container fluid className="mt-5 rounded">
 			<Klima1 />
 			<Klima2 />
-			<Klima3 />
-			<Klima4 />
-			<Klima6 />
-			<Klima5 />
-			<ProductBrands />
+
+			<SanityKlima />
+			<Reviews />
 		</Container>
 	);
 }

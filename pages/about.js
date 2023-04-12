@@ -1,6 +1,17 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Header, Header5, ProductBrands } from "../components";
+import {
+	About1,
+	About2,
+	About3,
+	About4,
+	Header,
+	Header5,
+	HeaderSlides,
+	ProductBrands,
+	Reviews,
+	SanityWork,
+} from "../components";
 
 function About() {
 	const [fade, setFade] = React.useState(false);
@@ -11,50 +22,11 @@ function About() {
 
 	return (
 		<>
-			<Container fluid className="">
-				<Row>
-					<Row className="text-center align-items-center justify-content-center text-dark blur pt-5 mb-2 vh-full">
-						<Col
-							lg={10}
-							xs={8}
-							className="    rounded text-center text-slide shadow-lg mt-5"
-						>
-							<h3 className="">
-								Welcome to our companys subpage! We specialize in providing
-								heating pumps and solar panels for residential and commercial
-								properties.
-							</h3>
-						</Col>
-						<Col
-							lg={10}
-							xs={8}
-							className="  rounded text-center text-slide shadow-lg "
-						>
-							<h3>
-								Our heating pumps use advanced technology to provide efficient
-								and cost-effective heating solutions, while our solar panels
-								harness the power of the sun to provide renewable energy for
-								your property.
-							</h3>
-						</Col>
-						<Col
-							lg={10}
-							xs={8}
-							className=" rounded text-center  text-slide shadow-lg "
-						>
-							<h3>
-								With over 20 years of experience in the industry, were committed
-								to providing the highest quality products and services to our
-								customers.
-							</h3>
-						</Col>
-					</Row>
-					<Row className="text-center align-items-center"></Row>
-				</Row>
-			</Container>
-			<Header />
-			<Header5 />
-			<ProductBrands />
+			<About1 />
+			<About2 />
+			<About3 />
+			<About4 />
+			<Reviews />
 		</>
 	);
 }

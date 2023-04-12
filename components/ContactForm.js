@@ -85,10 +85,10 @@ export const ContactForm = () => {
 	return (
 		<div ref={sectionRef}>
 			<Row
-				className="align-items-center justify-content-center vh-full text-center  testimonial-bg"
+				className="align-items-center justify-content-center vh-full text-center "
 				id="price"
 			>
-				<Col lg={5} className="blur p-3 mx-2 shadow-lg rounded">
+				<Col lg={5} className="blur p-3 rounded">
 					<animated.div style={imgAnimationProps}>
 						<Card
 							style={{
@@ -98,8 +98,8 @@ export const ContactForm = () => {
 						>
 							<Card.Body className="text-center ">
 								<p className="lead">
-									Fill the form to get a personalized prices and advice to go
-									green the most efficient way !
+									Vul het formulier in voor gepersonaliseerde prijzen en advies
+									om op de meest efficiënte manier groen te worden!
 								</p>
 							</Card.Body>
 						</Card>{" "}
@@ -107,7 +107,7 @@ export const ContactForm = () => {
 				</Col>
 				<Col
 					lg={5}
-					className=" rounded  p-5 blur  shadow-lg m-2"
+					className=" rounded  p-5 blur  m-2"
 					style={{
 						border: "1px solid green",
 					}}
@@ -123,7 +123,7 @@ export const ContactForm = () => {
 										<Form.Control
 											className="p-text"
 											type="text"
-											placeholder="Your Name"
+											placeholder="Uw naam"
 											value={name}
 											name="name"
 											onChange={handleChangeInput}
@@ -136,7 +136,7 @@ export const ContactForm = () => {
 										<Form.Control
 											className="p-text"
 											type="text"
-											placeholder="Your Phone"
+											placeholder="Uw telefoon"
 											value={phone}
 											name="phone"
 											onChange={handleChangeInput}
@@ -149,7 +149,7 @@ export const ContactForm = () => {
 										<Form.Control
 											className="p-text"
 											type="email"
-											placeholder="Your E-mail"
+											placeholder="Uw e-mail"
 											value={email}
 											name="email"
 											onChange={handleChangeInput}
@@ -161,11 +161,11 @@ export const ContactForm = () => {
 							<Row>
 								<Col>
 									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Label>Your Description</Form.Label>
+										<Form.Label>Uw beschrijving</Form.Label>
 										<Form.Control
 											className="p-text"
 											as="textarea"
-											placeholder="Your Description"
+											placeholder="Uw beschrijving"
 											value={description}
 											name="description"
 											onChange={handleChangeInput}
@@ -179,7 +179,7 @@ export const ContactForm = () => {
 							<Row className="justify-content-center align-items-center">
 								<Col>
 									<Button type="submit" className="p-text m-2 btn-green btn-lg">
-										{loading ? "Sending..." : "Get Indyvidual Price"}
+										{loading ? "Sending..." : "STUUR"}
 									</Button>
 								</Col>
 							</Row>

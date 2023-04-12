@@ -9,17 +9,18 @@ import {
 	Pumps3,
 	Pumps4,
 	Pumps5,
+	SanityPump,
+	SanityWork,
 } from "../components";
 
 function pumps() {
 	return (
 		<Container fluid className="mt-5 rounded">
-			<Pumps1 />
 			<Pumps2 />
 			<Pumps3 />
 			<Pumps4 />
 			<Pumps5 />
-			<ProductBrands />
+			<SanityPump />
 		</Container>
 	);
 }
