@@ -112,83 +112,89 @@ export const ContactForm = () => {
 						border: "1px solid green",
 					}}
 				>
-					{!isFormSubmitted ? (
-						<Form
-							className="app__footer-form app__flex"
-							onSubmit={handleSubmit}
-						>
-							<Row>
-								<Col>
-									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Control
-											className="p-text"
-											type="text"
-											placeholder="Uw naam"
-											value={name}
-											name="name"
-											onChange={handleChangeInput}
-											required
-										/>
-									</Form.Group>
-								</Col>
-								<Col>
-									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Control
-											className="p-text"
-											type="text"
-											placeholder="Uw telefoon"
-											value={phone}
-											name="phone"
-											onChange={handleChangeInput}
-											required
-										/>
-									</Form.Group>
-								</Col>
-								<Col>
-									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Control
-											className="p-text"
-											type="email"
-											placeholder="Uw e-mail"
-											value={email}
-											name="email"
-											onChange={handleChangeInput}
-											required
-										/>
-									</Form.Group>
-								</Col>
-							</Row>
-							<Row>
-								<Col>
-									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Label>Uw beschrijving</Form.Label>
-										<Form.Control
-											className="p-text"
-											as="textarea"
-											placeholder="Uw beschrijving"
-											value={description}
-											name="description"
-											onChange={handleChangeInput}
-											rows={3}
-											required
-										/>
-									</Form.Group>
-								</Col>
-							</Row>
+					{" "}
+					<animated.div style={imgAnimationProps}>
+						{!isFormSubmitted ? (
+							<Form
+								className="app__footer-form app__flex"
+								onSubmit={handleSubmit}
+							>
+								<Row>
+									<Col>
+										<Form.Group className="mb-3" controlId="formBasicEmail">
+											<Form.Control
+												className="p-text"
+												type="text"
+												placeholder="Uw naam"
+												value={name}
+												name="name"
+												onChange={handleChangeInput}
+												required
+											/>
+										</Form.Group>
+									</Col>
+									<Col>
+										<Form.Group className="mb-3" controlId="formBasicEmail">
+											<Form.Control
+												className="p-text"
+												type="text"
+												placeholder="Uw telefoon"
+												value={phone}
+												name="phone"
+												onChange={handleChangeInput}
+												required
+											/>
+										</Form.Group>
+									</Col>
+									<Col>
+										<Form.Group className="mb-3" controlId="formBasicEmail">
+											<Form.Control
+												className="p-text"
+												type="email"
+												placeholder="Uw e-mail"
+												value={email}
+												name="email"
+												onChange={handleChangeInput}
+												required
+											/>
+										</Form.Group>
+									</Col>
+								</Row>
+								<Row>
+									<Col>
+										<Form.Group className="mb-3" controlId="formBasicEmail">
+											<Form.Label>Uw beschrijving</Form.Label>
+											<Form.Control
+												className="p-text"
+												as="textarea"
+												placeholder="Uw beschrijving"
+												value={description}
+												name="description"
+												onChange={handleChangeInput}
+												rows={3}
+												required
+											/>
+										</Form.Group>
+									</Col>
+								</Row>
 
-							<Row className="justify-content-center align-items-center">
-								<Col>
-									<Button type="submit" className="p-text m-2 btn-green btn-lg">
-										{loading ? "Sending..." : "STUUR"}
-									</Button>
-								</Col>
-							</Row>
-						</Form>
-					) : (
-						<div>
-							<h3 className="head-text"> Thank You For Contact!</h3>
-						</div>
-					)}
+								<Row className="justify-content-center align-items-center">
+									<Col>
+										<Button
+											type="submit"
+											className="p-text m-2 nav-blue-bg btn-lg border-0"
+										>
+											{loading ? "Sending..." : "Stuur"}
+										</Button>
+									</Col>
+								</Row>
+							</Form>
+						) : (
+							<div>
+								<h3 className="head-text"> Thank You For Contact!</h3>
+							</div>
+						)}{" "}
+					</animated.div>
 				</Col>
 			</Row>
 		</div>

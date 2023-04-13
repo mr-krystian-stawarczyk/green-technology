@@ -1,14 +1,21 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import {
+	Bateries1,
+	Bateries2,
+	Bateries3,
+	Reviews,
+	Solar2N,
+} from "../components";
 
 function bateries() {
 	return (
-		<Container fluid className="vh-100">
-			<Row className="justify-content-center align-items-center text-center mt-5 pt-5">
-				<Col>
-					<h1>Tutaj Sekcje Baterie ?</h1>
-				</Col>
-			</Row>
+		<Container fluid className="">
+			<Bateries1 />
+			<Bateries2 />
+			<Bateries3 />
+			<Solar2N />
+			<Reviews />
 		</Container>
 	);
 }

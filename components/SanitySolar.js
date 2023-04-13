@@ -73,7 +73,7 @@ function SanitySolar() {
 
 	return (
 		<div ref={sectionRef}>
-			<Container className=" ">
+			<Container className="">
 				<Row
 					className="text-center pt-5 d-flex vh-full justify-content-center align-items-center  "
 					style={{
@@ -83,36 +83,33 @@ function SanitySolar() {
 				>
 					<Row className="mt-5 pt-5 text-start">
 						<Col lg={6}>
-							<h1>We presenteren hier onze laatste projecten</h1>
+							<h1 className="my-5">
+								We presenteren hier onze laatste projecten
+							</h1>
 						</Col>
 					</Row>
 
 					<Row className="justify-content-center align-items-center text-center">
 						<Col lg={10}>
-							<Carousel>
-								{solar.map((item) => (
-									<Carousel.Item key={item._id} style={{ height: "600px" }}>
-										<img
-											className="d-block w-100 carousel-imgs"
-											src={urlFor(item.image && item.image[0])}
-											alt={item.name}
-										/>
-										<Carousel.Caption>
-											<h3>{item.name}</h3>
-											<p>{item.details}</p>
-										</Carousel.Caption>
-									</Carousel.Item>
-								))}
-							</Carousel>
+							{" "}
+							<animated.div style={animationProps}>
+								<Carousel>
+									{solar.map((item) => (
+										<Carousel.Item key={item._id} style={{ height: "600px" }}>
+											<img
+												className="d-block w-100 carousel-imgs"
+												src={urlFor(item.image && item.image[0])}
+												alt={item.name}
+											/>
+											<Carousel.Caption>
+												<h3>{item.name}</h3>
+												<p>{item.details}</p>
+											</Carousel.Caption>
+										</Carousel.Item>
+									))}
+								</Carousel>
+							</animated.div>
 						</Col>
-
-						<Row className="my-2">
-							<Col>
-								<Button className="nav-blue-bg border-0 text-white btn-md">
-									Werk
-								</Button>
-							</Col>
-						</Row>
 					</Row>
 				</Row>
 			</Container>

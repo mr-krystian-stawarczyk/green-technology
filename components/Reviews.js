@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Image from "react-bootstrap/Image";
 import { FaStar } from "react-icons/fa";
 import sanityClient from "@sanity/client";
 import CountUp from "react-countup";
@@ -142,14 +142,11 @@ function Reviews({}) {
 								<Col className="btn-light btn-lg p-2 text-uppercase text-bold  rounded">
 									<span className="lead text-bold">
 										<Card.Title>
-											<span className="display-4">+</span>
+											<span className="lead">+</span>
 											{isVisible && (
 												<CountUp start={0} end={300} duration={12} delay={0}>
 													{({ countUpRef }) => (
-														<span
-															className="count display-4"
-															ref={countUpRef}
-														/>
+														<span className="lead" ref={countUpRef} />
 													)}
 												</CountUp>
 											)}
@@ -175,8 +172,7 @@ function Reviews({}) {
 								<Image
 									src="/assets/face1.jpg"
 									alt="me"
-									width="350"
-									height="350"
+									fluid
 									className="rounded"
 								/>
 								<Carousel.Caption>
@@ -188,8 +184,7 @@ function Reviews({}) {
 								<Image
 									src="/assets/face2.jpg"
 									alt="me"
-									width="350"
-									height="350"
+									fluid
 									className="rounded"
 								/>
 
@@ -202,8 +197,7 @@ function Reviews({}) {
 								<Image
 									src="/assets/face3.jpg"
 									alt="me"
-									width="350"
-									height="350"
+									fluid
 									className="rounded"
 								/>
 

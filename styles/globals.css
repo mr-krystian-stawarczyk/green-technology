@@ -240,8 +240,9 @@ body,
 }
 
 .hover2:hover {
-	transform: scale(1.1);
-	transition: 1s ease-in-out;
+	transform: scale(1.2);
+	transition: 0.5s ease-in-out;
+	z-index: 999 !important;
 }
 
 .page-transition-enter {

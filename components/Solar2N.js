@@ -1,5 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { Container, Row, Col, Card, Carousel, Button } from "react-bootstrap";
+import {
+	Container,
+	Row,
+	Col,
+	Card,
+	Carousel,
+	Button,
+	CardGroup,
+} from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -8,7 +16,7 @@ import sanityClient from "@sanity/client";
 import CountUp from "react-countup";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { urlFor } from "../lib/client";
-
+import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 
 function Solar2N() {
@@ -103,8 +111,7 @@ function Solar2N() {
 	});
 	return (
 		<Container
-			fluid
-			className="  text-dark   align-items-center  p-2 border-0 mt-5 "
+			className="  text-dark   align-items-center  p-2 mt-2 border-0 "
 			ref={sectionRef}
 		>
 			<Row
@@ -115,150 +122,180 @@ function Solar2N() {
 				}}
 			>
 				{" "}
-				<Row className="py-3 text-start ">
-					<animated.div style={animationProps}>
-						<Col lg={6}>
-							{" "}
-							<h1>
-								Mogelijke oplossingen met behulp van fotovoltaïsche cellen
-							</h1>
-						</Col>
-					</animated.div>
+				<Row className=" text-start mt-2">
+					<Col lg={7}>
+						{" "}
+						<h1 className="my-5">
+							Mogelijke oplossingen met behulp van fotovoltaïsche cellen
+						</h1>
+					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
-					<Card
-						className="border-sm  rounded-0"
-						style={{
-							justifyContent: "center",
-							alignContent: "center",
-							alignItems: "center",
-							width: "18rem",
-							height: "25rem",
-						}}
-					>
-						<Card.Img
-							src="/assets/battery-mag.png"
-							style={{
-								width: "6rem",
-								height: "6rem",
-							}}
-							className="my-1"
-						/>
-						<Card.Body>
-							<Card.Title>Energie Magazijn</Card.Title>
-							<Card.Text>
-								Onafhankelijkheid van elektriciteitsprijzen en stroomuitval
-								huidig. Zorgen voor een meer kosteneffectieve installatie in de
-								aangekondigde dynamische tarieven met Uurtarieven.
-							</Card.Text>
-						</Card.Body>{" "}
-						<Button variant="">
-							<BsFillArrowRightCircleFill
-								className="arrow-green"
-								style={{ color: "green", width: "30px", height: "30px" }}
-							/>
-						</Button>
-					</Card>
-					<Card
-						className="border-sm  rounded-0"
-						style={{
-							justifyContent: "center",
-							alignContent: "center",
-							alignItems: "center",
-							width: "18rem",
-							height: "25rem",
-						}}
-					>
-						<Card.Img
-							src="/assets/home.png"
-							style={{
-								width: "6rem",
-								height: "6rem",
-							}}
-							className="my-1"
-						/>
-						<Card.Body>
-							<Card.Title>Warmte Opslag</Card.Title>
-							<Card.Text>
-								Ecologische en efficiënte warmtebron die uw thuis zal maken
-								tegen lage kosten de ideale temperatuur bereikt. Bedankt wijd
-								scala aan apparaten - we zullen zeker de juiste voor u vinden en
-								uw gebouw.
-							</Card.Text>
-						</Card.Body>{" "}
-						<Button variant="">
-							<BsFillArrowRightCircleFill
-								className="arrow-green"
-								style={{ color: "green", width: "30px", height: "30px" }}
-							/>
-						</Button>
-					</Card>
-					<Card
-						className="border-sm  rounded-0"
-						style={{
-							justifyContent: "center",
-							alignContent: "center",
-							alignItems: "center",
-							width: "18rem",
-							height: "25rem",
-						}}
-					>
-						<Card.Img
-							src="/assets/charging-station.png"
-							style={{
-								width: "6rem",
-								height: "6rem",
-							}}
-							className="my-1"
-						/>
-						<Card.Body>
-							<Card.Title>Opladers voor Voertuigen</Card.Title>
-							<Card.Text>
-								Zelfstandig goedkoop kunnen verwarmen en comfort bieden van de
-								buitentemperatuur. Ontdek onze effectieve en praktische
-								oplossingen.
-							</Card.Text>
-						</Card.Body>{" "}
-						<Button variant="">
-							<BsFillArrowRightCircleFill
-								className="arrow-green"
-								style={{ color: "green", width: "30px", height: "30px" }}
-							/>
-						</Button>
-					</Card>{" "}
-					<Card
-						className="border-sm  rounded-0"
-						style={{
-							justifyContent: "center",
-							alignContent: "center",
-							alignItems: "center",
-							width: "18rem",
-							height: "25rem",
-						}}
-					>
-						<Card.Img
-							src="/assets/thermostat.png"
-							style={{
-								width: "6rem",
-								height: "6rem",
-							}}
-							className="my-1"
-						/>
-						<Card.Body>
-							<Card.Title>Verwarming en Koeling</Card.Title>
-							<Card.Text>
-								Zelfstandig goedkoop kunnen verwarmen en comfort bieden van de
-								buitentemperatuur. Ontdek onze effectieve en praktische
-								oplossingen.
-							</Card.Text>
-						</Card.Body>{" "}
-						<Button variant="">
-							<BsFillArrowRightCircleFill
-								className="arrow-green"
-								style={{ color: "green", width: "30px", height: "30px" }}
-							/>
-						</Button>
-					</Card>
+					<CardGroup>
+						<Col lg={3} md={6}>
+							<animated.div style={animationProps}>
+								<Card
+									className="border-sm  rounded-0"
+									style={{
+										justifyContent: "center",
+										alignContent: "center",
+										alignItems: "center",
+										maxWidth: "20rem",
+										height: "25rem",
+									}}
+								>
+									<Card.Img
+										src="/assets/battery-mag.png"
+										style={{
+											width: "6rem",
+											height: "6rem",
+										}}
+										className="my-1"
+									/>
+									<Card.Body>
+										<Card.Title>Energie Magazijn</Card.Title>
+										<Card.Text>
+											Onafhankelijkheid van elektriciteitsprijzen en
+											stroomuitval huidig. Zorgen voor een meer kosteneffectieve
+											installatie in de aangekondigde dynamische tarieven met
+											Uurtarieven.
+										</Card.Text>
+									</Card.Body>{" "}
+									<Nav.Link as={Link} href="/bateries" className="mx-2">
+										<Button variant="">
+											<BsFillArrowRightCircleFill
+												className="arrow-green  hover2"
+												style={{
+													color: "green",
+													width: "30px",
+													height: "30px",
+												}}
+											/>
+										</Button>
+									</Nav.Link>{" "}
+								</Card>{" "}
+							</animated.div>{" "}
+						</Col>
+						<Col lg={3} md={6}>
+							{" "}
+							<animated.div style={animationPropsMiddle}>
+								<Card
+									className="border-sm  rounded-0"
+									style={{
+										justifyContent: "center",
+										alignContent: "center",
+										alignItems: "center",
+										maxWidth: "20rem",
+										height: "25rem",
+									}}
+								>
+									<Card.Img
+										src="/assets/home.png"
+										style={{
+											width: "6rem",
+											height: "6rem",
+										}}
+										className="my-1"
+									/>
+									<Card.Body>
+										<Card.Title>Warmte Opslag</Card.Title>
+										<Card.Text>
+											Ecologische en efficiënte warmtebron die uw thuis zal
+											maken tegen lage kosten de ideale temperatuur bereikt.
+											Bedankt wijd scala aan apparaten - we zullen zeker de
+											juiste voor u vinden en uw gebouw.
+										</Card.Text>
+									</Card.Body>{" "}
+									<Nav.Link as={Link} href="/warm" className="mx-2">
+										<Button variant="">
+											<BsFillArrowRightCircleFill
+												className="arrow-green hover2"
+												style={{
+													color: "green",
+													width: "30px",
+													height: "30px",
+												}}
+											/>
+										</Button>
+									</Nav.Link>{" "}
+								</Card>{" "}
+							</animated.div>
+						</Col>
+						<Col lg={3}>
+							<animated.div style={imgAnimationProps}>
+								<Card
+									className="border-sm  rounded-0"
+									style={{
+										justifyContent: "center",
+										alignContent: "center",
+										alignItems: "center",
+										maxWidth: "20rem",
+										height: "25rem",
+									}}
+								>
+									<Card.Img
+										src="/assets/thermostat.png"
+										style={{
+											width: "6rem",
+											height: "6rem",
+										}}
+										className="my-1"
+									/>
+									<Card.Body>
+										<Card.Title>Verwarming en Koeling</Card.Title>
+										<Card.Text>
+											Zelfstandig goedkoop kunnen verwarmen en comfort bieden
+											van de buitentemperatuur. Ontdek onze effectieve en
+											praktische oplossingen.
+										</Card.Text>
+									</Card.Body>{" "}
+									<Nav.Link as={Link} href="/pumps" className="mx-2">
+										<Button variant="">
+											<BsFillArrowRightCircleFill
+												className="arrow-green  hover2"
+												style={{
+													color: "green",
+													width: "30px",
+													height: "30px",
+												}}
+											/>
+										</Button>
+									</Nav.Link>{" "}
+								</Card>
+							</animated.div>
+						</Col>{" "}
+						<Col lg={3}>
+							<animated.div style={imgAnimationProps}>
+								<Card
+									className="border-sm  rounded-0"
+									style={{
+										justifyContent: "center",
+										alignContent: "center",
+										alignItems: "center",
+										maxWidth: "20rem",
+										height: "25rem",
+									}}
+								>
+									<Card.Img
+										src="/assets/charging-station.png"
+										style={{
+											width: "6rem",
+											height: "6rem",
+										}}
+										className="my-1"
+									/>
+									<Card.Body>
+										<Card.Title>Opladers voor Voertuigen</Card.Title>
+										<Card.Text>
+											Zelfstandig goedkoop kunnen verwarmen en comfort bieden
+											van de buitentemperatuur. Ontdek onze effectieve en
+											praktische oplossingen.
+										</Card.Text>
+									</Card.Body>{" "}
+								</Card>{" "}
+							</animated.div>{" "}
+						</Col>{" "}
+					</CardGroup>
 				</Row>
 			</Row>
 		</Container>

@@ -56,3 +56,10 @@ export { default as About4 } from "./About4";
 export { default as SanitySolar } from "./SanitySolar";
 export { default as SanityPump } from "./SanityPump";
 export { default as SanityKlima } from "./SanityKlima";
+export { default as Subsidies } from "./Subsidies";
+export { default as CountedBar } from "./CountedBar";
+export { default as Bateries1 } from "./Bateries1";
+export { default as Bateries2 } from "./Bateries2";
+export { default as Bateries3 } from "./Bateries3";
+
+export { default as Warm1 } from "./Warm1";

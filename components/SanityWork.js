@@ -79,21 +79,21 @@ function SanityWork() {
 	});
 
 	return (
-		<Container className=" py-3 vh-full  my-2" ref={sectionRef}>
-			<Row className="justify-content-center align-items-center text-center mt-5 text-dark">
-				<Col>
+		<Container className=" my-5" ref={sectionRef}>
+			<Row className="justify-content-center align-items-center text-center  text-dark">
+				<Col className="my-3">
 					{" "}
 					<animated.div style={animationProps}>
-						<h1 className="py-3 text-start">Bekijk onze nieuwste projecten</h1>{" "}
+						<h1 className=" text-start">Bekijk onze nieuwste projecten</h1>{" "}
 					</animated.div>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">
-				<Col lg={8}>
+				<Col lg={10}>
 					<animated.div style={animationPropsMiddle}>
 						<Carousel className="shadow-lg">
 							{all.map((item) => (
-								<Carousel.Item key={item._id} style={{ height: "500px" }}>
+								<Carousel.Item key={item._id} style={{ maxHeight: "600px" }}>
 									<img
 										className="d-block w-100 carousel-imgs "
 										src={urlFor(item.image && item.image[0])}
@@ -111,8 +111,10 @@ function SanityWork() {
 
 				<Row className="my-2">
 					<Col>
-						<Nav.Link as={Link} href="#contact" className="mx-2">
-							<Button className="nav-blue-bg border-0">Meer Projecten</Button>
+						<Nav.Link as={Link} href="/work" className="">
+							<Button className="nav-blue-bg border-0 btn-lg">
+								Meer Projecten
+							</Button>
 						</Nav.Link>
 					</Col>
 				</Row>

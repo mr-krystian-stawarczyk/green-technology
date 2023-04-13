@@ -15,7 +15,7 @@ import {
 import Solar2N from "../components/Solar2N";
 function solar() {
 	return (
-		<Container fluid className="mt-5 rounded ">
+		<Container fluid className="pt-5">
 			<Solar1 />
 			<Solar2N />
 			<Solar3N />

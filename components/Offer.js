@@ -48,9 +48,11 @@ function Offer() {
 	});
 	return (
 		<div ref={sectionRef}>
-			<Row className="mt-5 ">
+			<Row className="mt-5 text-start ">
 				<Col lg={7}>
-					<h1 className="mt-5">Onze Aanbieding</h1>
+					<animated.div style={animationProps}>
+						<h1 className="mt-5">Onze Aanbieding</h1>{" "}
+					</animated.div>
 				</Col>
 			</Row>
 

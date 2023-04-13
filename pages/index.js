@@ -20,7 +20,7 @@ import CountedBar from "../components/CountedBar";
 
 export default function Home() {
 	return (
-		<div className="wrapper">
+		<>
 			<HeaderSlides />
 			<HeaderN1 />
 			<HeaderN2 />
@@ -29,6 +29,6 @@ export default function Home() {
 			<Reviews />
 
 			<SanityWork />
-		</div>
+		</>
 	);
 }

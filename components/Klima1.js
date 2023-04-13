@@ -101,7 +101,7 @@ function Klima1() {
 			className=" justify-content-center align-items-center vh-full  my-2  rounded"
 			ref={sectionRef}
 		>
-			<Col xl={5} lg={5} className=" p-3 rounded blur  rounded">
+			<Col xl={5} lg={5} className=" p-3 rounded   rounded">
 				{" "}
 				<animated.div style={animationProps}>
 					<Card className="border-0 ">
@@ -109,7 +109,7 @@ function Klima1() {
 					</Card>{" "}
 				</animated.div>
 			</Col>
-			<Col xl={5} lg={5} className="blur p-3 mx-2 ">
+			<Col xl={5} lg={5} className=" p-3 mx-2 ">
 				<animated.div style={imgAnimationProps}>
 					{" "}
 					<Card

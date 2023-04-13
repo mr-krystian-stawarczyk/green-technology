@@ -14,7 +14,6 @@ const NavbarComp = () => {
 	const [scrolled, setScrolled] = useState(false);
 	function handleCall() {
 		window.location.href = "tel:+31649932604";
-		// Replace +1234567890 with the phone number that you want to call
 	}
 	useEffect(() => {
 		const handleScroll = () => {
@@ -63,11 +62,6 @@ const NavbarComp = () => {
 					style={{}}
 				>
 					<Nav className="navbar-collapse justify-content-end text-center rounded">
-						<Nav.Link as={Link} href="/" className="mx-2 ">
-							<Button variant=" btn-lg   py-2 shadow-lg nav-blue-btn border-0">
-								<AiOutlineHome />
-							</Button>
-						</Nav.Link>
 						<NavDropdown
 							title="Producten"
 							id="basic-nav-dropdown"
@@ -79,7 +73,7 @@ const NavbarComp = () => {
 							}} // add custom styles
 						>
 							<NavDropdown.Item as={Link} href="products" className="">
-								<Button className="w-100 border-0 nav-blue-btn ">
+								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
 									{" "}
 									Producten
 								</Button>
@@ -105,7 +99,13 @@ const NavbarComp = () => {
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/bateries">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Batterijen
+									Energie opslag
+								</Button>{" "}
+								{/* add Bootstrap classes */}
+							</NavDropdown.Item>
+							<NavDropdown.Item as={Link} href="/warm">
+								<Button className="w-100 border-0 nav-blue-btn ">
+									Warmteopslag
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
@@ -114,6 +114,12 @@ const NavbarComp = () => {
 							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
 								{" "}
 								Werk
+							</Button>
+						</Nav.Link>
+						<Nav.Link as={Link} href="/subsidies">
+							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
+								{" "}
+								Subsidies
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/about" className="mx-2">

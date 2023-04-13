@@ -15,7 +15,7 @@ import {
 
 function pumps() {
 	return (
-		<Container fluid className="mt-5 rounded">
+		<Container>
 			<Pumps2 />
 			<Pumps3 />
 			<Pumps4 />
