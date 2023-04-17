@@ -169,7 +169,7 @@ function Pumps5() {
 						</Col>
 						<Col lg={4}>
 							{" "}
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								{" "}
 								<Card
 									className="border-sm rounded-0"
@@ -283,7 +283,7 @@ function Pumps5() {
 						</Col>
 						<Col lg={4}>
 							{" "}
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm rounded-0 bg-amg text-white rounded-0 w-100"
 									style={{

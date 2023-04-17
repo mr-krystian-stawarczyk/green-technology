@@ -143,7 +143,7 @@ function HeaderCounted() {
 				</Col>
 				<Col lg={4}>
 					{" "}
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card className="m-3 border-success bg-transparent p-4">
 							<Card.Img variant="top" src="/assets/20558_3.png" />
 							<Card.Body>

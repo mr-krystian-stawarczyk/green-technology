@@ -54,7 +54,7 @@ function Product1() {
 				}}
 			>
 				<Col lg={5} className=" rounded blur shadow-lg p-3">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card className="bg-transparent">
 							<Card.Img src="/assets/pompa.jpg" className="" />
 						</Card>

@@ -62,7 +62,7 @@ function Bateries1() {
 					</animated.div>
 				</Col>
 				<Col xl={5} lg={5} className=" rounded p-2 m-2">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
@@ -70,13 +70,13 @@ function Bateries1() {
 							className=" "
 						>
 							<Card.Body className="text-center">
-								<h1 className=" text-dark ">Energie opslag</h1>
-								<p className=" text-dark ">
+								<h1 className=" text-dark text-center ">Energie opslag</h1>
+								<h5 className=" text-dark  text-start">
 									Dankzij de energieopslag kunt u er volledig onafhankelijk van
 									worden elektriciteitsnet, stroomuitval en beschermen tegen
 									energieprijs stijgt.
-								</p>
-								<p className=" text-dark ">
+								</h5>
+								<h5 className=" text-dark text-start">
 									Een goed geselecteerde micro-installatie met een
 									energieopslagblik 100% van uw elektriciteitsbehoefte dekken
 									huishouden, waarbij het netwerk volledig wordt omzeild. Zon
@@ -89,7 +89,7 @@ function Bateries1() {
 									het netwerk of door het te kopen u moet de distributiekosten
 									dragen. Door overschotten op te slaan in in uw eigen magazijn
 									kunt u dit voorkomen.
-								</p>
+								</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

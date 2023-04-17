@@ -24,12 +24,6 @@ function Klima2() {
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -40,7 +34,7 @@ function Klima2() {
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
@@ -64,7 +58,7 @@ function Klima2() {
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -119,50 +113,53 @@ function Klima2() {
 		>
 			<Row className="py-3 text-center text-dark">
 				<Col lg={7}>
-					<animated.div style={animationPropsMiddle}>
-						<h1>Voordelen van recuperatie</h1>
-					</animated.div>
+					<h1>Voordelen van recuperatie</h1>
 				</Col>
 			</Row>
 			<Row className="text-center  justify-content-center align-items-center ">
 				<CardGroup>
 					{" "}
 					<Col lg={6}>
-						<Card
-							className="border-sm rounded-0 bg-green "
-							style={{
-								justifyContent: "center",
-								alignContent: "center",
-								alignItems: "center",
-								maxWidth: "38rem",
-								height: "30rem",
-							}}
-						>
+						<animated.div style={animationPropsMiddle}>
 							{" "}
-							<Card.Img
-								src="/assets/stress-management.png"
+							<Card
+								className="border-sm rounded-0 bg-green "
 								style={{
-									width: "6rem",
-									height: "6rem",
+									justifyContent: "center",
+									alignContent: "center",
+									alignItems: "center",
+									maxWidth: "38rem",
+									minHeight: "30rem",
 								}}
-								className="my-1"
-							/>
-							<Card.Body>
-								<Card.Title>GEZONDHEID EN COMFORT</Card.Title>
-								<Card.Text>
-									System rekuperacji, dzięki zastosowaniu filtrów, rozprowadza
-									po pomieszczeniach świeże, czyste, pozbawione pyłków i
-									alergenów powietrze o odpowiedniej wilgotności. Jest to bardzo
-									zdrowe i komfortowe rozwiązanie dla każdego użytkownika, ale
-									szczególnie przydatne i zalecane dla alergików, gdyż taki
-									mikroklimat również nie sprzyja rozwojowi pleśni i grzybów.
-									Unikamy także efektu parowania szyb od wewnątrz.
-								</Card.Text>
-							</Card.Body>{" "}
-						</Card>
+							>
+								{" "}
+								<Card.Img
+									src="/assets/stress-management.png"
+									style={{
+										width: "6rem",
+										height: "6rem",
+									}}
+									className="my-1"
+								/>
+								<Card.Body>
+									<Card.Title>GEZONDHEID EN COMFORT</Card.Title>
+									<Card.Text>
+										Het recuperatiesysteem verdeelt, dankzij het gebruik van
+										filters, frisse, schone, pollen- en allergeenvrije lucht met
+										een aangepaste luchtvochtigheid in de kamers. Het is een
+										zeer gezonde en comfortabele oplossing voor elke gebruiker,
+										maar vooral nuttig en aanbevolen voor mensen met een
+										allergie, omdat een dergelijk microklimaat ook niet
+										bevorderlijk is voor de ontwikkeling van schimmels. We
+										vermijden ook het effect van het verdampen van de ramen van
+										binnenuit.
+									</Card.Text>
+								</Card.Body>{" "}
+							</Card>{" "}
+						</animated.div>
 					</Col>
 					<Col lg={6}>
-						<animated.div style={imgAnimationProps}>
+						<animated.div style={animationProps}>
 							<Card
 								className="border-sm rounded-0  bg-amg text-white"
 								style={{
@@ -170,7 +167,7 @@ function Klima2() {
 									alignContent: "center",
 									alignItems: "center",
 									maxWidth: "38rem",
-									height: "30rem",
+									minHeight: "30rem",
 								}}
 							>
 								<Card.Img
@@ -211,7 +208,7 @@ function Klima2() {
 									alignContent: "center",
 									alignItems: "center",
 									maxWidth: "38rem",
-									height: "30rem",
+									minHeight: "30rem",
 								}}
 							>
 								<Card.Img
@@ -243,39 +240,42 @@ function Klima2() {
 						</animated.div>
 					</Col>
 					<Col lg={6}>
-						<Card
-							className="border-sm   rounded-0"
-							style={{
-								justifyContent: "center",
-								alignContent: "center",
-								alignItems: "center",
-								maxWidth: "38rem",
-								height: "30rem",
-							}}
-						>
-							<Card.Img
-								src="/assets/automation.png"
+						{" "}
+						<animated.div style={animationPropsMiddle}>
+							<Card
+								className="border-sm   rounded-0"
 								style={{
-									width: "6rem",
-									height: "6rem",
+									justifyContent: "center",
+									alignContent: "center",
+									alignItems: "center",
+									maxWidth: "38rem",
+									minHeight: "30rem",
 								}}
-								className="my-1"
-							/>
-							<Card.Body>
-								<Card.Title>MULTITASKING</Card.Title>
-								<Card.Text>
-									Airconditioning, dankzij de mogelijkheid om de circulatie van
-									de factor om te keren, Het kan ook in de winter als warmtebron
-									worden gebruikt extra verwarming of volledige
-									ruimteverwarming. In deze de manier waarop het het vaakst
-									wordt gebruikt in periodes overgangsperiode: herfst of lente,
-									maar in ons aanbod we hebben ook airconditioners die zijn
-									ontworpen voor werk het hele jaar door, wat effectief kan
-									werken in de modus verwarming zelfs bij extreem lage
-									temperaturen buiten tot -30°C.
-								</Card.Text>
-							</Card.Body>{" "}
-						</Card>{" "}
+							>
+								<Card.Img
+									src="/assets/automation.png"
+									style={{
+										width: "6rem",
+										height: "6rem",
+									}}
+									className="my-1"
+								/>
+								<Card.Body>
+									<Card.Title>MULTITASKING</Card.Title>
+									<Card.Text>
+										Airconditioning, dankzij de mogelijkheid om de circulatie
+										van de factor om te keren, Het kan ook in de winter als
+										warmtebron worden gebruikt extra verwarming of volledige
+										ruimteverwarming. In deze de manier waarop het het vaakst
+										wordt gebruikt in periodes overgangsperiode: herfst of
+										lente, maar in ons aanbod we hebben ook airconditioners die
+										zijn ontworpen voor werk het hele jaar door, wat effectief
+										kan werken in de modus verwarming zelfs bij extreem lage
+										temperaturen buiten tot -30°C.
+									</Card.Text>
+								</Card.Body>{" "}
+							</Card>{" "}
+						</animated.div>
 					</Col>
 				</CardGroup>
 			</Row>

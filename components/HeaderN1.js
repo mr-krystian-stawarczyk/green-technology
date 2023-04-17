@@ -24,11 +24,18 @@ function HeaderN1() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
-
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
+	const handleIntersection = (entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				setIsVisible(true);
+			} else {
+				setIsVisible(false);
+			}
+			if (entries[0].isIntersecting) {
+				setAnimate(true);
+				setAnimateImg(true);
+			}
+		});
 	};
 
 	const client = sanityClient({
@@ -41,7 +48,7 @@ function HeaderN1() {
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
@@ -65,21 +72,7 @@ function HeaderN1() {
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
-
-	const handleIntersection = (entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				setIsVisible(true);
-			} else {
-				setIsVisible(false);
-			}
-			if (entries[0].isIntersecting) {
-				setAnimate(true);
-				setAnimateImg(true);
-			}
-		});
-	};
+	}, [sectionRef]);
 
 	const animationProps = useSpring({
 		from: { opacity: 0, transform: "translateX(-50%)" },
@@ -123,18 +116,16 @@ function HeaderN1() {
 			>
 				{" "}
 				<Row className="py-3 text-start ">
-					<animated.div style={animationPropsMiddle}>
-						<Col lg={6}>
-							{" "}
-							<h1>
-								Wij bieden uitgebreide diensten met betrekking tot de
-								installatie van fotovoltaïsche cellen en warmtepompen
-							</h1>
-						</Col>
-					</animated.div>
+					<Col lg={6}>
+						{" "}
+						<h1>
+							Wij bieden uitgebreide diensten met betrekking tot de installatie
+							van fotovoltaïsche cellen en warmtepompen
+						</h1>
+					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
-					<CardGroup>
+					<CardGroup className="">
 						<Col lg={4}>
 							<animated.div style={animationProps}>
 								<Card
@@ -167,7 +158,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green"
+												className="arrow-green mb-4"
 												style={{
 													color: "green",
 													width: "30px",
@@ -212,7 +203,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green"
+												className="arrow-green mb-4"
 												style={{
 													color: "green",
 													width: "30px",
@@ -225,7 +216,7 @@ function HeaderN1() {
 							</animated.div>
 						</Col>
 						<Col lg={4}>
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm rounded-0"
 									style={{
@@ -256,7 +247,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green"
+												className="arrow-green mb-4"
 												style={{
 													color: "green",
 													width: "30px",
@@ -299,10 +290,10 @@ function HeaderN1() {
 										</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/bateries">
-										<Button className="bg-transparent border-0">
+										<Button className="bg-transparent border-0 ">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green"
+												className="arrow-green mb-4"
 												style={{
 													color: "green",
 													width: "30px",

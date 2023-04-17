@@ -6,8 +6,9 @@ import counts from './counts'
 import pumps from './pumps'
 import klima from './klima'
 import all from './all'
+import promo from './promo'
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([solar, counts, pumps, klima, all]),
+  types: schemaTypes.concat([solar, counts, pumps, klima, all, promo]),
 })

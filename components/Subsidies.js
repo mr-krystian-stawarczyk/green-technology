@@ -53,7 +53,7 @@ function Subsidies() {
 		delay: 1000,
 	});
 	return (
-		<div ref={sectionRef}>
+		<Container ref={sectionRef}>
 			<Row className="  text-center text-dark justify-content-center align-items-center  my-5 pt-3">
 				<animated.div style={animationPropsMiddle}>
 					<h1 className="mt-5">
@@ -74,96 +74,100 @@ function Subsidies() {
 				/>
 			</Row>
 			<Row className="  text-center text-dark justify-content-center align-items-center  my-5 pt-3">
-				<Col lg={4}>
-					<animated.div style={animationProps}>
-						<Card
-							className=" rounded-0 hover2 "
-							style={{
-								justifyContent: "center",
-								alignContent: "center",
-								alignItems: "center",
-								maxWidth: "35rem",
-								height: "35rem",
-							}}
-						>
-							<Card.Body>
-								<span className="display-1"> 1 </span>
-								<Card.Text>
-									Investeringssubsidie Duurzame Energie (ISDE): De ISDE is een
-									subsidieprogramma dat de aankoop van hernieuwbare
-									energiesystemen ondersteunt, waaronder zonnepanelen,
-									warmtepompen, thuisbatterijen en airconditioning. Het bedrag
-									van de subsidie hangt af van het type systeem en de
-									capaciteit, maar kan variëren van enkele honderden tot enkele
-									duizenden euros. Huiseigenaren, bedrijven en
-									non-profitorganisaties kunnen zich aanmelden voor de ISDE.
-								</Card.Text>
-							</Card.Body>
-						</Card>
-					</animated.div>{" "}
-				</Col>
-				<Col lg={4}>
-					{" "}
-					<animated.div style={animationPropsMiddle}>
+				<CardGroup>
+					<Col lg={4}>
+						<animated.div style={animationProps}>
+							<Card
+								className=" rounded-0 hover2 "
+								style={{
+									justifyContent: "center",
+									alignContent: "center",
+									alignItems: "center",
+									maxWidth: "35rem",
+									height: "35rem",
+								}}
+							>
+								<Card.Body>
+									<span className="display-1"> 1 </span>
+									<Card.Text>
+										Investeringssubsidie Duurzame Energie (ISDE): De ISDE is een
+										subsidieprogramma dat de aankoop van hernieuwbare
+										energiesystemen ondersteunt, waaronder zonnepanelen,
+										warmtepompen, thuisbatterijen en airconditioning. Het bedrag
+										van de subsidie hangt af van het type systeem en de
+										capaciteit, maar kan variëren van enkele honderden tot
+										enkele duizenden euros. Huiseigenaren, bedrijven en
+										non-profitorganisaties kunnen zich aanmelden voor de ISDE.
+									</Card.Text>
+								</Card.Body>
+							</Card>
+						</animated.div>{" "}
+					</Col>
+					<Col lg={4}>
 						{" "}
-						<Card
-							className="border-sm rounded-0 bg-amg text-white hover2"
-							style={{
-								justifyContent: "center",
-								alignContent: "center",
-								alignItems: "center",
-								maxWidth: "35rem",
-								height: "35rem",
-							}}
-						>
-							<Card.Body>
-								<span className="display-1"> 2 </span>
-								<h6>
-									Subsidie energiebesparing eigen huis (SEEH): De SEEH is een
-									subsidieprogramma dat financiële ondersteuning biedt aan
-									Nederlandse huiseigenaren die investeren in energiebesparende
-									maatregelen, waaronder de installatie van zonnepanelen,
-									warmtepompen, thuisbatterijen en airconditioning. De subsidie
-									dekt tot 20% van de investeringskosten, met een maximum van
-									€10.000. Om in aanmerking te komen, moeten huiseigenaren ten
-									minste twee energiebesparende maatregelen hebben genomen.
-								</h6>
-							</Card.Body>{" "}
-						</Card>{" "}
-					</animated.div>{" "}
-				</Col>
-				<Col lg={4}>
-					{" "}
-					<animated.div style={imgAnimationProps}>
+						<animated.div style={animationPropsMiddle}>
+							{" "}
+							<Card
+								className="border-sm rounded-0 bg-amg text-white hover2"
+								style={{
+									justifyContent: "center",
+									alignContent: "center",
+									alignItems: "center",
+									maxWidth: "35rem",
+									height: "35rem",
+								}}
+							>
+								<Card.Body>
+									<span className="display-1"> 2 </span>
+									<h6>
+										Subsidie energiebesparing eigen huis (SEEH): De SEEH is een
+										subsidieprogramma dat financiële ondersteuning biedt aan
+										Nederlandse huiseigenaren die investeren in
+										energiebesparende maatregelen, waaronder de installatie van
+										zonnepanelen, warmtepompen, thuisbatterijen en
+										airconditioning. De subsidie dekt tot 20% van de
+										investeringskosten, met een maximum van €10.000. Om in
+										aanmerking te komen, moeten huiseigenaren ten minste twee
+										energiebesparende maatregelen hebben genomen.
+									</h6>
+								</Card.Body>{" "}
+							</Card>{" "}
+						</animated.div>{" "}
+					</Col>
+					<Col lg={4}>
 						{" "}
-						<Card
-							className="border-sm  rounded-0 hover2"
-							style={{
-								justifyContent: "center",
-								alignContent: "center",
-								alignItems: "center",
-								maxWidth: "35rem",
-								height: "35rem",
-							}}
-						>
-							<Card.Body>
-								<span className="display-1"> 3 </span>
-								<Card.Text>
-									Subsidie energiebesparing en duurzame energie
-									sportaccommodaties (SEDS): De SEDS is een subsidieprogramma
-									dat sportverenigingen en -stichtingen ondersteunt bij het
-									verduurzamen van hun accommodaties. De subsidie dekt maximaal
-									30% van de investeringskosten voor energiebesparende
-									maatregelen, waaronder de installatie van zonnepanelen,
-									warmtepompen, thuisbatterijen en airconditioning. Het maximale
-									subsidiebedrag is €125.000 per aanvraag.
-								</Card.Text>
-							</Card.Body>{" "}
-						</Card>{" "}
-					</animated.div>{" "}
-				</Col>{" "}
+						<animated.div style={animationProps}>
+							{" "}
+							<Card
+								className="border-sm  rounded-0 hover2"
+								style={{
+									justifyContent: "center",
+									alignContent: "center",
+									alignItems: "center",
+									maxWidth: "35rem",
+									height: "35rem",
+								}}
+							>
+								<Card.Body>
+									<span className="display-1"> 3 </span>
+									<Card.Text>
+										Subsidie energiebesparing en duurzame energie
+										sportaccommodaties (SEDS): De SEDS is een subsidieprogramma
+										dat sportverenigingen en -stichtingen ondersteunt bij het
+										verduurzamen van hun accommodaties. De subsidie dekt
+										maximaal 30% van de investeringskosten voor
+										energiebesparende maatregelen, waaronder de installatie van
+										zonnepanelen, warmtepompen, thuisbatterijen en
+										airconditioning. Het maximale subsidiebedrag is €125.000 per
+										aanvraag.
+									</Card.Text>
+								</Card.Body>{" "}
+							</Card>{" "}
+						</animated.div>{" "}
+					</Col>{" "}
+				</CardGroup>
 			</Row>{" "}
-		</div>
+		</Container>
 	);
 }
 

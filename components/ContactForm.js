@@ -89,7 +89,7 @@ export const ContactForm = () => {
 				id="price"
 			>
 				<Col lg={5} className="blur p-3 rounded">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
@@ -113,7 +113,7 @@ export const ContactForm = () => {
 					}}
 				>
 					{" "}
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						{!isFormSubmitted ? (
 							<Form
 								className="app__footer-form app__flex"

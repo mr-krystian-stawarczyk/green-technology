@@ -47,10 +47,10 @@ function Pumps3() {
 	});
 	return (
 		<Row
-			className="vh-full  justify-content-center align-items-center vh-full  my-2 "
+			className=" justify-content-center align-items-center   my-2 "
 			ref={sectionRef}
 		>
-			<Col lg={6} className="blur p-3 mx-2  ">
+			<Col lg={6} className=" p-3 mx-2  ">
 				<animated.div style={animationProps}>
 					{" "}
 					<Card
@@ -60,7 +60,7 @@ function Pumps3() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h1> Hoe werkt een warmtepomp?</h1>
+							<h1 className="text-center"> Hoe werkt een warmtepomp?</h1>
 							<h6 className="lead">
 								Onder atmosferische druk kookt water bij een temperatuur van 100
 								˚C. Bij gelijke druk en een constante temperatuur van 100 ˚C,
@@ -91,7 +91,7 @@ function Pumps3() {
 			</Col>{" "}
 			<Col lg={5} className=" p-3 rounded  rounded ">
 				{" "}
-				<animated.div style={imgAnimationProps}>
+				<animated.div style={animationProps}>
 					{" "}
 					<Card className="border-0 ">
 						<Card.Img src="/assets/grafika-pomp 1.png" className="hover2" />

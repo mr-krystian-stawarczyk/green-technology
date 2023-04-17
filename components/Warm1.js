@@ -48,20 +48,19 @@ function Warm1() {
 
 	return (
 		<Container
-			fluid
 			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col xl={5} lg={5} className="  rounded  rounded m-2">
-					<animated.div style={imgAnimationProps}>
+				<Col lg={5} className="  rounded  rounded m-2">
+					<animated.div style={animationProps}>
 						{" "}
 						<Card className="border-0 bg-transparent">
 							<Card.Img src="/assets/warm.png" className="" />
 						</Card>{" "}
 					</animated.div>
 				</Col>
-				<Col xl={5} lg={5} className=" rounded p-2 m-2">
+				<Col lg={6} className=" rounded p-2 m-2">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
@@ -69,13 +68,13 @@ function Warm1() {
 							}}
 							className="bg-transparent "
 						>
-							<Card.Body className="text-center">
-								<h1 className=" text-dark ">Warmteopslag </h1>
-								<p className=" text-dark ">
+							<Card.Body>
+								<h1 className=" text-dark text-center">Warmteopslag </h1>
+								<h5 className=" text-dark text-start">
 									Het is een moderne warmwatertank die kan worden verwarmd en
 									energie kan verzamelen in de vorm van warmte.
-								</p>
-								<p className=" text-dark ">
+								</h5>
+								<h5 className=" text-dark text-start">
 									Hij is voorzien van een batterij met een groot warmtewisselend
 									oppervlak, wat zorgt voor een zeer hoog rendement. Meestal
 									gemaakt van roestvrij staal, wat de levensduur verlengt zonder
@@ -84,7 +83,7 @@ function Warm1() {
 									perfecte oplossing is, want het is een volledig gratis en
 									onderhoudsvrije set voor het bereiden van warm water voor een
 									gezin van meerdere personen.
-								</p>
+								</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

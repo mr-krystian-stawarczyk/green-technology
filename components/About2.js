@@ -17,12 +17,6 @@ function About2() {
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -30,34 +24,19 @@ function About2() {
 		apiVersion: "2022-03-09",
 	});
 
-	const [liczba_klientow, setLiczbaKlientow] = useState(0);
-
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
 		}
 
 		// Fetch the happy client count from Sanity
-		client
-			.fetch(
-				`*[_type == "counts"] {
-          liczba_klientow
-        }`
-			)
-			.then((data) => {
-				const count = data[0]?.liczba_klientow ?? 0;
-				setLiczbaKlientow(count);
-			})
-			.catch((error) => {
-				console.error("Error fetching happy client count:", error);
-			});
 
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -139,18 +118,18 @@ function About2() {
 					</animated.div>
 				</Col>
 				<Col xl={5} lg={5} className=" rounded p-2 m-2">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
 							}}
 							className=" "
 						>
-							<Card.Body className="text-start">
-								<h3 className=" text-dark ">
+							<Card.Body className="text-center">
+								<h1 className=" text-dark ">
 									Wij zijn een lokaal bedrijf met 12 jaar ervaring
-								</h3>
-								<p className="lead text-dark ">
+								</h1>
+								<h5 className="lead text-dark text-start">
 									AMGreenergy is een lokaal bedrijf in de sector hernieuwbare
 									bronnen energie. We hebben de enige (stationaire) in onze stad
 									gemaakt Centrum van groene technologieën - een plek waar
@@ -160,7 +139,7 @@ function About2() {
 									elektriciteitsrekeningen en het verbeteren van de kwaliteit
 									van uw rekeningen leven dankzij het gebruik van ecologische
 									oplossingen in uw huis woning, bedrijf of boerderij.
-								</p>
+								</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

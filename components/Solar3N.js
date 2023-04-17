@@ -25,12 +25,6 @@ function Solar3N() {
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -41,7 +35,7 @@ function Solar3N() {
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
@@ -65,7 +59,7 @@ function Solar3N() {
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -215,7 +209,7 @@ function Solar3N() {
 						</Col>
 						<Col lg={4}>
 							{" "}
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								{" "}
 								<Card
 									className="border-sm  rounded-0"
@@ -316,7 +310,7 @@ function Solar3N() {
 						</Col>
 						<Col lg={4}>
 							{" "}
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								{" "}
 								<Card
 									className="border-sm rounded-0 bg-amg text-white "

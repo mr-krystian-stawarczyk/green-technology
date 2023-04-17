@@ -14,6 +14,7 @@ import {
 	HeaderCounted,
 	SanityWork,
 	HeaderN2,
+	HeaderN3,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
 import CountedBar from "../components/CountedBar";
@@ -25,7 +26,7 @@ export default function Home() {
 			<HeaderN1 />
 			<HeaderN2 />
 			<CountedBar />
-
+			<HeaderN3 />
 			<Reviews />
 
 			<SanityWork />

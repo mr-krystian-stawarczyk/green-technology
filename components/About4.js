@@ -25,12 +25,6 @@ function About4() {
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -41,7 +35,7 @@ function About4() {
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
@@ -65,7 +59,7 @@ function About4() {
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -132,7 +126,7 @@ function About4() {
 					</animated.div>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
-					<CardGroup>
+					<CardGroup className=" justify-content-center align-items-center align-self-center">
 						<Col lg={4}>
 							<animated.div style={animationProps}>
 								<Card
@@ -206,7 +200,7 @@ function About4() {
 							</animated.div>
 						</Col>
 						<Col lg={4}>
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm rounded-0"
 									style={{
@@ -250,7 +244,7 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-
+										maxWidth: "26rem",
 										height: "25rem",
 									}}
 								>
@@ -309,7 +303,7 @@ function About4() {
 							</animated.div>
 						</Col>
 						<Col lg={4}>
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm rounded-0 bg-amg text-white "
 									style={{

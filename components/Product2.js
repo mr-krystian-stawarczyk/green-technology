@@ -91,7 +91,7 @@ function Product2() {
 					</animated.div>
 				</Col>
 				<Col lg={5} className="blur p-3 shadow-lg rounded">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						{" "}
 						<Card
 							style={{

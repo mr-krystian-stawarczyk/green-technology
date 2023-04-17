@@ -101,7 +101,7 @@ function Klima1() {
 			className=" justify-content-center align-items-center vh-full  my-2  rounded"
 			ref={sectionRef}
 		>
-			<Col xl={5} lg={5} className=" p-3 rounded   rounded">
+			<Col lg={5} className=" p-3 rounded   rounded">
 				{" "}
 				<animated.div style={animationProps}>
 					<Card className="border-0 ">
@@ -109,8 +109,8 @@ function Klima1() {
 					</Card>{" "}
 				</animated.div>
 			</Col>
-			<Col xl={5} lg={5} className=" p-3 mx-2 ">
-				<animated.div style={imgAnimationProps}>
+			<Col lg={6} className=" p-3 mx-2 ">
+				<animated.div style={animationProps}>
 					{" "}
 					<Card
 						style={{
@@ -119,9 +119,9 @@ function Klima1() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h2 className=" text-dark">
+							<h1 className=" text-dark">
 								Recuperatie en airconditioning kunnen worden gecombineerd
-							</h2>{" "}
+							</h1>{" "}
 							<h5>
 								De airconditioning houdt de kamers koel maar voorziet niet
 								ventilatie, d.w.z. verse lucht aanvoeren.

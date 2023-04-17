@@ -67,7 +67,7 @@ function Header3() {
 					</animated.div>
 				</Col>
 				<Col lg={5} className="blur p-3 mx-2  rounded bg-am-green m-2">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",

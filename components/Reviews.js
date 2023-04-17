@@ -112,16 +112,16 @@ function Reviews({}) {
 				}}
 			>
 				{" "}
-				<Row className="py-3 ">
+				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
-						<Col lg={7}>
+						<Col lg={6}>
 							<h1>
 								Sluit je aan bij onze tevreden klanten uit heel Nederland!
 							</h1>
 						</Col>
 					</animated.div>
 				</Row>
-				<Col lg={5} className="p-3 mx-2  rounded ">
+				<Col lg={6} className="p-3 mx-2  rounded ">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
@@ -129,17 +129,17 @@ function Reviews({}) {
 							}}
 							className=" "
 						>
-							<Card.Body className="text-center text-dark">
-								<p className="lead ">
+							<Card.Body className="text-start text-dark">
+								<h5 className=" ">
 									Veel tevreden klanten hebben is een van de belangrijkste
 									prestaties voor elk bedrijf
-								</p>
-								<p className="lead">
+								</h5>
+								<h5 className="">
 									Het geeft niet alleen de kwaliteit van de aangeboden producten
 									of diensten aan, maar weerspiegelt ook het niveau van
 									klanttevredenheid en loyaliteit
-								</p>
-								<Col className="btn-light btn-lg p-2 text-uppercase text-bold  rounded">
+								</h5>
+								<Col className="btn-light btn-lg p-2 text-uppercase text-bold text-center  rounded">
 									<span className="lead text-bold">
 										<Card.Title>
 											<span className="lead">+</span>
@@ -152,7 +152,7 @@ function Reviews({}) {
 											)}
 										</Card.Title>
 									</span>
-									<p className="lead">Happy Clients !</p>
+									<p className="lead">Tevreden Klanten !</p>
 									<span>
 										<FaStar className="star " />
 										<FaStar className="star " />
@@ -166,48 +166,46 @@ function Reviews({}) {
 					</animated.div>
 				</Col>
 				<Col lg={5} className="p-3 rounded  ">
-					<animated.div style={imgAnimationProps}>
-						<Carousel>
-							<Carousel.Item>
-								<Image
-									src="/assets/face1.jpg"
-									alt="me"
-									fluid
-									className="rounded"
-								/>
-								<Carousel.Caption>
-									<h3>Yo</h3>
-									<p>100% Proffesional</p>
-								</Carousel.Caption>
-							</Carousel.Item>
-							<Carousel.Item>
-								<Image
-									src="/assets/face2.jpg"
-									alt="me"
-									fluid
-									className="rounded"
-								/>
+					<Carousel indicators={false} controls={false} loop>
+						<Carousel.Item>
+							<Image
+								src="/assets/face1.jpg"
+								alt="me"
+								fluid
+								className="rounded"
+							/>
+							<Carousel.Caption>
+								<h3>Yo</h3>
+								<p>100% Proffesional</p>
+							</Carousel.Caption>
+						</Carousel.Item>
+						<Carousel.Item>
+							<Image
+								src="/assets/face2.jpg"
+								alt="me"
+								fluid
+								className="rounded"
+							/>
 
-								<Carousel.Caption>
-									<h3>Toon</h3>
-									<p>Je kunt op hen rekenen!</p>
-								</Carousel.Caption>
-							</Carousel.Item>
-							<Carousel.Item>
-								<Image
-									src="/assets/face3.jpg"
-									alt="me"
-									fluid
-									className="rounded"
-								/>
+							<Carousel.Caption>
+								<h3>Toon</h3>
+								<p>Je kunt op hen rekenen!</p>
+							</Carousel.Caption>
+						</Carousel.Item>
+						<Carousel.Item>
+							<Image
+								src="/assets/face3.jpg"
+								alt="me"
+								fluid
+								className="rounded"
+							/>
 
-								<Carousel.Caption>
-									<h3>Anna</h3>
-									<p>Best Service Ever</p>
-								</Carousel.Caption>
-							</Carousel.Item>
-						</Carousel>
-					</animated.div>
+							<Carousel.Caption>
+								<h3>Anna</h3>
+								<p>Best Service Ever</p>
+							</Carousel.Caption>
+						</Carousel.Item>
+					</Carousel>
 				</Col>
 			</Row>
 		</Container>

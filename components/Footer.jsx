@@ -155,7 +155,7 @@ function Footer() {
 				</Col>
 				<Col lg={6} className="windmil  p-5">
 					{" "}
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						{!isFormSubmitted ? (
 							<Form
 								className="app__footer-form app__flex "

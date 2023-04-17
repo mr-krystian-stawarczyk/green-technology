@@ -10,21 +10,16 @@ function HeaderN2() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
 		}
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -83,26 +78,27 @@ function HeaderN2() {
 				}}
 			>
 				<Col lg={5} className="p-3 rounded   m-2">
-					<animated.div style={animationProps}>
+					{" "}
+					<Card className="border-0">
 						{" "}
-						<Card className="border-0">
-							<Card.Img src="/assets/local.png" className="hover" />
-						</Card>{" "}
-					</animated.div>
+						<animated.div style={animationProps}>
+							<Card.Img src="/assets/local.png" className="hover" />{" "}
+						</animated.div>
+					</Card>{" "}
 				</Col>
 				<Col lg={6} className="blur p-3 mx-2  rounded m-2">
-					<animated.div style={imgAnimationProps}>
-						<Card
-							style={{
-								border: "none",
-							}}
-							className=""
-						>
+					<Card
+						style={{
+							border: "none",
+						}}
+						className=""
+					>
+						<animated.div style={animationProps}>
 							<Card.Body className=" text-dark">
-								<h3 className="">
-									Wij zijn een lokaal bedrijf met 12 jaar ervaring en hebben het
-									centrum opgericht Groene technologieën voor u - naast u.
-								</h3>
+								<h1 className="text-center">
+									Wij zijn een lokaal bedrijf met 12 jaar ervarin voor u - naast
+									u
+								</h1>
 								<h5 className="">
 									Wij bieden praktische oplossingen om van uw huis een thuis te
 									maken ecologisch.
@@ -116,9 +112,9 @@ function HeaderN2() {
 										Maak kennis met ons bedrijf
 									</Button>
 								</Nav.Link>{" "}
-							</Card.Body>
-						</Card>
-					</animated.div>
+							</Card.Body>{" "}
+						</animated.div>
+					</Card>
 				</Col>
 			</Row>
 		</Container>

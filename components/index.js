@@ -42,12 +42,13 @@ export { default as HeaderCards } from "./HeaderCards";
 export { default as SanityWork } from "./SanityWork";
 
 export { default as HeaderN1 } from "./HeaderN1";
-
 export { default as HeaderN2 } from "./HeaderN2";
+export { default as HeaderN3 } from "./HeaderN3";
+
 export { default as Offer } from "./Offer";
 export { default as Solar2N } from "./Solar2N";
 export { default as Solar3N } from "./Solar3N";
-
+export { default as ProductsPromo } from "./ProductsPromo";
 export { default as About1 } from "./About1";
 export { default as About2 } from "./About2";
 export { default as About3 } from "./About3";
@@ -57,6 +58,7 @@ export { default as SanitySolar } from "./SanitySolar";
 export { default as SanityPump } from "./SanityPump";
 export { default as SanityKlima } from "./SanityKlima";
 export { default as Subsidies } from "./Subsidies";
+export { default as Subsidies2 } from "./Subsidies2";
 export { default as CountedBar } from "./CountedBar";
 export { default as Bateries1 } from "./Bateries1";
 export { default as Bateries2 } from "./Bateries2";

@@ -54,7 +54,7 @@ function Solar1() {
 	});
 
 	return (
-		<div ref={sectionRef}>
+		<Container ref={sectionRef}>
 			<Row className="  text-center text-dark justify-content-center align-items-center  mt-5 pt-3">
 				<Col lg={5} className="    rounded text-center ">
 					{" "}
@@ -65,8 +65,8 @@ function Solar1() {
 					</animated.div>
 				</Col>
 				<Col lg={6} className=" text-start m-1">
-					<animated.div style={imgAnimationProps}>
-						<h1> AM Fotovoltaïsche </h1>
+					<animated.div style={animationProps}>
+						<h1 className="text-center"> AM Fotovoltaïsche </h1>
 						<h5>
 							Schakel over op je eigen energie en kijk hoeveel je kunt bespaar
 							dankzij de technologie van de toekomst, namelijk fotovoltaïsche
@@ -84,7 +84,7 @@ function Solar1() {
 					</animated.div>
 				</Col>
 			</Row>{" "}
-		</div>
+		</Container>
 	);
 }
 

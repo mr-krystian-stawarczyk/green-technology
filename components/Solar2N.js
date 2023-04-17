@@ -25,47 +25,17 @@ function Solar2N() {
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
 
-	const options = {
-		root: null,
-		rootMargin: "0px",
-		threshold: 0.5,
-	};
-
-	const client = sanityClient({
-		projectId: process.env.NEXT_PUBLIC_PROJECTID,
-		dataset: "production",
-		useCdn: true,
-		apiVersion: "2022-03-09",
-	});
-
-	const [liczba_klientow, setLiczbaKlientow] = useState(0);
-
 	useEffect(() => {
-		const observer = new IntersectionObserver(handleIntersection, options);
+		const observer = new IntersectionObserver(handleIntersection);
 
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
 		}
 
-		// Fetch the happy client count from Sanity
-		client
-			.fetch(
-				`*[_type == "counts"] {
-          liczba_klientow
-        }`
-			)
-			.then((data) => {
-				const count = data[0]?.liczba_klientow ?? 0;
-				setLiczbaKlientow(count);
-			})
-			.catch((error) => {
-				console.error("Error fetching happy client count:", error);
-			});
-
 		return () => {
 			observer.disconnect();
 		};
-	}, [sectionRef, options]);
+	}, [sectionRef]);
 
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
@@ -132,7 +102,8 @@ function Solar2N() {
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
 					<CardGroup>
-						<Col lg={3} md={6}>
+						<Col lg={3}>
+							{" "}
 							<animated.div style={animationProps}>
 								<Card
 									className="border-sm  rounded-0"
@@ -144,6 +115,7 @@ function Solar2N() {
 										height: "25rem",
 									}}
 								>
+									{" "}
 									<Card.Img
 										src="/assets/battery-mag.png"
 										style={{
@@ -176,7 +148,7 @@ function Solar2N() {
 								</Card>{" "}
 							</animated.div>{" "}
 						</Col>
-						<Col lg={3} md={6}>
+						<Col lg={3}>
 							{" "}
 							<animated.div style={animationPropsMiddle}>
 								<Card
@@ -222,7 +194,7 @@ function Solar2N() {
 							</animated.div>
 						</Col>
 						<Col lg={3}>
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm  rounded-0"
 									style={{
@@ -265,7 +237,7 @@ function Solar2N() {
 							</animated.div>
 						</Col>{" "}
 						<Col lg={3}>
-							<animated.div style={imgAnimationProps}>
+							<animated.div style={animationProps}>
 								<Card
 									className="border-sm  rounded-0"
 									style={{

@@ -44,6 +44,20 @@ function Work() {
 	};
 
 	useEffect(() => {
+		const observer = new IntersectionObserver(handleIntersection);
+
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
+
+		// Fetch the happy client count from Sanity
+
+		return () => {
+			observer.disconnect();
+		};
+	}, [sectionRef]);
+
+	useEffect(() => {
 		fetchData();
 	}, []);
 	const handleIntersection = (entries) => {
@@ -96,37 +110,38 @@ function Work() {
 
 				<Row id="newest" className=" justify-content-center align-items-center">
 					<Col lg={8} className="">
-						<Carousel className="shadow-lg">
-							{all.map((all) => (
-								<Carousel.Item key={all._id} style={{ height: "500px" }}>
-									<Image
-										className="d-block w-100 carousel-imgs "
-										src={urlFor(all.image && all.image[0])}
-										alt={all.name}
-									/>
-									<Carousel.Caption>
-										<h3>{all.name}</h3>
-										<p>{all.details}</p>
-									</Carousel.Caption>
-								</Carousel.Item>
-							))}
-						</Carousel>{" "}
+						<animated.div style={animationProps}>
+							<Carousel className="shadow-lg">
+								{all.map((all) => (
+									<Carousel.Item key={all._id} style={{ height: "500px" }}>
+										<Image
+											className="d-block w-100 carousel-imgs "
+											src={urlFor(all.image && all.image[0])}
+											alt={all.name}
+										/>
+										<Carousel.Caption>
+											<h3>{all.name}</h3>
+											<p>{all.details}</p>
+										</Carousel.Caption>
+									</Carousel.Item>
+								))}
+							</Carousel>{" "}
+						</animated.div>
 					</Col>
 				</Row>
 				<Row className="my-5 text-start align-items-center justify-content-center">
 					<Col lg={6}>
 						<h1>Bekijk meer van ons werk</h1>
 					</Col>
-
 					<Col lg={6} className="d-flex">
-						<Nav.Link as={Link} href="workpump" className="m-3">
-							<Button className="m-3 nav-blue-bg border-0 btn-lg">Pumps</Button>
+						<Nav.Link as={Link} href="workpump">
+							<Button className="m-2 nav-blue-bg border-0 btn-lg">Pumps</Button>
 						</Nav.Link>
-						<Nav.Link as={Link} href="worksolar" className="m-3">
-							<Button className="m-3 nav-blue-bg border-0 btn-lg">Solar</Button>
+						<Nav.Link as={Link} href="worksolar">
+							<Button className="m-2 nav-blue-bg border-0 btn-lg">Solar</Button>
 						</Nav.Link>
-						<Nav.Link as={Link} href="workklima" className="m-3">
-							<Button className="m-3 nav-blue-bg border-0 btn-lg">Klima</Button>{" "}
+						<Nav.Link as={Link} href="workklima">
+							<Button className="m-2 nav-blue-bg border-0 btn-lg">Klima</Button>{" "}
 						</Nav.Link>
 					</Col>
 				</Row>

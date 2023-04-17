@@ -47,7 +47,7 @@ function Offer() {
 		delay: 1000,
 	});
 	return (
-		<div ref={sectionRef}>
+		<Container ref={sectionRef}>
 			<Row className="mt-5 text-start ">
 				<Col lg={7}>
 					<animated.div style={animationProps}>
@@ -66,93 +66,87 @@ function Offer() {
 			>
 				<Col lg={4} className="  rounded">
 					<Nav.Link as={Link} href="/solar" className="">
-						<animated.div style={imgAnimationProps}>
-							<Card
-								style={{ border: "none", position: "relative" }}
-								className="bg-amg rounded hover"
-							>
-								<animated.div style={imgAnimationProps}>
-									<Card.Img
-										src="/assets/solary.jpg"
-										className=" rounded"
-										style={{ opacity: "0.55" }}
-									/>
-									<Card.Title
-										style={{
-											position: "absolute",
-											top: "50%",
-											left: "50%",
-											transform: "translate(-50%, -50%)",
-											color: "white",
-										}}
-									>
-										<h1>Zonnepanelen</h1>
-									</Card.Title>
-								</animated.div>
-							</Card>
-						</animated.div>
+						<Card
+							style={{ border: "none", position: "relative" }}
+							className="bg-amg rounded hover m-1"
+						>
+							<animated.div style={animationProps}>
+								<Card.Img
+									src="/assets/solary.jpg"
+									className=" rounded"
+									style={{ opacity: "0.55" }}
+								/>
+								<Card.Title
+									style={{
+										position: "absolute",
+										top: "50%",
+										left: "50%",
+										transform: "translate(-50%, -50%)",
+										color: "white",
+									}}
+								>
+									<h1>Zonnepanelen</h1>
+								</Card.Title>
+							</animated.div>
+						</Card>
 					</Nav.Link>
 				</Col>
 				<Col lg={4} className="  rounded">
 					<Nav.Link as={Link} href="/pumps" className="">
-						<animated.div style={imgAnimationProps}>
-							<Card
-								style={{ border: "none", position: "relative" }}
-								className="bg-amg rounded hover"
-							>
-								<animated.div style={imgAnimationProps}>
-									<Card.Img
-										src="/assets/pompa.jpg"
-										className=" rounded"
-										style={{ opacity: "0.55" }}
-									/>
-									<Card.Title
-										style={{
-											position: "absolute",
-											top: "50%",
-											left: "50%",
-											transform: "translate(-50%, -50%)",
-											color: "white",
-										}}
-									>
-										<h1>Warmtepompen</h1>
-									</Card.Title>
-								</animated.div>
-							</Card>
-						</animated.div>
+						<Card
+							style={{ border: "none", position: "relative" }}
+							className="bg-amg rounded hover m-1"
+						>
+							<animated.div style={animationProps}>
+								<Card.Img
+									src="/assets/pompa.jpg"
+									className=" rounded"
+									style={{ opacity: "0.55" }}
+								/>
+								<Card.Title
+									style={{
+										position: "absolute",
+										top: "50%",
+										left: "50%",
+										transform: "translate(-50%, -50%)",
+										color: "white",
+									}}
+								>
+									<h1>Warmtepompen</h1>
+								</Card.Title>
+							</animated.div>
+						</Card>
 					</Nav.Link>
 				</Col>{" "}
 				<Col lg={4} className="  rounded ">
 					<Nav.Link as={Link} href="/klimatization" className="">
-						<animated.div style={imgAnimationProps}>
-							<Card
-								style={{ border: "none", position: "relative" }}
-								className="bg-amg rounded hover"
-							>
-								<animated.div style={imgAnimationProps}>
-									<Card.Img
-										src="/assets/klimatyzacje.jpg"
-										className=" rounded"
-										style={{ opacity: "0.55" }}
-									/>
-									<Card.Title
-										style={{
-											position: "absolute",
-											top: "50%",
-											left: "50%",
-											transform: "translate(-50%, -50%)",
-											color: "white",
-										}}
-									>
-										<h1>Airconditioning</h1>
-									</Card.Title>
-								</animated.div>
-							</Card>
-						</animated.div>
+						<Card
+							style={{ border: "none", position: "relative" }}
+							className="bg-amg rounded hover m-1"
+						>
+							<animated.div style={animationProps}>
+								<Card.Img
+									src="/assets/klimatyzacje.jpg"
+									className=" rounded"
+									style={{ opacity: "0.55" }}
+								/>
+								<Card.Title
+									style={{
+										position: "absolute",
+										top: "50%",
+										left: "50%",
+										transform: "translate(-50%, -50%)",
+										color: "white",
+									}}
+								>
+									<h1>Airconditioning</h1>
+								</Card.Title>
+							</animated.div>
+						</Card>
 					</Nav.Link>
 				</Col>
 			</Row>
-		</div>
+		</Container>
 	);
 }
 

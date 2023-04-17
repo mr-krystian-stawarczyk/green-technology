@@ -65,7 +65,7 @@ const NavbarComp = () => {
 						<NavDropdown
 							title="Producten"
 							id="basic-nav-dropdown"
-							className=" rounded shadow-lg  mx-2   nav-blue-btn"
+							className=" rounded shadow-lg  m-2   nav-blue-btn"
 							style={{
 								borderColor: "#cccccc",
 								borderWidth: 1,
@@ -76,6 +76,12 @@ const NavbarComp = () => {
 								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
 									{" "}
 									Producten
+								</Button>
+							</NavDropdown.Item>
+							<NavDropdown.Item as={Link} href="voll" className="">
+								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
+									{" "}
+									Volledige set
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Divider />
@@ -110,7 +116,7 @@ const NavbarComp = () => {
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link as={Link} href="/work" className="mx-2">
+						<Nav.Link as={Link} href="/work" className="m-2">
 							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
 								{" "}
 								Werk
@@ -122,7 +128,7 @@ const NavbarComp = () => {
 								Subsidies
 							</Button>
 						</Nav.Link>
-						<Nav.Link as={Link} href="/about" className="mx-2">
+						<Nav.Link as={Link} href="/about" className="m-2">
 							<Button variant=" btn-lg   shadow-lg nav-blue-btn ">
 								Over Ons
 							</Button>
@@ -134,7 +140,7 @@ const NavbarComp = () => {
 							<MdPhoneInTalk className="m-1" />
 							649 932 604
 						</Button>
-						<Nav.Link as={Link} href="#contact" className="mx-2">
+						<Nav.Link as={Link} href="#contact" className="m-2">
 							<Button variant=" btn-lg nav-blue-bg text-white shadow-lg">
 								{" "}
 								Snel Kontakt

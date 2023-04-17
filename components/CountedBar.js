@@ -77,7 +77,7 @@ function CountedBar() {
 								{isVisible && (
 									<CountUp start={100} end={15706} duration={3} delay={0}>
 										{({ countUpRef }) => (
-											<span className="count display-1" ref={countUpRef} />
+											<span className="count " ref={countUpRef} />
 										)}
 									</CountUp>
 								)}
@@ -94,7 +94,7 @@ function CountedBar() {
 								{isVisible && (
 									<CountUp start={6} end={12} duration={3} delay={0}>
 										{({ countUpRef }) => (
-											<span className="count display-1" ref={countUpRef} />
+											<span className="count " ref={countUpRef} />
 										)}
 									</CountUp>
 								)}
@@ -104,13 +104,13 @@ function CountedBar() {
 					</animated.div>
 				</Col>
 				<Col lg={4}>
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationPropsMiddle}>
 						<Card.Body className="text-white">
 							<Card.Title>
 								{isVisible && (
 									<CountUp start={6} end={1795} duration={3} delay={0}>
 										{({ countUpRef }) => (
-											<span className="count display-1" ref={countUpRef} />
+											<span className="count " ref={countUpRef} />
 										)}
 									</CountUp>
 								)}{" "}

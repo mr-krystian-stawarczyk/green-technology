@@ -87,7 +87,7 @@ function Header4() {
 					</animated.div>
 				</Col>
 				<Col lg={5} className="p-3 rounded   ">
-					<animated.div style={imgAnimationProps}>
+					<animated.div style={animationProps}>
 						{" "}
 						<Card className="border-0 hover">
 							<Card.Img src="/assets/solary1.jpg" className="" />
