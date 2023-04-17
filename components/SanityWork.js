@@ -93,7 +93,7 @@ function SanityWork() {
 					<animated.div style={animationPropsMiddle}>
 						<Carousel className="shadow-lg">
 							{all.map((item) => (
-								<Carousel.Item key={item._id} style={{ maxHeight: "600px" }}>
+								<Carousel.Item key={item._id} style={{ height: "500px" }}>
 									<img
 										className="d-block w-100 carousel-imgs "
 										src={urlFor(item.image && item.image[0])}

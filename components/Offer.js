@@ -68,7 +68,7 @@ function Offer() {
 					<Nav.Link as={Link} href="/solar" className="">
 						<Card
 							style={{ border: "none", position: "relative" }}
-							className="bg-amg rounded hover m-1"
+							className="bg-amg hover m-1 rounded-0 border-0"
 						>
 							<animated.div style={animationProps}>
 								<Card.Img
