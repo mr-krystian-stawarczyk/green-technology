@@ -70,7 +70,7 @@ function Pumps4() {
 	});
 	return (
 		<Row
-			className=" text-center justify-content-center align-items-center my-2  "
+			className=" text-center justify-content-center align-items-center my-2 mt-5 "
 			ref={sectionRef}
 		>
 			<Col lg={5} className=" p-3 rounded   rounded">
@@ -93,20 +93,20 @@ function Pumps4() {
 							<h1 className=" text-dark text-center">
 								Wij voeren een betrouwbare audit uit
 							</h1>{" "}
-							<h5 className=" text-dark text-start">
+							<h6 className=" text-dark text-start">
 								Elk van onze offertes wordt voorafgegaan betrouwbare controle.
-							</h5>{" "}
-							<h5 className=" text-dark text-start">
+							</h6>{" "}
+							<h6 className=" text-dark text-start">
 								{" "}
 								We kiezen niet zomaar een toestel. Iedereen die bij ons komt de
 								klant moet voorbereid zijn op een reeks uitputtende vragen met
 								betrekking tot het gebouw en een bezoek van een
 								installateur/monteur/simpelweg leuke knappe meneer 😀 om de C.O.
-							</h5>
-							<h5 className=" text-dark text-start">
+							</h6>
+							<h6 className=" text-dark text-start">
 								Pas na deze twee belangrijke stappen kunnen we het halen
 								verantwoorde keuze van het apparaat en een bindende offerte.
-							</h5>
+							</h6>
 						</Card.Body>
 					</Card>
 				</animated.div>

@@ -3,7 +3,7 @@ body,
 * {
 	padding: 0;
 	margin: 0;
-	font-family: "Monserat", sans-serif;
+	font-family: "Poppins", sans-serif;
 
 	box-sizing: border-box;
 }
@@ -23,6 +23,10 @@ body,
 
 .truck-road {
 	border-bottom: 5px dotted rgba(40, 167, 69, 1);
+}
+
+.bold {
+	font-weight: 600 !important;
 }
 
 @keyframes truck-move {
@@ -49,8 +53,11 @@ body,
 }
 
 #basic-nav-dropdown {
-	font-size: 1.2rem;
 	color: black !important;
+}
+
+#basic-nav-dropdown:hover {
+	color: rgb(255, 255, 255) !important;
 }
 
 .nav {
@@ -86,7 +93,7 @@ body,
 }
 
 .btn-green {
-	background-color: #28a745 !important;
+	background-color: #54a49c !important;
 	color: black !important;
 	border: none !important;
 }
@@ -110,6 +117,10 @@ body,
 	background-color: #174873;
 }
 
+.producten-dropdown:hover {
+	color: rgb(102, 2, 2) !important;
+}
+
 .icons {
 	font-size: 5rem;
 	color: white;
@@ -129,8 +140,14 @@ body,
 }
 
 .carousel-imgs {
-	height: 100%; /* make the image fill the container height */
-	object-fit: cover; /* make the image cover the container without distorting aspect ratio */
+	height: 100% !important; /* make the image fill the container height */
+	width: 100% !important;
+	object-fit: contain; /* make the image cover the container without distorting aspect ratio */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background-color: #28a745 !important;
 }
 
 @media (max-width: 368px) {
@@ -154,7 +171,7 @@ body,
 }
 
 .nav-blue-bg {
-	background-color: #28a745 !important;
+	background-color: #54a49c !important;
 }
 
 .nav-blue-bg:hover {
@@ -227,6 +244,10 @@ body,
 	background-size: cover;
 }
 
+.arrow-green {
+	color: #54a49c !important;
+}
+
 .secondary-bg2 {
 	background-image: url("../public/assets/secondary.svg");
 }
@@ -273,11 +294,6 @@ body,
 	100% {
 		opacity: 1;
 	}
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-	display: none;
 }
 
 .product-button {

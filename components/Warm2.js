@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 
-function Bateries1() {
+function Warm2() {
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -48,48 +48,44 @@ function Bateries1() {
 
 	return (
 		<Container
-			fluid
 			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col xl={5} lg={5} className="  rounded  rounded m-2">
+				<Col lg={5} className="  rounded  rounded m-2">
 					<animated.div style={animationProps}>
 						{" "}
-						<Card className="border-0 ">
-							<Card.Img src="/assets/home-battery.png" className="" />
+						<Card className="border-0 bg-transparent">
+							<Card.Img src="/assets/warm.png" className="" />
 						</Card>{" "}
 					</animated.div>
 				</Col>
-				<Col xl={5} lg={5} className=" rounded p-2 m-2">
+				<Col lg={6} className=" rounded p-2 m-2">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
 								border: "none",
 							}}
-							className=" "
+							className="bg-transparent "
 						>
-							<Card.Body className="text-center">
-								<h1 className=" text-dark text-center ">Energie opslag</h1>
-								<h6 className=" text-dark  text-start my-5">
-									Dankzij de energieopslag kunt u er volledig onafhankelijk van
-									worden elektriciteitsnet, stroomuitval en beschermen tegen
-									energieprijs stijgt.
-								</h6>
-								<h6 className=" text-dark text-start">
-									Een goed geselecteerde micro-installatie met een
-									energieopslagblik 100% van uw elektriciteitsbehoefte dekken
-									huishouden, waarbij het netwerk volledig wordt omzeild. Zon
-									setje stelt u in staat om alleen uw eigen i, co nog
-									belangrijker, gratis elektriciteit: wat er ook gebeurt
-									facturatiesysteem zit je zonder magazijn energie, overtollige
-									energie die je moet binnenhalen of verkopen netwerken; in
-									tijden van energievraag en gebrek aan productie
-									micro-installaties, verliest u 20% door het op te halen van
-									het netwerk of door het te kopen u moet de distributiekosten
-									dragen. Door overschotten op te slaan in in uw eigen magazijn
-									kunt u dit voorkomen.
-								</h6>
+							<Card.Body>
+								<h1 className=" text-dark text-center bold my-3">
+									Warmteopslag{" "}
+								</h1>
+								<h5 className=" text-dark text-start my-3">
+									Het is een moderne warmwatertank die kan worden verwarmd en
+									energie kan verzamelen in de vorm van warmte.
+								</h5>
+								<h5 className=" text-dark text-start">
+									Hij is voorzien van een batterij met een groot warmtewisselend
+									oppervlak, wat zorgt voor een zeer hoog rendement. Meestal
+									gemaakt van roestvrij staal, wat de levensduur verlengt zonder
+									extra onderhoud. Het grootste voordeel is dat het in
+									combinatie met een fotovoltaïsche micro-installatie een
+									perfecte oplossing is, want het is een volledig gratis en
+									onderhoudsvrije set voor het bereiden van warm water voor een
+									gezin van meerdere personen.
+								</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}
@@ -99,4 +95,4 @@ function Bateries1() {
 	);
 }
 
-export default Bateries1;
+export default Warm2;

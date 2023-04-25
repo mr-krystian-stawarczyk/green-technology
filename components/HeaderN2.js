@@ -67,7 +67,7 @@ function HeaderN2() {
 	return (
 		<Container
 			fluid
-			className=" vh-full text-dark  d-flex align-items-center  p-2"
+			className=" vh-full text-dark  d-flex align-items-center  "
 			ref={sectionRef}
 		>
 			<Row
@@ -94,21 +94,20 @@ function HeaderN2() {
 						className=""
 					>
 						<animated.div style={animationProps}>
-							<Card.Body className=" text-dark">
-								<h1 className="text-center">
-									Wij zijn een lokaal bedrijf met 12 jaar ervarin voor u - naast
-									u
+							<Card.Body className=" text-center">
+								<h1 className="text-center bold py-5">
+									Wij zijn een lokaal bedrijf met 12 jaar ervarin
 								</h1>
-								<h5 className="">
+								<h5 className="text-start">
 									Wij bieden praktische oplossingen om van uw huis een thuis te
 									maken ecologisch.
 								</h5>
-								<h5>
+								<h5 className="text-start">
 									Leer ons kennen, vertel ons over uw wensen en oordeel zelf -
 									Er is geen probleem dat we niet kunnen oplossen!
 								</h5>
 								<Nav.Link as={Link} href="/about">
-									<Button className=" p-2  text-bold  text-dark shadow-lg hover m-5 nav-blue-bg border-0 text-white">
+									<Button className=" p-2  text-bold  text-dark shadow-lg hover  nav-blue-bg border-0 text-white text-center my-3">
 										Maak kennis met ons bedrijf
 									</Button>
 								</Nav.Link>{" "}

@@ -110,7 +110,7 @@ function ProductsPromo() {
 						</Col>
 					</animated.div>
 				</Row>{" "}
-				<Col lg={6} className=" p-3 mx-2  rounded m-2">
+				<Col lg={6} className="">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
@@ -144,12 +144,12 @@ function ProductsPromo() {
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="p-3 rounded   m-2">
+				<Col lg={6}>
 					<animated.div style={animationProps}>
 						{promo.map((item) => (
-							<Card key={item._id}>
+							<Card key={item._id} className="border-0 rounded-0">
 								<Card.Img
-									className="d-block w-100 carousel-imgs hover"
+									className="d-block w-100 carousel-imgs hover border-0 rounded-0"
 									src={urlFor(item.image && item.image[0])}
 									alt={item.name}
 								/>

@@ -22,12 +22,14 @@ function HeaderSlides() {
 						}}
 						className="header-card border-0 bg-transparent text-white "
 					>
-						<Card.Body className="header-card-bg">
-							<h1>Uitgebreide oplossingen voor ecologische woningen</h1>
-							<h2>
-								We hebben meer dan 12 jaar ervaring ondersteund door tal van
-								referenties
+						<Card.Body className="header-card-bg text-center">
+							<h2 className="text-start bold">
+								Uitgebreide oplossingen voor ecologische woningen
 							</h2>
+							<h3 className="text-start">
+								AM Greenergy is jouw partner voor alle duurzame stappen die je
+								wilt gaan zetten om bij te dragen aan een beter klimaat
+							</h3>
 							<Nav.Link as={Link} href="/products">
 								<Button className="nav-blue-bg border-0 text-white">
 									Aanbod

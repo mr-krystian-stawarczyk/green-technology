@@ -53,6 +53,14 @@ function Bateries2() {
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
+				<Col lg={6} className="  rounded  rounded m-2">
+					<animated.div style={animationProps}>
+						{" "}
+						<Card className="border-0 bg-transparent">
+							<Card.Img src="/assets/home-battery3.png" className="" />
+						</Card>{" "}
+					</animated.div>
+				</Col>
 				<Col lg={5} className=" rounded p-2 m-2">
 					<animated.div style={animationProps}>
 						<Card
@@ -63,13 +71,13 @@ function Bateries2() {
 						>
 							<Card.Body className="text-center">
 								<h1 className=" text-dark text-center">Netspanning te hoog?</h1>
-								<h5 className=" text-dark text-start">
+								<h6 className=" text-dark text-start my-5">
 									Een ander onmiskenbaar en voor sommigen belangrijk aspect dat
 									wordt ondersteund door de investering in energieopslag, is het
 									probleem waarmee een toenemend aantal prosumenten wordt
 									geconfronteerd: te hoge spanning in het netwerk.
-								</h5>
-								<h5 className=" text-dark text-start">
+								</h6>
+								<h6 className=" text-dark text-start">
 									Het wordt veroorzaakt door overbelasting van het net op
 									zonnige, lente- en zomerdagen tijdens de piekuren van de
 									energieproductie van PV-installaties, waardoor in sommige
@@ -80,18 +88,10 @@ function Bateries2() {
 									installatie. Voor prosumenten met energieopslag geldt dit
 									probleem niet, want dan kunnen er overschotten ontstaan ​​die
 									helemaal niet aan het net worden geleverd.
-								</h5>
+								</h6>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}
-				</Col>
-				<Col lg={6} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
-						{" "}
-						<Card className="border-0 bg-transparent">
-							<Card.Img src="/assets/home-battery3.png" className="" />
-						</Card>{" "}
-					</animated.div>
 				</Col>
 			</Row>
 		</Container>

@@ -106,54 +106,49 @@ function Footer() {
 		>
 			<Row className="justify-content-center align-items-center text-center">
 				{" "}
-				<Col lg={6} sm={12} className="footer-bg p-4">
+				<Col lg={5} sm={12} className="p-4">
 					<animated.div style={animationProps}>
 						{" "}
 						<Row className="text-start">
-							<Col className="text-white">
+							<Col className="text-dark">
 								<Card className="border-0 bg-transparent">
-									<Card.Body>
-										<span className="display-5">AM Greenenergy</span>
-										<h4>
-											Heeft u vragen over ons aanbod? Bel ons of vul het
-											contactformulier in
-										</h4>
-										<h4>Wij zullen zo snel mogelijk contact met u opnemen</h4>
-										Hier voeren we het adres in
-										<h3>Bel ons:</h3>
-										<a href="tel:+31649932604">
-											<h1 className="p-2 text-green rounded hover">
-												649 932 604
-											</h1>
+									<Card.Img src="/assets/Logo.png" style={{ width: "260px" }} />
+									<Card.Body className="pt-0 mt-0">
+										<Card.Title className="my-3 bold">
+											Telefonisch bereikbaar
+										</Card.Title>
+
+										<a
+											href="tel:+31649932604"
+											style={{ textDecoration: "none", color: "black" }}
+										>
+											<h3 className="hover my-3">+31 649 932 604 </h3>
+											<h6 style={{ textDecoration: "none", color: "black" }}>
+												Maandag t/m vrijdag 9:00 - 17:00 uur
+											</h6>
 										</a>
-										<Card.Text className="hover">
-											<AiOutlineCheckCircle
-												className="text-green m-1 "
-												style={{ height: "28px", width: "28px" }}
-											/>
-											<span className="">Snelle en efficiënte installatie</span>
+
+										<Card.Title className="my-4 bold">Kantoor</Card.Title>
+										<Card.Text>
+											AM Greenergy Jan de Withof 106 5709 AL Helmond
 										</Card.Text>
-										<Card.Text className="hover">
-											<AiOutlineCheckCircle
-												className="text-green m-1 "
-												style={{ height: "28px", width: "28px" }}
-											/>
-											<span className="">Volledig aanbod</span>
-										</Card.Text>
-										<Card.Text className="hover">
-											<AiOutlineCheckCircle
-												className="text-green m-1 "
-												style={{ height: "28px", width: "28px" }}
-											/>
-											<span className="">Professioneel team</span>
-										</Card.Text>
+										<Card.Text>KVK: 78380758</Card.Text>
+										<Card.Title className="my-4 bold">Mail</Card.Title>
+
+										<a
+											href="mailto:info@izzifast.nl"
+											style={{ textDecoration: "none", color: "black" }}
+										>
+											{" "}
+											info@izzifast.nl
+										</a>
 									</Card.Body>
 								</Card>
 							</Col>
 						</Row>{" "}
 					</animated.div>
 				</Col>
-				<Col lg={6} className="windmil  p-5">
+				<Col lg={5} className="  p-5">
 					{" "}
 					<animated.div style={animationProps}>
 						{!isFormSubmitted ? (
@@ -163,59 +158,71 @@ function Footer() {
 							>
 								<Row>
 									<Row>
-										<h1 className="py-3">Snel Konakt </h1>
+										<h4 className="py-2 bold">
+											Neem direct contact met ons op{" "}
+										</h4>
 									</Row>
-									<Col>
-										<Form.Group
-											className="mb-3 border-success"
-											controlId="formBasicEmail"
-										>
-											<Form.Control
-												className="p-text"
-												type="text"
-												placeholder="Uw naam"
-												value={name}
-												name="name"
-												onChange={handleChangeInput}
-												required
-											/>
-										</Form.Group>
-									</Col>
-									<Col>
-										<Form.Group className="mb-3" controlId="formBasicEmail">
-											<Form.Control
-												className="p-text"
-												type="text"
-												placeholder="Uw telefoon"
-												value={phone}
-												name="phone"
-												onChange={handleChangeInput}
-												required
-											/>
-										</Form.Group>
-									</Col>
-									<Col>
-										<Form.Group className="mb-3" controlId="formBasicEmail">
-											<Form.Control
-												className="p-text"
-												type="email"
-												placeholder="Uw e-mail"
-												value={email}
-												name="Uw e-mail"
-												onChange={handleChangeInput}
-												required
-											/>
-										</Form.Group>
-									</Col>
+									<Row>
+										<Col>
+											<Form.Group
+												className="mb-3 border-success"
+												controlId="formBasicEmail"
+											>
+												<Form.Label>Naam</Form.Label>
+												<Form.Control
+													className="p-text"
+													type="text"
+													placeholder="Naam"
+													value={name}
+													name="name"
+													onChange={handleChangeInput}
+													required
+												/>
+											</Form.Group>
+										</Col>
+									</Row>
+									<Row>
+										<Col>
+											<Form.Group className="mb-3" controlId="formBasicEmail">
+												<Form.Label>Telefoon</Form.Label>
+												<Form.Control
+													className="p-text"
+													type="text"
+													placeholder="Telefoon"
+													value={phone}
+													name="phone"
+													onChange={handleChangeInput}
+													required
+												/>
+											</Form.Group>
+										</Col>
+									</Row>
+									<Row>
+										<Col>
+											<Form.Group className="mb-3" controlId="formBasicEmail">
+												<Form.Label>E-mail</Form.Label>
+												<Form.Control
+													className="p-text"
+													type="email"
+													placeholder="mail@gmail.com"
+													value={email}
+													name="Uw e-mail"
+													onChange={handleChangeInput}
+													required
+													rows={3}
+												/>
+											</Form.Group>
+										</Col>
+									</Row>
 								</Row>
 								<Row>
 									<Col>
 										<Form.Group className="mb-3" controlId="formBasicEmail">
-											<Form.Label>Uw beschrijving</Form.Label>
+											<Form.Label>Uw bericht</Form.Label>
 											<Form.Control
 												className="p-text"
 												as="textarea"
-												placeholder="Uw beschrijving"
+												placeholder="Bericht"
 												value={description}
 												name="description"
 												onChange={handleChangeInput}
@@ -226,15 +233,13 @@ function Footer() {
 									</Col>
 								</Row>
 
-								<Row className="justify-content-center align-items-center">
-									<Col>
-										<Button
-											type="submit"
-											className="p-text m-2 nav-blue-bg border-0"
-										>
-											{loading ? "Verzenden ..." : "Stuur"}
-										</Button>
-									</Col>
+								<Row className="justify-content-center align-items-center mx-1">
+									<Button
+										type="submit"
+										className="p-text  nav-blue-bg border-0 "
+									>
+										{loading ? "Verzenden ..." : "Stuur"}
+									</Button>
 								</Row>
 							</Form>
 						) : (

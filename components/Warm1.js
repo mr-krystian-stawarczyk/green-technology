@@ -52,14 +52,6 @@ function Warm1() {
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col lg={5} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
-						{" "}
-						<Card className="border-0 bg-transparent">
-							<Card.Img src="/assets/warm.png" className="" />
-						</Card>{" "}
-					</animated.div>
-				</Col>
 				<Col lg={6} className=" rounded p-2 m-2">
 					<animated.div style={animationProps}>
 						<Card
@@ -69,24 +61,32 @@ function Warm1() {
 							className="bg-transparent "
 						>
 							<Card.Body>
-								<h1 className=" text-dark text-center">Warmteopslag </h1>
-								<h5 className=" text-dark text-start">
-									Het is een moderne warmwatertank die kan worden verwarmd en
-									energie kan verzamelen in de vorm van warmte.
+								<h1 className=" text-dark text-center bold my-3">
+									Zonneboiler{" "}
+								</h1>
+								<h5 className=" text-dark text-start my-3">
+									Een zonneboiler gebruikt de energie van de zon om water te
+									verwarmen. De energie wordt opgevangen door collectoren en
+									omgezet in warmte.
 								</h5>
 								<h5 className=" text-dark text-start">
-									Hij is voorzien van een batterij met een groot warmtewisselend
-									oppervlak, wat zorgt voor een zeer hoog rendement. Meestal
-									gemaakt van roestvrij staal, wat de levensduur verlengt zonder
-									extra onderhoud. Het grootste voordeel is dat het in
-									combinatie met een fotovoltaïsche micro-installatie een
-									perfecte oplossing is, want het is een volledig gratis en
-									onderhoudsvrije set voor het bereiden van warm water voor een
-									gezin van meerdere personen.
+									Door de collectoren stroomt een vloeistof die deze warmte
+									opneemt. De collectoren zijn aangesloten op een voorraadvat,
+									via een spiraal/warmtewisselaar geeft de vloeistof de warmte
+									af aan het (tap)water in het voorraadvat. De zonneboiler
+									installatie kan ook gekoppeld aan uw centrale verwarming.
 								</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}
+				</Col>
+				<Col lg={5} className="  rounded  rounded m-2">
+					<animated.div style={animationProps}>
+						{" "}
+						<Card className="border-0 bg-transparent">
+							<Card.Img src="/assets/boiler.png" className="rounded-0" />
+						</Card>{" "}
+					</animated.div>
 				</Col>
 			</Row>
 		</Container>

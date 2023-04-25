@@ -78,7 +78,7 @@ function Subsidies() {
 					<Col lg={4}>
 						<animated.div style={animationProps}>
 							<Card
-								className=" rounded-0 hover2 "
+								className=" rounded-0 hover "
 								style={{
 									justifyContent: "center",
 									alignContent: "center",
@@ -108,7 +108,7 @@ function Subsidies() {
 						<animated.div style={animationPropsMiddle}>
 							{" "}
 							<Card
-								className="border-sm rounded-0 bg-amg text-white hover2"
+								className="border-sm rounded-0 bg-amg text-white hover"
 								style={{
 									justifyContent: "center",
 									alignContent: "center",
@@ -139,7 +139,7 @@ function Subsidies() {
 						<animated.div style={animationProps}>
 							{" "}
 							<Card
-								className="border-sm  rounded-0 hover2"
+								className="border-sm  rounded-0 hover"
 								style={{
 									justifyContent: "center",
 									alignContent: "center",

@@ -116,9 +116,9 @@ function HeaderN1() {
 			>
 				{" "}
 				<Row className="py-3 text-start ">
-					<Col lg={6}>
+					<Col lg={7}>
 						{" "}
-						<h1>
+						<h1 className="bold">
 							Wij bieden uitgebreide diensten met betrekking tot de installatie
 							van fotovoltaïsche cellen en warmtepompen
 						</h1>
@@ -147,7 +147,7 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title>Zonnepanelen</Card.Title>
+										<Card.Title className="bold">Zonnepanelen</Card.Title>
 										<Card.Text>
 											Je eigen, gratis en ecologische stroombron. laten ons om u
 											onafhankelijk te maken van verhogingen, limieten en
@@ -158,7 +158,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green mb-4"
+												className="arrow-green mb-4 hover"
 												style={{
 													color: "green",
 													width: "30px",
@@ -191,7 +191,7 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title>Warmtepomp</Card.Title>
+										<Card.Title className="bold">Warmtepomp</Card.Title>
 										<Card.Text>
 											Ecologische en efficiënte warmtebron die uw het huis zal
 											tegen lage kosten de ideale temperatuur bereiken. Bedankt
@@ -203,7 +203,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green mb-4"
+												className="arrow-green mb-4 hover"
 												style={{
 													color: "green",
 													width: "30px",
@@ -236,7 +236,9 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title>Airconditioning en recuperatie</Card.Title>
+										<Card.Title className="bold">
+											Airconditioning en recuperatie
+										</Card.Title>
 										<Card.Text>
 											Mogelijkheid tot goedkope verwarming en comfort ongeacht
 											de buitentemperatuur. Maak kennis met de onze effectieve
@@ -247,7 +249,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green mb-4"
+												className="arrow-green mb-4 hover"
 												style={{
 													color: "green",
 													width: "30px",
@@ -281,7 +283,7 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title>Energie Magazijn</Card.Title>
+										<Card.Title className="bold">Energie Magazijn</Card.Title>
 										<Card.Text>
 											Onafhankelijkheid van elektriciteitsprijzen en
 											stroomuitval. Zorgen voor een grotere rendabiliteit van de
@@ -293,7 +295,7 @@ function HeaderN1() {
 										<Button className="bg-transparent border-0 ">
 											{" "}
 											<BsFillArrowRightCircleFill
-												className="arrow-green mb-4"
+												className="arrow-green mb-4 hover"
 												style={{
 													color: "green",
 													width: "30px",

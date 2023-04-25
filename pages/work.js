@@ -104,16 +104,18 @@ function Work() {
 			>
 				<Row className="mt-5 pt-5 text-start">
 					<Col lg={6}>
-						<h1>We presenteren hier onze laatste projecten</h1>
+						<h1 className="bold py-4">
+							We presenteren hier onze laatste projecten
+						</h1>
 					</Col>
 				</Row>
 
 				<Row id="newest" className=" justify-content-center align-items-center">
-					<Col lg={8} className="">
+					<Col lg={10} className="bg-transparent">
 						<animated.div style={animationProps}>
-							<Carousel className="shadow-lg">
+							<Carousel className=" bg-transparent">
 								{all.map((all) => (
-									<Carousel.Item key={all._id} style={{ height: "500px" }}>
+									<Carousel.Item key={all._id} style={{ height: "600px" }}>
 										<Image
 											className="d-block w-100 carousel-imgs "
 											src={urlFor(all.image && all.image[0])}
@@ -127,22 +129,6 @@ function Work() {
 								))}
 							</Carousel>{" "}
 						</animated.div>
-					</Col>
-				</Row>
-				<Row className="my-5 text-start align-items-center justify-content-center">
-					<Col lg={6}>
-						<h1>Bekijk meer van ons werk</h1>
-					</Col>
-					<Col lg={6} className="d-flex">
-						<Nav.Link as={Link} href="workpump">
-							<Button className="m-2 nav-blue-bg border-0 btn-lg">Pumps</Button>
-						</Nav.Link>
-						<Nav.Link as={Link} href="worksolar">
-							<Button className="m-2 nav-blue-bg border-0 btn-lg">Solar</Button>
-						</Nav.Link>
-						<Nav.Link as={Link} href="workklima">
-							<Button className="m-2 nav-blue-bg border-0 btn-lg">Klima</Button>{" "}
-						</Nav.Link>
 					</Col>
 				</Row>
 			</Row>

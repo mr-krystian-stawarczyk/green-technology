@@ -84,16 +84,16 @@ function SanityWork() {
 				<Col className="my-3">
 					{" "}
 					<animated.div style={animationProps}>
-						<h1 className=" text-start">Bekijk onze nieuwste projecten</h1>{" "}
+						<h1 className=" text-start bold">Bekijk onze nieuwste projecten</h1>{" "}
 					</animated.div>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">
 				<Col lg={10}>
 					<animated.div style={animationPropsMiddle}>
-						<Carousel className="shadow-lg">
+						<Carousel className="">
 							{all.map((item) => (
-								<Carousel.Item key={item._id} style={{ height: "500px" }}>
+								<Carousel.Item key={item._id} style={{ height: "600px" }}>
 									<img
 										className="d-block w-100 carousel-imgs "
 										src={urlFor(item.image && item.image[0])}

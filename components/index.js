@@ -59,9 +59,10 @@ export { default as SanityPump } from "./SanityPump";
 export { default as SanityKlima } from "./SanityKlima";
 export { default as Subsidies } from "./Subsidies";
 export { default as Subsidies2 } from "./Subsidies2";
-export { default as CountedBar } from "./CountedBar";
+
 export { default as Bateries1 } from "./Bateries1";
 export { default as Bateries2 } from "./Bateries2";
 export { default as Bateries3 } from "./Bateries3";
 
 export { default as Warm1 } from "./Warm1";
+export { default as Warm2 } from "./Warm2";

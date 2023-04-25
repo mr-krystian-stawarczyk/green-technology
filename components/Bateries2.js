@@ -53,14 +53,6 @@ function Bateries2() {
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col lg={5} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
-						{" "}
-						<Card className="border-0 bg-transparent">
-							<Card.Img src="/assets/home-battery2.png" className="" />
-						</Card>{" "}
-					</animated.div>
-				</Col>
 				<Col lg={6} className=" rounded p-2 m-2">
 					<animated.div style={animationProps}>
 						<Card
@@ -71,24 +63,32 @@ function Bateries2() {
 						>
 							<Card.Body className="text-center">
 								<h1 className=" text-dark text-center">Salderingsregeling </h1>
-								<h5 className=" text-dark text-start ">
+								<h6 className=" text-dark text-start my-5">
 									De salderingsregeling is een regeling in Nederland waarmee
 									eigenaren van zonnepanelen en andere duurzame energiebronnen
 									energie die ze niet gebruiken, kunnen terugleveren aan het
 									elektriciteitsnet. De eigenaar ontvangt dan een vergoeding
 									voor de teruggeleverde energie in de vorm van een vermindering
 									op de energierekening.
-								</h5>
-								<h5 className=" text-dark text-start">
+								</h6>
+								<h6 className=" text-dark text-start">
 									Met de salderingsregeling wordt de teruglevering van duurzame
 									energie gestimuleerd en kan er efficiënter gebruik worden
 									gemaakt van de opgewekte energie. Door de regeling wordt het
 									voor huishoudens en bedrijven ook financieel aantrekkelijker
 									om te investeren in duurzame energie.
-								</h5>
+								</h6>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}
+				</Col>
+				<Col lg={5} className="  rounded  rounded m-2">
+					<animated.div style={animationProps}>
+						{" "}
+						<Card className="border-0 bg-transparent">
+							<Card.Img src="/assets/home-battery2.png" className="" />
+						</Card>{" "}
+					</animated.div>
 				</Col>
 			</Row>
 		</Container>

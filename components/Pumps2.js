@@ -47,7 +47,7 @@ function Pumps2() {
 	});
 	return (
 		<Row
-			className="  justify-content-center align-items-center my-2 text-dark mt-5"
+			className="  justify-content-center align-items-center my-2 text-dark vh-full"
 			ref={sectionRef}
 		>
 			<Col xl={5} lg={5} className=" p-3 rounded   rounded">
@@ -71,15 +71,15 @@ function Pumps2() {
 								{" "}
 								Wat is een warmtepomp?
 							</h1>
-							<h5 className="text-start">
+							<h6 className="text-start">
 								Wat doet een warmtepomp in huis? Een warmtepomp haalt warmte uit
 								de lucht, de bodem of het grondwater. Hiervoor gebruikt hij
 								stroom, maar veel minder dan bij elektrisch verwarmen zonder
 								warmtepomp. Een warmtepomp werkt eigenlijk als een omgekeerde
 								koelkast. In plaats van dat hij warmte afvoert, haalt een
 								warmtepomp juist warmte van buiten naar binnen.
-							</h5>
-							<h5 className="text-start">
+							</h6>
+							<h6 className="text-start">
 								Je kunt je huis verwarmen met een hybride of een volledig
 								elektrische warmtepomp. Een warmtepomp werkt het best in
 								combinatie met goede isolatie. Zorg dus dat je huis redelijk
@@ -87,7 +87,7 @@ function Pumps2() {
 								geïsoleerd voor je een volledige warmtepomp neemt. Hybride
 								warmtepompen halen warmte meestal uit de buitenlucht. Een
 								volledige warmtepomp kan ook andere bronnen gebruiken.
-							</h5>
+							</h6>
 						</Card.Body>
 					</Card>{" "}
 				</animated.div>

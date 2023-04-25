@@ -114,8 +114,8 @@ function Reviews({}) {
 				{" "}
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
-						<Col lg={6}>
-							<h1>
+						<Col lg={7}>
+							<h1 className="bold">
 								Sluit je aan bij onze tevreden klanten uit heel Nederland!
 							</h1>
 						</Col>
@@ -130,7 +130,7 @@ function Reviews({}) {
 							className=" "
 						>
 							<Card.Body className="text-start text-dark">
-								<h5 className=" ">
+								<h5 className="py-4 ">
 									Veel tevreden klanten hebben is een van de belangrijkste
 									prestaties voor elk bedrijf
 								</h5>
@@ -165,27 +165,17 @@ function Reviews({}) {
 						</Card>
 					</animated.div>
 				</Col>
-				<Col lg={5} className="p-3 rounded  ">
+				<Col lg={5} className="p-3  ">
 					<Carousel indicators={false} controls={false} loop>
 						<Carousel.Item>
-							<Image
-								src="/assets/face1.jpg"
-								alt="me"
-								fluid
-								className="rounded"
-							/>
+							<Image src="/assets/face1.jpg" alt="me" fluid className="" />
 							<Carousel.Caption>
 								<h3>Yo</h3>
 								<p>100% Proffesional</p>
 							</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
-							<Image
-								src="/assets/face2.jpg"
-								alt="me"
-								fluid
-								className="rounded"
-							/>
+							<Image src="/assets/face2.jpg" alt="me" fluid className="" />
 
 							<Carousel.Caption>
 								<h3>Toon</h3>
@@ -193,12 +183,7 @@ function Reviews({}) {
 							</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
-							<Image
-								src="/assets/face3.jpg"
-								alt="me"
-								fluid
-								className="rounded"
-							/>
+							<Image src="/assets/face3.jpg" alt="me" fluid className="" />
 
 							<Carousel.Caption>
 								<h3>Anna</h3>

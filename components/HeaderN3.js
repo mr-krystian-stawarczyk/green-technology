@@ -104,7 +104,9 @@ function HeaderN3() {
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
 						<Col lg={6}>
-							<h1>Bekijk onze laatste promotie</h1>
+							<h1 style={{ fontWeight: "600" }}>
+								Bekijk onze laatste promotie
+							</h1>
 						</Col>
 					</animated.div>
 				</Row>{" "}
@@ -116,22 +118,21 @@ function HeaderN3() {
 						className=""
 					>
 						<Card.Body className=" text-dark text-center">
-							<h5>
+							<h5 className="bold">
 								<AiOutlineCheckCircle
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
 								/>
 								Hoogste kwaliteit
 							</h5>
-							<h5>
-								{" "}
+							<h5 className="bold">
 								<AiOutlineCheckCircle
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
 								/>
 								Beste prijzen
 							</h5>{" "}
-							<h5 className="text-center p-2">
+							<h5 className="text-center p-2 bold">
 								<AiOutlineCheckCircle
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
@@ -148,9 +149,9 @@ function HeaderN3() {
 				</Col>
 				<Col lg={5} className="p-3 rounded   m-2">
 					{promo.map((item) => (
-						<Card key={item._id}>
+						<Card key={item._id} className="rounded-0 border-0">
 							<Card.Img
-								className="d-block w-100 carousel-imgs hover shadow-lg border-0 rounded-0"
+								className="d-block w-100 carousel-imgs hover  border-0 rounded-0 shadow-lg"
 								src={urlFor(item.image && item.image[0])}
 								alt={item.name}
 							/>

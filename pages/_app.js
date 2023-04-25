@@ -6,6 +6,7 @@ import { PageTransition } from "next-page-transitions";
 import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
 import { SSRProvider } from "react-bootstrap";
+
 export default function App(props) {
 	const { Component, pageProps, router } = props;
 

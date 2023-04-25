@@ -98,14 +98,17 @@ function Klima1() {
 	});
 	return (
 		<Row
-			className=" justify-content-center align-items-center vh-full  my-2  rounded"
+			className=" justify-content-center align-items-center vh-full  my-2  "
 			ref={sectionRef}
 		>
-			<Col lg={5} className=" p-3 rounded   rounded">
+			<Col lg={5} className="p-3">
 				{" "}
 				<animated.div style={animationProps}>
-					<Card className="border-0 ">
-						<Card.Img src="/assets/lgcooler.jpg" className="" />
+					<Card className="border-0 rounded-0">
+						<Card.Img
+							src="/assets/klimatyzacje.jpg"
+							className="border-0 rounded-0"
+						/>
 					</Card>{" "}
 				</animated.div>
 			</Col>
@@ -119,20 +122,16 @@ function Klima1() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h1 className=" text-dark">
-								Recuperatie en airconditioning kunnen worden gecombineerd
-							</h1>{" "}
-							<h5>
-								De airconditioning houdt de kamers koel maar voorziet niet
-								ventilatie, d.w.z. verse lucht aanvoeren.
+							<h1 className=" text-dark">COMFORT IN UW WONING</h1>{" "}
+							<h5 className="my-3">
+								Houd uw woonkamer, slaapkamer of werkkamer lekker koel met
+								airconditioning. In een mum van tijd is uw ruimte op een
+								aangename temperatuur en geniet u van een optimaal
+								binnenklimaat.
 							</h5>{" "}
 							<h5>
-								Mogelijkheid om te combineren tot één recuperatie- en
-								airconditioningsysteem Er is veel. Van de eenvoudigste, namelijk
-								het aansluiten van airconditioning kanaal zonder circulatie in
-								een mechanisch ventilatiesysteem na een freon-koeler aansluiten.
-								Elk gebouw en elke behoefte gebruikers zijn verschillend, dus
-								kiezen we voor de juiste oplossing telkens individueel.
+								Laat een airco plaatsen door Duurzaam Klimaat Zeeland en u bent
+								gegarandeerd van een vakkundige installatie.
 							</h5>
 						</Card.Body>
 					</Card>

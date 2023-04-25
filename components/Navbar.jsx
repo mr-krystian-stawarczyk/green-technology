@@ -65,12 +65,14 @@ const NavbarComp = () => {
 						<NavDropdown
 							title="Producten"
 							id="basic-nav-dropdown"
-							className=" rounded shadow-lg  m-2   nav-blue-btn"
+							className="rounded shadow-lg m-1 nav-blue-btn"
 							style={{
 								borderColor: "#cccccc",
 								borderWidth: 1,
-								fontSize: "1rem",
-							}} // add custom styles
+
+								color: "#000000", // set the default color of the title text to black
+							}}
+							// add this line to change the title color to white
 						>
 							<NavDropdown.Item as={Link} href="products" className="">
 								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
@@ -81,7 +83,7 @@ const NavbarComp = () => {
 							<NavDropdown.Item as={Link} href="voll" className="">
 								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
 									{" "}
-									Volledige set
+									Zonneboiler met warmtepomp
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Divider />
@@ -105,43 +107,43 @@ const NavbarComp = () => {
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/bateries">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Energie opslag
+									Thuis baterijen
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/warm">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Warmteopslag
+									Zonneboilers
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link as={Link} href="/work" className="m-2">
-							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
+						<Nav.Link as={Link} href="/work" className="m-1">
+							<Button className="btn-md py-2  shadow-lg nav-blue-btn border-0">
 								{" "}
 								Werk
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/subsidies">
-							<Button className="btn-lg   shadow-lg nav-blue-btn border-0">
+							<Button className="btn-md py-2 shadow-lg nav-blue-btn border-0">
 								{" "}
 								Subsidies
 							</Button>
 						</Nav.Link>
-						<Nav.Link as={Link} href="/about" className="m-2">
-							<Button variant=" btn-lg   shadow-lg nav-blue-btn ">
+						<Nav.Link as={Link} href="/about" className="m-1">
+							<Button variant=" btn-md py-2  shadow-lg nav-blue-btn ">
 								Over Ons
 							</Button>
 						</Nav.Link>{" "}
 						<Button
-							className="btn-lg   shadow-lg nav-blue-btn border-0"
+							className="btn-md py-2  shadow-lg nav-blue-btn border-0"
 							onClick={handleCall}
 						>
 							<MdPhoneInTalk className="m-1" />
-							649 932 604
+							+31 649932604
 						</Button>
-						<Nav.Link as={Link} href="#contact" className="m-2">
-							<Button variant=" btn-lg nav-blue-bg text-white shadow-lg">
+						<Nav.Link as={Link} href="#contact" className="m-1">
+							<Button variant=" btn-md nav-blue-bg text-white shadow-lg">
 								{" "}
 								Snel Kontakt
 							</Button>

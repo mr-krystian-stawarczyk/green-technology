@@ -17,7 +17,6 @@ import {
 	HeaderN3,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
-import CountedBar from "../components/CountedBar";
 
 export default function Home() {
 	return (
@@ -25,7 +24,7 @@ export default function Home() {
 			<HeaderSlides />
 			<HeaderN1 />
 			<HeaderN2 />
-			<CountedBar />
+
 			<HeaderN3 />
 			<Reviews />
 

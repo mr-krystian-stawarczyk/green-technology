@@ -61,7 +61,7 @@ function Pumps3() {
 					>
 						<Card.Body className="">
 							<h1 className="text-center"> Hoe werkt een warmtepomp?</h1>
-							<h6 className="lead">
+							<h6 className="">
 								Onder atmosferische druk kookt water bij een temperatuur van 100
 								˚C. Bij gelijke druk en een constante temperatuur van 100 ˚C,
 								blijft het water koken, oftewel verdampen, en vormt het zich tot
@@ -74,7 +74,7 @@ function Pumps3() {
 								bij 20 ˚C, ook hier moeten we nog steeds warmte toevoeren,
 								bijvoorbeeld uit de omgeving.
 							</h6>{" "}
-							<h6 className="lead">
+							<h6 className="">
 								Het kook- en condensatiepunt van water hangt dus samen met de
 								druk waarin het water zich bevindt. Bij koken kunnen de
 								moleculen ontsnappen aan het water. Hoe lager de druk hoe
