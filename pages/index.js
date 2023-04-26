@@ -1,5 +1,6 @@
 import React from "react";
-
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 import {
 	Header,
 	Header2,
@@ -15,19 +16,19 @@ import {
 	SanityWork,
 	HeaderN2,
 	HeaderN3,
+	Navigation,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
 
 export default function Home() {
 	return (
 		<>
+			{" "}
 			<HeaderSlides />
 			<HeaderN1 />
 			<HeaderN2 />
-
 			<HeaderN3 />
 			<Reviews />
-
 			<SanityWork />
 		</>
 	);

@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-
+import { useTranslation } from "react-i18next";
 import Nav from "react-bootstrap/Nav";
 import ContactForm from "./ContactForm";
 import emailjs from "emailjs-com";
@@ -22,6 +22,7 @@ function Footer() {
 		email: "",
 		message: "",
 	});
+	const { t } = useTranslation();
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
@@ -114,9 +115,7 @@ function Footer() {
 								<Card className="border-0 bg-transparent">
 									<Card.Img src="/assets/Logo.png" style={{ width: "260px" }} />
 									<Card.Body className="pt-0 mt-0">
-										<Card.Title className="my-3 bold">
-											Telefonisch bereikbaar
-										</Card.Title>
+										<Card.Title className="my-3 bold">{t("f1")}</Card.Title>
 
 										<a
 											href="tel:+31649932604"
@@ -124,11 +123,11 @@ function Footer() {
 										>
 											<h3 className="hover my-3">+31 649 932 604 </h3>
 											<h6 style={{ textDecoration: "none", color: "black" }}>
-												Maandag t/m vrijdag 9:00 - 17:00 uur
+												{t("f2")}
 											</h6>
 										</a>
 
-										<Card.Title className="my-4 bold">Kantoor</Card.Title>
+										<Card.Title className="my-4 bold"> {t("f3")}</Card.Title>
 										<Card.Text>
 											AM Greenergy Jan de Withof 106 5709 AL Helmond
 										</Card.Text>
@@ -158,9 +157,7 @@ function Footer() {
 							>
 								<Row>
 									<Row>
-										<h4 className="py-2 bold">
-											Neem direct contact met ons op{" "}
-										</h4>
+										<h4 className="py-2 bold">{t("f4")}</h4>
 									</Row>
 									<Row>
 										<Col>
@@ -168,7 +165,7 @@ function Footer() {
 												className="mb-3 border-success"
 												controlId="formBasicEmail"
 											>
-												<Form.Label>Naam</Form.Label>
+												<Form.Label> {t("f5")}</Form.Label>
 												<Form.Control
 													className="p-text"
 													type="text"
@@ -184,7 +181,7 @@ function Footer() {
 									<Row>
 										<Col>
 											<Form.Group className="mb-3" controlId="formBasicEmail">
-												<Form.Label>Telefoon</Form.Label>
+												<Form.Label> {t("f6")}</Form.Label>
 												<Form.Control
 													className="p-text"
 													type="text"
@@ -218,7 +215,7 @@ function Footer() {
 								<Row>
 									<Col>
 										<Form.Group className="mb-3" controlId="formBasicEmail">
-											<Form.Label>Uw bericht</Form.Label>
+											<Form.Label> {t("f7")}</Form.Label>
 											<Form.Control
 												className="p-text"
 												as="textarea"

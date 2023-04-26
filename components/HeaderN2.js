@@ -4,13 +4,13 @@ import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
-
+import { useTranslation } from "react-i18next";
 function HeaderN2() {
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
-
+	const { t } = useTranslation();
 	useEffect(() => {
 		const observer = new IntersectionObserver(handleIntersection);
 		if (sectionRef.current) {
@@ -95,20 +95,11 @@ function HeaderN2() {
 					>
 						<animated.div style={animationProps}>
 							<Card.Body className=" text-center">
-								<h1 className="text-center bold py-5">
-									Wij zijn een lokaal bedrijf met 12 jaar ervarin
-								</h1>
-								<h5 className="text-start">
-									Wij bieden praktische oplossingen om van uw huis een thuis te
-									maken ecologisch.
-								</h5>
-								<h5 className="text-start">
-									Leer ons kennen, vertel ons over uw wensen en oordeel zelf -
-									Er is geen probleem dat we niet kunnen oplossen!
-								</h5>
+								<h1 className="text-center bold py-5">{t("h15")}</h1>
+								<h5 className="text-start">{t("h16")}</h5>
 								<Nav.Link as={Link} href="/about">
 									<Button className=" p-2  text-bold  text-dark shadow-lg hover  nav-blue-bg border-0 text-white text-center my-3">
-										Maak kennis met ons bedrijf
+										{t("h17")}
 									</Button>
 								</Nav.Link>{" "}
 							</Card.Body>{" "}

@@ -6,8 +6,11 @@ import { PageTransition } from "next-page-transitions";
 import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
 import { SSRProvider } from "react-bootstrap";
+import { appWithTranslation } from "next-i18next";
 
-export default function App(props) {
+import i18n from "../i18n";
+
+function App(props) {
 	const { Component, pageProps, router } = props;
 
 	useEffect(() => {
@@ -35,3 +38,5 @@ export default function App(props) {
 		</SSRProvider>
 	);
 }
+
+export default appWithTranslation(App);

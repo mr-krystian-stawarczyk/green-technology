@@ -18,7 +18,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { urlFor } from "../lib/client";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
-
+import { useTranslation } from "react-i18next";
 function HeaderN1() {
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
@@ -37,7 +37,7 @@ function HeaderN1() {
 			}
 		});
 	};
-
+	const { t } = useTranslation();
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -118,10 +118,7 @@ function HeaderN1() {
 				<Row className="py-3 text-start ">
 					<Col lg={7}>
 						{" "}
-						<h1 className="bold">
-							Wij bieden uitgebreide diensten met betrekking tot de installatie
-							van fotovoltaïsche cellen en warmtepompen
-						</h1>
+						<h1 className="bold">{t("h4")}</h1>
 					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
@@ -147,12 +144,8 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title className="bold">Zonnepanelen</Card.Title>
-										<Card.Text>
-											Je eigen, gratis en ecologische stroombron. laten ons om u
-											onafhankelijk te maken van verhogingen, limieten en
-											onderbrekingen stroomuitval!
-										</Card.Text>
+										<Card.Title className="bold">{t("h5")}</Card.Title>
+										<Card.Text>{t("h6")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/solar">
 										<Button className="bg-transparent border-0">
@@ -191,13 +184,8 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title className="bold">Warmtepomp</Card.Title>
-										<Card.Text>
-											Ecologische en efficiënte warmtebron die uw het huis zal
-											tegen lage kosten de ideale temperatuur bereiken. Bedankt
-											een breed scala aan apparaten - we zullen zeker de juiste
-											vinden voor u en uw gebouw.
-										</Card.Text>
+										<Card.Title className="bold">{t("h7")}</Card.Title>
+										<Card.Text>{t("h8")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/pumps">
 										<Button className="bg-transparent border-0">
@@ -236,14 +224,8 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title className="bold">
-											Airconditioning en recuperatie
-										</Card.Title>
-										<Card.Text>
-											Mogelijkheid tot goedkope verwarming en comfort ongeacht
-											de buitentemperatuur. Maak kennis met de onze effectieve
-											en praktische oplossingen.
-										</Card.Text>
+										<Card.Title className="bold">{t("h9")}</Card.Title>
+										<Card.Text>{t("h10")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/klimatization">
 										<Button className="bg-transparent border-0">
@@ -283,13 +265,8 @@ function HeaderN1() {
 										className="m-3"
 									/>
 									<Card.Body>
-										<Card.Title className="bold">Energie Magazijn</Card.Title>
-										<Card.Text>
-											Onafhankelijkheid van elektriciteitsprijzen en
-											stroomuitval. Zorgen voor een grotere rendabiliteit van de
-											fotovoltaïsche installatie in de aangekondigde dynamische
-											tarieven met uurtarieven.
-										</Card.Text>
+										<Card.Title className="bold">{t("h11")}</Card.Title>
+										<Card.Text>{t("h12")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/bateries">
 										<Button className="bg-transparent border-0 ">
@@ -334,7 +311,7 @@ function HeaderN1() {
 												</CountUp>
 											)}{" "}
 										</h1>
-										<h2>Tevreden Klanten</h2>
+										<h2>{t("h13")}</h2>
 									</Card>
 								</animated.div>
 							</Col>
@@ -363,7 +340,7 @@ function HeaderN1() {
 												</CountUp>
 											)}
 										</h1>
-										<h2> De kracht van onze installaties PV - kWp</h2>
+										<h2>{t("h14")}</h2>
 									</Card>
 								</animated.div>{" "}
 							</Col>{" "}

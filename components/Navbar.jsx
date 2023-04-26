@@ -10,6 +10,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdPhoneInTalk } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+import Navigation from "./Navigation";
 const NavbarComp = () => {
 	const [scrolled, setScrolled] = useState(false);
 	function handleCall() {
@@ -30,6 +32,7 @@ const NavbarComp = () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+	const { t } = useTranslation();
 
 	return (
 		<Navbar
@@ -42,7 +45,7 @@ const NavbarComp = () => {
 			collapseOnSelect
 		>
 			<Container>
-				<Navbar.Brand as={Link} href="/" className=" rounded p-1 ">
+				<Navbar.Brand as={Link} href="/" className=" rounded ">
 					<Image
 						alt=""
 						src="/assets/logo2.png"
@@ -63,7 +66,7 @@ const NavbarComp = () => {
 				>
 					<Nav className="navbar-collapse justify-content-end text-center rounded">
 						<NavDropdown
-							title="Producten"
+							title={t("nav6")}
 							id="basic-nav-dropdown"
 							className="rounded shadow-lg m-1 nav-blue-btn"
 							style={{
@@ -77,62 +80,60 @@ const NavbarComp = () => {
 							<NavDropdown.Item as={Link} href="products" className="">
 								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
 									{" "}
-									Producten
+									{t("nav6")}
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="voll" className="">
 								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
-									{" "}
-									Zonneboiler met warmtepomp
+									{t("nav7")}
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Divider />
 							<NavDropdown.Item as={Link} href="/solar">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Zonnepanelen
+									{t("nav8")}
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/pumps">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Warmtepompen
+									{t("nav9")}
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/klimatization">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Airconditioning
+									{t("nav10")}
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/bateries">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Thuis baterijen
+									{t("nav11")}
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="/warm">
 								<Button className="w-100 border-0 nav-blue-btn ">
-									Zonneboilers
+									{t("nav12")}
 								</Button>{" "}
 								{/* add Bootstrap classes */}
 							</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Link as={Link} href="/work" className="m-1">
 							<Button className="btn-md py-2  shadow-lg nav-blue-btn border-0">
-								{" "}
-								Werk
+								{t("nav2")}
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/subsidies">
 							<Button className="btn-md py-2 shadow-lg nav-blue-btn border-0">
 								{" "}
-								Subsidies
+								{t("nav3")}
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/about" className="m-1">
 							<Button variant=" btn-md py-2  shadow-lg nav-blue-btn ">
-								Over Ons
+								{t("nav4")}
 							</Button>
 						</Nav.Link>{" "}
 						<Button
@@ -145,9 +146,10 @@ const NavbarComp = () => {
 						<Nav.Link as={Link} href="#contact" className="m-1">
 							<Button variant=" btn-md nav-blue-bg text-white shadow-lg">
 								{" "}
-								Snel Kontakt
+								{t("nav5")}
 							</Button>
 						</Nav.Link>
+						<Navigation />
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

@@ -6,7 +6,7 @@ import Image from "react-bootstrap/Image";
 import { FaStar } from "react-icons/fa";
 import sanityClient from "@sanity/client";
 import CountUp from "react-countup";
-
+import { useTranslation } from "react-i18next";
 import { urlFor } from "../lib/client";
 
 function Reviews({}) {
@@ -29,7 +29,7 @@ function Reviews({}) {
 	});
 
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
-
+	const { t } = useTranslation();
 	useEffect(() => {
 		const observer = new IntersectionObserver(handleIntersection, options);
 
@@ -115,9 +115,7 @@ function Reviews({}) {
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
 						<Col lg={7}>
-							<h1 className="bold">
-								Sluit je aan bij onze tevreden klanten uit heel Nederland!
-							</h1>
+							<h1 className="bold">{t("h23")}</h1>
 						</Col>
 					</animated.div>
 				</Row>
@@ -130,15 +128,8 @@ function Reviews({}) {
 							className=" "
 						>
 							<Card.Body className="text-start text-dark">
-								<h5 className="py-4 ">
-									Veel tevreden klanten hebben is een van de belangrijkste
-									prestaties voor elk bedrijf
-								</h5>
-								<h5 className="">
-									Het geeft niet alleen de kwaliteit van de aangeboden producten
-									of diensten aan, maar weerspiegelt ook het niveau van
-									klanttevredenheid en loyaliteit
-								</h5>
+								<h5 className="py-4 ">{t("h24")}</h5>
+								<h5 className="">{t("h25")}</h5>
 								<Col className="btn-light btn-lg p-2 text-uppercase text-bold text-center  rounded">
 									<span className="lead text-bold">
 										<Card.Title>
@@ -152,7 +143,7 @@ function Reviews({}) {
 											)}
 										</Card.Title>
 									</span>
-									<p className="lead">Tevreden Klanten !</p>
+									<p className="lead"> {t("h26")}</p>
 									<span>
 										<FaStar className="star " />
 										<FaStar className="star " />

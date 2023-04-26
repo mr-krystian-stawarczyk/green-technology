@@ -3,10 +3,11 @@ import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import Image from "next/image";
 import Nav from "react-bootstrap/Nav";
-
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 function HeaderSlides() {
+	const { t } = useTranslation();
 	return (
 		<Container
 			fluid
@@ -23,16 +24,11 @@ function HeaderSlides() {
 						className="header-card border-0 bg-transparent text-white "
 					>
 						<Card.Body className="header-card-bg text-center">
-							<h2 className="text-start bold">
-								Uitgebreide oplossingen voor ecologische woningen
-							</h2>
-							<h3 className="text-start">
-								AM Greenergy is jouw partner voor alle duurzame stappen die je
-								wilt gaan zetten om bij te dragen aan een beter klimaat
-							</h3>
+							<h2 className="text-start bold">{t("h1")}</h2>
+							<h3 className="text-start">{t("h2")}</h3>
 							<Nav.Link as={Link} href="/products">
 								<Button className="nav-blue-bg border-0 text-white">
-									Aanbod
+									{t("h3")}
 								</Button>
 							</Nav.Link>{" "}
 						</Card.Body>

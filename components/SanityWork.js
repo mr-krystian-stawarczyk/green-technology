@@ -13,7 +13,7 @@ import sanityClient from "@sanity/client";
 import { useSpring, animated } from "react-spring";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
-
+import { useTranslation } from "react-i18next";
 function SanityWork() {
 	const [all, setAll] = useState([]);
 	const client = sanityClient({
@@ -22,7 +22,7 @@ function SanityWork() {
 		useCdn: true,
 		apiVersion: "2022-03-09",
 	});
-
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
@@ -84,7 +84,7 @@ function SanityWork() {
 				<Col className="my-3">
 					{" "}
 					<animated.div style={animationProps}>
-						<h1 className=" text-start bold">Bekijk onze nieuwste projecten</h1>{" "}
+						<h1 className=" text-start bold">{t("h27")}</h1>{" "}
 					</animated.div>
 				</Col>
 			</Row>
@@ -113,7 +113,7 @@ function SanityWork() {
 					<Col>
 						<Nav.Link as={Link} href="/work" className="">
 							<Button className="nav-blue-bg border-0 btn-lg">
-								Meer Projecten
+								{t("h28")}
 							</Button>
 						</Nav.Link>
 					</Col>

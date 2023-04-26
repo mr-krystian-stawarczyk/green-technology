@@ -7,9 +7,10 @@ import Link from "next/link";
 import sanityClient from "@sanity/client";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { urlFor } from "../lib/client";
+import { useTranslation } from "react-i18next";
 function HeaderN3() {
 	const [promo, setPromo] = useState([]);
-
+	const { t } = useTranslation();
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",
@@ -104,9 +105,7 @@ function HeaderN3() {
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
 						<Col lg={6}>
-							<h1 style={{ fontWeight: "600" }}>
-								Bekijk onze laatste promotie
-							</h1>
+							<h1 style={{ fontWeight: "600" }}>{t("h18")}</h1>
 						</Col>
 					</animated.div>
 				</Row>{" "}
@@ -123,25 +122,25 @@ function HeaderN3() {
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
 								/>
-								Hoogste kwaliteit
+								{t("h19")}
 							</h5>
 							<h5 className="bold">
 								<AiOutlineCheckCircle
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
 								/>
-								Beste prijzen
+								{t("h20")}
 							</h5>{" "}
 							<h5 className="text-center p-2 bold">
 								<AiOutlineCheckCircle
 									className="text-green m-1 "
 									style={{ height: "28px", width: "28px" }}
 								/>
-								Snelle realisaties
+								{t("h21")}
 							</h5>
 							<Nav.Link as={Link} href="/products">
 								<Button className=" p-2  text-bold  text-dark shadow-lg hover m-5 nav-blue-bg border-0 text-white ">
-									Producten
+									{t("h22")}
 								</Button>
 							</Nav.Link>{" "}
 						</Card.Body>
