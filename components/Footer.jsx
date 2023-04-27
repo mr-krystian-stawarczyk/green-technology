@@ -116,7 +116,6 @@ function Footer() {
 									<Card.Img src="/assets/Logo.png" style={{ width: "260px" }} />
 									<Card.Body className="pt-0 mt-0">
 										<Card.Title className="my-3 bold">{t("f1")}</Card.Title>
-
 										<a
 											href="tel:+31649932604"
 											style={{ textDecoration: "none", color: "black" }}
@@ -126,21 +125,28 @@ function Footer() {
 												{t("f2")}
 											</h6>
 										</a>
-
 										<Card.Title className="my-4 bold"> {t("f3")}</Card.Title>
 										<Card.Text>
 											AM Greenergy Jan de Withof 106 5709 AL Helmond
 										</Card.Text>
 										<Card.Text>KVK: 78380758</Card.Text>
 										<Card.Title className="my-4 bold">Mail</Card.Title>
-
-										<a
-											href="mailto:info@izzifast.nl"
-											style={{ textDecoration: "none", color: "black" }}
-										>
-											{" "}
-											info@izzifast.nl
-										</a>
+										<Card.Text>
+											<a
+												href="mailto:info@izzifast.nl"
+												style={{ textDecoration: "none", color: "black" }}
+											>
+												{" "}
+												info@izzifast.nl
+											</a>
+										</Card.Text>
+										<Card.Title className="my-4 bold">Policy</Card.Title>
+										<Nav.Link as={Link} href="/cookies" className="m-1">
+											<h6>Cookies</h6>
+										</Nav.Link>{" "}
+										<Nav.Link as={Link} href="/impressium" className="m-1">
+											<h6>Impressium</h6>
+										</Nav.Link>{" "}
 									</Card.Body>
 								</Card>
 							</Col>

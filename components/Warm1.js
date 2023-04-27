@@ -2,13 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function Warm1() {
 	const router = useRouter();
 	const { id } = router.query;
-
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
@@ -45,14 +44,22 @@ function Warm1() {
 		config: { duration: 1000 },
 		delay: 1000,
 	});
+	const animationPropsMiddle = useSpring({
+		from: { opacity: 0 },
+		to: {
+			opacity: animate ? 1 : 0,
+		},
+		config: { duration: 1000 },
+		delay: 1000,
+	});
 
 	return (
 		<Container
-			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
+			className="  d-flex flex-column justify-content-center  border-0  py-5 my-5"
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col lg={6} className=" rounded p-2 m-2">
+				<Col lg={5} className=" rounded p-2 m-2 mx-auto">
 					<animated.div style={animationProps}>
 						<Card
 							style={{
@@ -61,27 +68,15 @@ function Warm1() {
 							className="bg-transparent "
 						>
 							<Card.Body>
-								<h1 className=" text-dark text-center bold my-3">
-									Zonneboiler{" "}
-								</h1>
-								<h5 className=" text-dark text-start my-3">
-									Een zonneboiler gebruikt de energie van de zon om water te
-									verwarmen. De energie wordt opgevangen door collectoren en
-									omgezet in warmte.
-								</h5>
-								<h5 className=" text-dark text-start">
-									Door de collectoren stroomt een vloeistof die deze warmte
-									opneemt. De collectoren zijn aangesloten op een voorraadvat,
-									via een spiraal/warmtewisselaar geeft de vloeistof de warmte
-									af aan het (tap)water in het voorraadvat. De zonneboiler
-									installatie kan ook gekoppeld aan uw centrale verwarming.
-								</h5>
+								<h2 className=" text-dark text-center bold my-3">{t("wm1")}</h2>
+								<h5 className=" text-dark text-start my-3">{t("wm2")}</h5>
+								<h5 className=" text-dark text-start">{t("wm3")}</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}
 				</Col>
-				<Col lg={5} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
+				<Col lg={5} className="  rounded  rounded m-2  mx-auto">
+					<animated.div style={animationPropsMiddle}>
 						{" "}
 						<Card className="border-0 bg-transparent">
 							<Card.Img src="/assets/boiler.png" className="rounded-0" />

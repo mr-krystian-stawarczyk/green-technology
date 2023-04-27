@@ -152,7 +152,7 @@ body,
 
 @media (max-width: 368px) {
 	.header-card {
-		max-width: 15rem !important;
+		max-width: 20rem !important;
 		display: flex;
 	}
 }

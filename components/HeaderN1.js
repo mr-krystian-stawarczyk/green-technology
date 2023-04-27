@@ -116,7 +116,7 @@ function HeaderN1() {
 			>
 				{" "}
 				<Row className="py-3 text-start ">
-					<Col lg={7}>
+					<Col lg={8}>
 						{" "}
 						<h1 className="bold">{t("h4")}</h1>
 					</Col>
@@ -132,7 +132,7 @@ function HeaderN1() {
 										alignContent: "center",
 										alignItems: "center",
 										minWidth: "20rem",
-										height: "22rem",
+										height: "25rem",
 									}}
 								>
 									<Card.Img
@@ -172,7 +172,7 @@ function HeaderN1() {
 										alignContent: "center",
 										alignItems: "center",
 										minWidth: "20rem",
-										height: "22rem",
+										height: "25rem",
 									}}
 								>
 									<Card.Img
@@ -204,7 +204,7 @@ function HeaderN1() {
 							</animated.div>
 						</Col>
 						<Col lg={4}>
-							<animated.div style={animationProps}>
+							<animated.div style={animationPropsMiddle}>
 								<Card
 									className="border-sm rounded-0"
 									style={{
@@ -212,7 +212,7 @@ function HeaderN1() {
 										alignContent: "center",
 										alignItems: "center",
 										minWidth: "20rem",
-										height: "22rem",
+										height: "25rem",
 									}}
 								>
 									<Card.Img
@@ -253,7 +253,7 @@ function HeaderN1() {
 										alignContent: "center",
 										alignItems: "center",
 										minWidth: "20rem",
-										height: "22rem",
+										height: "25rem",
 									}}
 								>
 									<Card.Img
@@ -295,7 +295,7 @@ function HeaderN1() {
 											alignContent: "center",
 											alignItems: "center",
 											maxWidth: "22rem",
-											height: "25rem",
+											height: "24rem",
 										}}
 									>
 										<h1 className="display-1">
@@ -324,7 +324,7 @@ function HeaderN1() {
 											alignContent: "center",
 											alignItems: "center",
 											maxWidth: "22rem",
-											height: "25rem",
+											height: "24rem",
 										}}
 									>
 										<h1 className="display-1">

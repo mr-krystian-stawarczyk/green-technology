@@ -13,7 +13,7 @@ function Navigation() {
 				width={32}
 				height={32}
 				onClick={() => i18n.changeLanguage("nl")}
-				className="mx-1 shadow-lg hover"
+				className="m-1 shadow-lg hover"
 			/>
 
 			<Image
@@ -22,7 +22,7 @@ function Navigation() {
 				width={32}
 				height={32}
 				onClick={() => i18n.changeLanguage("pl")}
-				className=" shadow-lg hover mx-1 "
+				className=" shadow-lg hover m-1 "
 			/>
 		</>
 	);

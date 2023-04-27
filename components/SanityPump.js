@@ -11,8 +11,11 @@ import {
 import { urlFor } from "../lib/client";
 import sanityClient from "@sanity/client";
 import { useSpring, animated } from "react-spring";
+import { useTranslation } from "react-i18next";
 
 function SanityPump() {
+	const { t } = useTranslation();
+
 	const [pump, setPump] = useState([]);
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
@@ -71,7 +74,7 @@ function SanityPump() {
 		<Container className=" py-3 " ref={sectionRef}>
 			<Row className="justify-content-center align-items-center text-center mt-5 text-dark">
 				<Col>
-					<h1 className="py-3 text-start">Bekijk onze nieuwste projecten</h1>
+					<h1 className="py-3 text-start">{t("po23")}</h1>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">

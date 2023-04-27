@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, ListGroup } from "react-bootstrap";
-
+import { useTranslation } from "react-i18next";
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
@@ -8,6 +8,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 function About3() {
+	const { t } = useTranslation();
 	return (
 		<Container>
 			<VerticalTimeline lineColor={"black"}>
@@ -17,51 +18,49 @@ function About3() {
 					date="2011"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>
-						Start bedrijf - ontwerp en installatie van installaties elektrisch
-					</p>
+					<p>{t("ab7")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="2013"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Toegangsautomatisering, alarm- en bewakingssystemen</p>
+					<p> {t("ab8")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="2014"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Domotica</p>
+					<p> {t("ab9")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					date="2017"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Recuperatie</p>
+					<p> {t("ab10")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
 					date="2018"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Fotovoltaïek</p>
+					<p> {t("ab11")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
 					date="2019"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Airconditioning</p>
+					<p> {t("ab12")}</p>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					className="vertical-timeline-element--education"
 					date="2020"
 					iconStyle={{ background: "rgba(40, 167, 69, 1)", color: "#fff" }}
 				>
-					<p>Warmtepompen</p>
+					<p> {t("ab13")}</p>
 				</VerticalTimelineElement>
 			</VerticalTimeline>
 		</Container>

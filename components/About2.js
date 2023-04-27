@@ -1,17 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Carousel, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+
 import sanityClient from "@sanity/client";
 import CountUp from "react-countup";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { urlFor } from "../lib/client";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
 
+import { useTranslation } from "react-i18next";
 function About2() {
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
@@ -30,8 +26,6 @@ function About2() {
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
 		}
-
-		// Fetch the happy client count from Sanity
 
 		return () => {
 			observer.disconnect();
@@ -102,7 +96,7 @@ function About2() {
 								)}
 							</h1>
 
-							<Card.Text>Tevreden klanten</Card.Text>
+							<Card.Text>{t("ab3")}</Card.Text>
 							<h1 className="display-1">
 								<span className="display-6">+</span>
 								{isVisible && (
@@ -113,7 +107,7 @@ function About2() {
 									</CountUp>
 								)}
 							</h1>
-							<Card.Text>Geïnstalleerde fotovoltaïsche panelen</Card.Text>
+							<Card.Text>{t("ab4")}</Card.Text>
 						</Card>{" "}
 					</animated.div>
 				</Col>
@@ -126,20 +120,8 @@ function About2() {
 							className=" "
 						>
 							<Card.Body className="text-center">
-								<h1 className=" text-dark ">
-									Wij zijn een lokaal bedrijf met 12 jaar ervaring
-								</h1>
-								<h5 className="lead text-dark text-start">
-									AMGreenergy is een lokaal bedrijf in de sector hernieuwbare
-									bronnen energie. We hebben de enige (stationaire) in onze stad
-									gemaakt Centrum van groene technologieën - een plek waar
-									iedereen een liefhebber van sparen en ecologie krijgt een
-									kant-en-klaar, aangepast exemplaar een recept voor het
-									verlagen van uw behoeften en mogelijkheden
-									elektriciteitsrekeningen en het verbeteren van de kwaliteit
-									van uw rekeningen leven dankzij het gebruik van ecologische
-									oplossingen in uw huis woning, bedrijf of boerderij.
-								</h5>
+								<h1 className=" text-dark ">{t("ab5")}</h1>
+								<h5 className=" text-start">{t("ab6")}</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

@@ -2,10 +2,11 @@ import React, { useRef, useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function Bateries1() {
+	const { t } = useTranslation();
+
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -45,57 +46,45 @@ function Bateries1() {
 		config: { duration: 1000 },
 		delay: 1000,
 	});
+	const animationPropsMiddle = useSpring({
+		from: { opacity: 0 },
+		to: {
+			opacity: animate ? 1 : 0,
+		},
+		config: { duration: 1000 },
+		delay: 1000,
+	});
 
 	return (
-		<Container
-			fluid
-			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
+		<Row
+			className="  justify-content-center align-items-center my-5 text-dark pt-5"
 			ref={sectionRef}
 		>
-			<Row className=" text-center justify-content-center align-items-center mt-5">
-				<Col xl={5} lg={5} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
-						{" "}
-						<Card className="border-0 ">
-							<Card.Img src="/assets/home-battery.png" className="" />
-						</Card>{" "}
-					</animated.div>
-				</Col>
-				<Col xl={5} lg={5} className=" rounded p-2 m-2">
-					<animated.div style={animationProps}>
-						<Card
-							style={{
-								border: "none",
-							}}
-							className=" "
-						>
-							<Card.Body className="text-center">
-								<h1 className=" text-dark text-center ">Energie opslag</h1>
-								<h6 className=" text-dark  text-start my-5">
-									Dankzij de energieopslag kunt u er volledig onafhankelijk van
-									worden elektriciteitsnet, stroomuitval en beschermen tegen
-									energieprijs stijgt.
-								</h6>
-								<h6 className=" text-dark text-start">
-									Een goed geselecteerde micro-installatie met een
-									energieopslagblik 100% van uw elektriciteitsbehoefte dekken
-									huishouden, waarbij het netwerk volledig wordt omzeild. Zon
-									setje stelt u in staat om alleen uw eigen i, co nog
-									belangrijker, gratis elektriciteit: wat er ook gebeurt
-									facturatiesysteem zit je zonder magazijn energie, overtollige
-									energie die je moet binnenhalen of verkopen netwerken; in
-									tijden van energievraag en gebrek aan productie
-									micro-installaties, verliest u 20% door het op te halen van
-									het netwerk of door het te kopen u moet de distributiekosten
-									dragen. Door overschotten op te slaan in in uw eigen magazijn
-									kunt u dit voorkomen.
-								</h6>
-							</Card.Body>{" "}
-						</Card>
-					</animated.div>{" "}
-				</Col>
-			</Row>
-		</Container>
+			<Col xl={5} lg={5} className="  rounded  rounded m-2">
+				<animated.div style={animationPropsMiddle}>
+					{" "}
+					<Card className="border-0 ">
+						<Card.Img src="/assets/home-battery.png" className="" />
+					</Card>{" "}
+				</animated.div>
+			</Col>
+			<Col xl={5} lg={5} className=" rounded p-2 m-2 mx-auto">
+				<animated.div style={animationProps}>
+					<Card
+						style={{
+							border: "none",
+						}}
+						className=" "
+					>
+						<Card.Body className="text-center">
+							<h2 className=" text-dark text-center ">{t("bt1")}</h2>
+							<h5 className=" text-dark  text-start my-3">{t("bt2")}</h5>
+							<h5 className=" text-dark text-start">{t("bt3")}</h5>
+						</Card.Body>{" "}
+					</Card>
+				</animated.div>{" "}
+			</Col>
+		</Row>
 	);
 }
 

@@ -68,7 +68,7 @@ const NavbarComp = () => {
 						<NavDropdown
 							title={t("nav6")}
 							id="basic-nav-dropdown"
-							className="rounded shadow-lg m-1 nav-blue-btn"
+							className="rounded shadow-sm m-1 nav-blue-btn"
 							style={{
 								borderColor: "#cccccc",
 								borderWidth: 1,
@@ -78,13 +78,13 @@ const NavbarComp = () => {
 							// add this line to change the title color to white
 						>
 							<NavDropdown.Item as={Link} href="products" className="">
-								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
+								<Button className="w-100 border-0 nav-blue-btn shadow-sm ">
 									{" "}
 									{t("nav6")}
 								</Button>
 							</NavDropdown.Item>
 							<NavDropdown.Item as={Link} href="voll" className="">
-								<Button className="w-100 border-0 nav-blue-btn shadow-lg ">
+								<Button className="w-100 border-0 nav-blue-btn shadow-sm ">
 									{t("nav7")}
 								</Button>
 							</NavDropdown.Item>
@@ -121,23 +121,23 @@ const NavbarComp = () => {
 							</NavDropdown.Item>
 						</NavDropdown>
 						<Nav.Link as={Link} href="/work" className="m-1">
-							<Button className="btn-md py-2  shadow-lg nav-blue-btn border-0">
+							<Button className="btn-md py-2  shadow-sm nav-blue-btn border-0">
 								{t("nav2")}
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/subsidies">
-							<Button className="btn-md py-2 shadow-lg nav-blue-btn border-0">
+							<Button className="btn-md py-2 shadow-sm nav-blue-btn border-0">
 								{" "}
 								{t("nav3")}
 							</Button>
 						</Nav.Link>
 						<Nav.Link as={Link} href="/about" className="m-1">
-							<Button variant=" btn-md py-2  shadow-lg nav-blue-btn ">
+							<Button variant=" btn-md py-2  shadow-sm nav-blue-btn ">
 								{t("nav4")}
 							</Button>
 						</Nav.Link>{" "}
 						<Button
-							className="btn-md py-2  shadow-lg nav-blue-btn border-0"
+							className="btn-md py-2  shadow-sm nav-blue-btn border-0"
 							onClick={handleCall}
 						>
 							<MdPhoneInTalk className="m-1" />

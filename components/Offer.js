@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -12,6 +13,7 @@ import Link from "next/link";
 function Offer() {
 	const router = useRouter();
 	const { id } = router.query;
+	const { t } = useTranslation();
 
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
@@ -50,9 +52,7 @@ function Offer() {
 		<Container ref={sectionRef}>
 			<Row className="mt-5 text-start ">
 				<Col lg={7}>
-					<animated.div style={animationProps}>
-						<h1 className="mt-5">Onze Aanbieding</h1>{" "}
-					</animated.div>
+					<h1 className="pt-5">{t("p1")}</h1>{" "}
 				</Col>
 			</Row>
 
@@ -85,7 +85,7 @@ function Offer() {
 										color: "white",
 									}}
 								>
-									<h1>Zonnepanelen</h1>
+									<h1>{t("p2")}</h1>
 								</Card.Title>
 							</animated.div>
 						</Card>
@@ -112,7 +112,7 @@ function Offer() {
 										color: "white",
 									}}
 								>
-									<h1>Warmtepompen</h1>
+									<h1>{t("p3")}</h1>
 								</Card.Title>
 							</animated.div>
 						</Card>
@@ -139,7 +139,7 @@ function Offer() {
 										color: "white",
 									}}
 								>
-									<h1>Airconditioning</h1>
+									<h1>{t("p4")}</h1>
 								</Card.Title>
 							</animated.div>
 						</Card>

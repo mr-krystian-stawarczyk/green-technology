@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { useRouter } from "next/router";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
 import sanityClient from "@sanity/client";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { urlFor } from "../lib/client";
 
 function ProductsPromo() {
 	const [promo, setPromo] = useState([]);
+	const { t } = useTranslation();
 
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
@@ -105,45 +105,11 @@ function ProductsPromo() {
 				{" "}
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
-						<Col lg={6}>
-							<h1>Bekijk onze laatste promotie</h1>
+						<Col lg={6} className="my-3">
+							<h1>{t("p5")}</h1>
 						</Col>
 					</animated.div>
 				</Row>{" "}
-				<Col lg={6} className="">
-					<animated.div style={animationProps}>
-						<Card
-							style={{
-								border: "none",
-							}}
-							className=""
-						>
-							<Card.Body className=" text-dark text-center">
-								<h5 className="text-center p-2">
-									<AiOutlineCheckCircle
-										className="text-green m-1 "
-										style={{ height: "28px", width: "28px" }}
-									/>
-									Hoogste kwaliteit
-								</h5>
-								<h5 className="text-center p-2">
-									<AiOutlineCheckCircle
-										className="text-green m-1 "
-										style={{ height: "28px", width: "28px" }}
-									/>
-									Beste prijzen
-								</h5>
-								<h5 className="text-center p-2">
-									<AiOutlineCheckCircle
-										className="text-green m-1 "
-										style={{ height: "28px", width: "28px" }}
-									/>
-									Snelle realisaties
-								</h5>
-							</Card.Body>
-						</Card>
-					</animated.div>
-				</Col>
 				<Col lg={6}>
 					<animated.div style={animationProps}>
 						{promo.map((item) => (
@@ -155,6 +121,40 @@ function ProductsPromo() {
 								/>
 							</Card>
 						))}
+					</animated.div>
+				</Col>
+				<Col lg={5} className="">
+					<animated.div style={animationProps}>
+						<Card
+							style={{
+								border: "none",
+							}}
+							className="bg-transparent"
+						>
+							<Card.Body className=" text-dark text-center">
+								<h5 className="text-center p-2">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("p6")}
+								</h5>
+								<h5 className="text-center p-2">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("p7")}
+								</h5>
+								<h5 className="text-center p-2">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("p8")}
+								</h5>
+							</Card.Body>
+						</Card>
 					</animated.div>
 				</Col>
 			</Row>

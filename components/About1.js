@@ -1,11 +1,11 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import Image from "next/image";
-import Nav from "react-bootstrap/Nav";
 
-import Link from "next/link";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+
+import { useTranslation } from "react-i18next";
+
 function About1() {
+	const { t } = useTranslation();
 	return (
 		<Container
 			fluid
@@ -22,12 +22,10 @@ function About1() {
 					>
 						<Card.Body className="header-card-bg">
 							<Card.Title className="">
-								<span className="display-6">AMGreenergy</span>
+								<span className="display-6">{t("ab1")}</span>
 							</Card.Title>
 
-							<span className="lead">
-								Uitgebreide oplossingen voor ecologische woningen
-							</span>
+							<span className="lead">{t("ab2")}</span>
 						</Card.Body>
 					</Card>
 				</Col>

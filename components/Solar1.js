@@ -2,11 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 
 function Solar1() {
 	const router = useRouter();
 	const { id } = router.query;
-
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
@@ -54,33 +55,25 @@ function Solar1() {
 	});
 
 	return (
-		<Container ref={sectionRef}>
-			<Row className="  text-center text-dark justify-content-center align-items-center  mt-5 pt-3">
-				<Col lg={5} className="    rounded text-center ">
+		<Container ref={sectionRef} className="pt-5">
+			<Row className="  text-center text-dark justify-content-center align-items-center   py-5">
+				<Col lg={5} className="     text-center ">
 					{" "}
-					<animated.div style={animationProps}>
-						<Card className="border-0">
-							<Card.Img src="/assets/solary1.jpg" className="" />
+					<animated.div style={animationPropsMiddle}>
+						<Card className="border-0 rounded-0">
+							<Card.Img
+								src="/assets/solary1.jpg"
+								className="border-0 rounded-0 pb-3"
+							/>
 						</Card>{" "}
 					</animated.div>
 				</Col>
-				<Col lg={6} className=" text-start m-1">
+				<Col lg={5} className=" text-start mx-auto">
 					<animated.div style={animationProps}>
-						<h1 className="text-center"> AM Fotovoltaïsche </h1>
-						<h5>
-							Schakel over op je eigen energie en kijk hoeveel je kunt bespaar
-							dankzij de technologie van de toekomst, namelijk fotovoltaïsche
-							energie.
-						</h5>
-						<h5>
-							Als u deze onmiskenbaar winstgevende investering plant – prima jij
-							raakt. Wij bieden u een oplossing die perfect is afgestemd op uw
-							behoeften.
-						</h5>
-						<h5>
-							Ontdek hoe u eenvoudig kunt besparen, onafhankelijk kunt zijn en
-							terwijl je de planeet beschermt.
-						</h5>{" "}
+						<h2 className="text-center"> {t("sl1")} </h2>
+						<h5>{t("sl2")}</h5>
+						<h5 className="my-3">{t("sl3")}</h5>
+						<h5>{t("sl4")}</h5>{" "}
 					</animated.div>
 				</Col>
 			</Row>{" "}

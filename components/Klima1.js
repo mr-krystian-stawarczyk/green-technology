@@ -3,6 +3,7 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Carousel, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
+import { useTranslation } from "react-i18next";
 
 import sanityClient from "@sanity/client";
 
@@ -11,6 +12,7 @@ function Klima1() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
+	const { t } = useTranslation();
 
 	const options = {
 		root: null,
@@ -98,12 +100,12 @@ function Klima1() {
 	});
 	return (
 		<Row
-			className=" justify-content-center align-items-center vh-full  my-2  "
+			className=" justify-content-center align-items-center  my-2  py-5"
 			ref={sectionRef}
 		>
 			<Col lg={5} className="p-3">
 				{" "}
-				<animated.div style={animationProps}>
+				<animated.div style={animationPropsMiddle}>
 					<Card className="border-0 rounded-0">
 						<Card.Img
 							src="/assets/klimatyzacje.jpg"
@@ -112,7 +114,7 @@ function Klima1() {
 					</Card>{" "}
 				</animated.div>
 			</Col>
-			<Col lg={6} className=" p-3 mx-2 ">
+			<Col lg={5} className=" p-3 mx-auto">
 				<animated.div style={animationProps}>
 					{" "}
 					<Card
@@ -122,17 +124,8 @@ function Klima1() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h1 className=" text-dark">COMFORT IN UW WONING</h1>{" "}
-							<h5 className="my-3">
-								Houd uw woonkamer, slaapkamer of werkkamer lekker koel met
-								airconditioning. In een mum van tijd is uw ruimte op een
-								aangename temperatuur en geniet u van een optimaal
-								binnenklimaat.
-							</h5>{" "}
-							<h5>
-								Laat een airco plaatsen door Duurzaam Klimaat Zeeland en u bent
-								gegarandeerd van een vakkundige installatie.
-							</h5>
+							<h2 className=" text-dark">{t("kl1")}</h2>{" "}
+							<h5 className="my-3">{t("kl2")}</h5> <h5>{t("kl3")}</h5>
 						</Card.Body>
 					</Card>
 				</animated.div>

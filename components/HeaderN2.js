@@ -86,14 +86,14 @@ function HeaderN2() {
 						</animated.div>
 					</Card>{" "}
 				</Col>
-				<Col lg={6} className="blur p-3 mx-2  rounded m-2">
+				<Col lg={5} className="blur p-3 mx-2  rounded m-2">
 					<Card
 						style={{
 							border: "none",
 						}}
 						className=""
 					>
-						<animated.div style={animationProps}>
+						<animated.div style={animationPropsMiddle}>
 							<Card.Body className=" text-center">
 								<h1 className="text-center bold py-5">{t("h15")}</h1>
 								<h5 className="text-start">{t("h16")}</h5>

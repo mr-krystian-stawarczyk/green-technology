@@ -2,13 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Nav from "react-bootstrap/Nav";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function Warm2() {
 	const router = useRouter();
 	const { id } = router.query;
-
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
@@ -45,15 +44,23 @@ function Warm2() {
 		config: { duration: 1000 },
 		delay: 1000,
 	});
+	const animationPropsMiddle = useSpring({
+		from: { opacity: 0 },
+		to: {
+			opacity: animate ? 1 : 0,
+		},
+		config: { duration: 1000 },
+		delay: 1000,
+	});
 
 	return (
 		<Container
-			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
+			className="  d-flex flex-column justify-content-center  border-0  p-2 my-5 py-5"
 			ref={sectionRef}
 		>
 			<Row className=" text-center justify-content-center align-items-center mt-5">
 				<Col lg={5} className="  rounded  rounded m-2">
-					<animated.div style={animationProps}>
+					<animated.div style={animationPropsMiddle}>
 						{" "}
 						<Card className="border-0 bg-transparent">
 							<Card.Img src="/assets/warm.png" className="" />
@@ -69,23 +76,9 @@ function Warm2() {
 							className="bg-transparent "
 						>
 							<Card.Body>
-								<h1 className=" text-dark text-center bold my-3">
-									Warmteopslag{" "}
-								</h1>
-								<h5 className=" text-dark text-start my-3">
-									Het is een moderne warmwatertank die kan worden verwarmd en
-									energie kan verzamelen in de vorm van warmte.
-								</h5>
-								<h5 className=" text-dark text-start">
-									Hij is voorzien van een batterij met een groot warmtewisselend
-									oppervlak, wat zorgt voor een zeer hoog rendement. Meestal
-									gemaakt van roestvrij staal, wat de levensduur verlengt zonder
-									extra onderhoud. Het grootste voordeel is dat het in
-									combinatie met een fotovoltaïsche micro-installatie een
-									perfecte oplossing is, want het is een volledig gratis en
-									onderhoudsvrije set voor het bereiden van warm water voor een
-									gezin van meerdere personen.
-								</h5>
+								<h2 className=" text-dark text-center bold my-3">{t("wm4")}</h2>
+								<h5 className=" text-dark text-start my-3">{t("wm5")}</h5>
+								<h5 className=" text-dark text-start">{t("wm6")}</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

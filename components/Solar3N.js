@@ -9,28 +9,22 @@ import {
 	CardGroup,
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import sanityClient from "@sanity/client";
-import CountUp from "react-countup";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { urlFor } from "../lib/client";
+import { useTranslation } from "react-i18next";
 
-import Link from "next/link";
+import sanityClient from "@sanity/client";
+const client = sanityClient({
+	projectId: process.env.NEXT_PUBLIC_PROJECTID,
+	dataset: "production",
+	useCdn: true,
+	apiVersion: "2022-03-09",
+});
 
 function Solar3N() {
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
-
-	const client = sanityClient({
-		projectId: process.env.NEXT_PUBLIC_PROJECTID,
-		dataset: "production",
-		useCdn: true,
-		apiVersion: "2022-03-09",
-	});
 
 	const [liczba_klientow, setLiczbaKlientow] = useState(0);
 
@@ -119,7 +113,7 @@ function Solar3N() {
 				<Row className="py-3 text-start ">
 					<Col lg={6}>
 						{" "}
-						<h1 className="my-5">Fotovoltaïsche Voordelen</h1>
+						<h1 className="my-5">{t("sl14")}</h1>
 					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
@@ -134,8 +128,8 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "45rem",
 									}}
 								>
 									{" "}
@@ -148,19 +142,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Besparing</Card.Title>
-										<Card.Text>
-											Door de continue toename van elektriciteit die niemand
-											spaart, elke mogelijke vorm van besparing op dit gebied
-											moet worden overwogen, en zijn eigen fotovoltaïsche
-											micro-installatie is daar perfect voor formulier. Het is
-											een reactie op de toch al hoge en waarschijnlijk constant
-											groeiende toekomstige elektriciteitsprijzen.
-											Investeringskosten betalen zichzelf meestal terug binnen 6
-											jaar na installatie, en daarna tijd kunnen we direct
-											zeggen dat we GRATIS elektriciteit gebruiken geproduceerd
-											door onze installatie.
-										</Card.Text>
+										<Card.Title>{t("sl15")}</Card.Title>
+										<Card.Text>{t("sl16")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}
@@ -175,8 +158,8 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "45rem",
 									}}
 								>
 									<Card.Img
@@ -188,21 +171,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Onafhankelijkheid</Card.Title>
-										<h6>
-											Dankzij onze eigen micro-energiecentrale kunnen we
-											onafhankelijk worden van door de overheid ingevoerde
-											limieten voor elektriciteitsverbruik daarna preferentiële
-											prijzen. Prosumer zijn in het nieuwe systeem
-											Netto-facturering, we kunnen onze overschotten aan het
-											netwerk verkopen elektriciteit, vaak tegen een hogere
-											prijs dan de huidige verkoopprijs door het energiebedrijf.
-											na het maken waarde saldo, blijkt dat ondanks het
-											overschot in de wet genoemde limieten, onze jaarlijkse
-											afrekening is zeer gunstig en als onze installatie goed is
-											gedaan geselecteerd, hoeven we niet te betalen voor de
-											aankoop van elektriciteit.
-										</h6>
+										<Card.Title>{t("sl17")}</Card.Title>
+										<Card.Text>{t("sl18")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}
@@ -217,8 +187,8 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "45rem",
 									}}
 								>
 									<Card.Img
@@ -230,14 +200,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Beveiliging</Card.Title>
-										<Card.Text>
-											Zonne-energie wordt over het algemeen als betrouwbaar
-											beschouwd en hernieuwbaar. Wij maken ons geen zorgen, in
-											tegenstelling tot de alternatieven energiebronnen dat over
-											50 jaar de zon niet meer schijnt. En zelfs als we toch
-											sterven.
-										</Card.Text>
+										<Card.Title>{t("sl19")}</Card.Title>
+										<Card.Text>{t("sl20")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}
@@ -251,7 +215,7 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
+										maxWidth: "27rem",
 										height: "25rem",
 									}}
 								>
@@ -264,12 +228,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Ecologie</Card.Title>
-										<Card.Text>
-											Zonnestraling is een schone energiebron. PV installatie
-											stoot geen vervuilende stoffen uit, en fotovoltaïsche
-											panelen, na kan na gebruik worden gerecycled.
-										</Card.Text>
+										<Card.Title>{t("sl21")}</Card.Title>
+										<Card.Text>{t("sl22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}
@@ -284,7 +244,7 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
+										maxWidth: "27rem",
 										height: "25rem",
 									}}
 								>
@@ -297,13 +257,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Duurzame ontwikkeling</Card.Title>
-										<Card.Text>
-											Elektriciteit winnen uit een PV-installatie is duurzaam en
-											dat is ook zo betekent dat aan de hedendaagse behoeften
-											van de samenleving wordt voldaan zonder afbreuk te doen
-											aan de behoeften van toekomstige generaties.
-										</Card.Text>
+										<Card.Title>{t("sl23")}</Card.Title>
+										<Card.Text>{t("sl24")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}
@@ -318,7 +273,7 @@ function Solar3N() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "25rem",
+										maxWidth: "27rem",
 										height: "25rem",
 									}}
 								>
@@ -331,15 +286,8 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Comfort</Card.Title>
-										<Card.Text>
-											Zonnestraling bereikt alle breedtegraden van onze planeet,
-											en de locatie van onze regio is bijzonder gunstig in
-											termen van zonlicht. Aanvullend installatie van
-											micro-installaties vereist geen speciale vergunningen en
-											is mogelijk bevindt zich op verschillende - ook moeilijk
-											bereikbare - plaatsen.
-										</Card.Text>
+										<Card.Title>{t("sl25")}</Card.Title>
+										<Card.Text>{t("sl26")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}

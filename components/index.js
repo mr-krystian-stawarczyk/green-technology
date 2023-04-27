@@ -67,3 +67,4 @@ export { default as Bateries3 } from "./Bateries3";
 export { default as Warm1 } from "./Warm1";
 export { default as Warm2 } from "./Warm2";
 export { default as Navigation } from "./Navigation";
+export { default as CookieConsent } from "./CookieConsent";

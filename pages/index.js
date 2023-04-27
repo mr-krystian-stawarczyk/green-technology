@@ -17,13 +17,13 @@ import {
 	HeaderN2,
 	HeaderN3,
 	Navigation,
+	CookieConsent,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
 
 export default function Home() {
 	return (
 		<>
-			{" "}
 			<HeaderSlides />
 			<HeaderN1 />
 			<HeaderN2 />

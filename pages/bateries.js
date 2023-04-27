@@ -10,7 +10,7 @@ import {
 
 function bateries() {
 	return (
-		<Container fluid className="">
+		<Container className="">
 			<Bateries1 />
 			<Bateries2 />
 			<Bateries3 />

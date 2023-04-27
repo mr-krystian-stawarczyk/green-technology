@@ -11,8 +11,11 @@ import {
 import { urlFor } from "../lib/client";
 import sanityClient from "@sanity/client";
 import { useSpring, animated } from "react-spring";
+import { useTranslation } from "react-i18next";
 
 function SanityKlima() {
+	const { t } = useTranslation();
+
 	const [klima, setKlima] = useState([]);
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
@@ -74,7 +77,7 @@ function SanityKlima() {
 				ref={sectionRef}
 			>
 				<Col>
-					<h1 className="py-3 text-start">Bekijk onze nieuwste projecten</h1>
+					<h1 className="py-3 text-start">{t("kl13")}</h1>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">

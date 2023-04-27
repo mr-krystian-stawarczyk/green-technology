@@ -10,16 +10,10 @@ import {
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import sanityClient from "@sanity/client";
-import CountUp from "react-countup";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { urlFor } from "../lib/client";
-
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function Pumps4() {
+	const { t } = useTranslation();
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -70,7 +64,7 @@ function Pumps4() {
 	});
 	return (
 		<Row
-			className=" text-center justify-content-center align-items-center my-2 mt-5 "
+			className=" text-center justify-content-center align-items-center my-2 mt-5 pt-5"
 			ref={sectionRef}
 		>
 			<Col lg={5} className=" p-3 rounded   rounded">
@@ -90,23 +84,9 @@ function Pumps4() {
 						className="bg-transparent "
 					>
 						<Card.Body>
-							<h1 className=" text-dark text-center">
-								Wij voeren een betrouwbare audit uit
-							</h1>{" "}
-							<h6 className=" text-dark text-start">
-								Elk van onze offertes wordt voorafgegaan betrouwbare controle.
-							</h6>{" "}
-							<h6 className=" text-dark text-start">
-								{" "}
-								We kiezen niet zomaar een toestel. Iedereen die bij ons komt de
-								klant moet voorbereid zijn op een reeks uitputtende vragen met
-								betrekking tot het gebouw en een bezoek van een
-								installateur/monteur/simpelweg leuke knappe meneer 😀 om de C.O.
-							</h6>
-							<h6 className=" text-dark text-start">
-								Pas na deze twee belangrijke stappen kunnen we het halen
-								verantwoorde keuze van het apparaat en een bindende offerte.
-							</h6>
+							<h2 className=" text-dark text-center">{t("po7")}</h2>{" "}
+							<h5 className=" text-dark text-start my-3">{t("po8")}</h5>
+							<h5 className=" text-dark text-start">{t("po9")}</h5>
 						</Card.Body>
 					</Card>
 				</animated.div>

@@ -15,6 +15,9 @@ import { useSpring, animated } from "react-spring";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import { useTranslation } from "react-i18next";
+
 const client = sanityClient({
 	projectId: process.env.NEXT_PUBLIC_PROJECTID,
 	dataset: "production",
@@ -23,6 +26,7 @@ const client = sanityClient({
 });
 
 function Work() {
+	const { t } = useTranslation();
 	const router = useRouter();
 	const { id } = router.query;
 
@@ -102,11 +106,9 @@ function Work() {
 					justifyContent: "center",
 				}}
 			>
-				<Row className="mt-5 pt-5 text-start">
+				<Row className=" text-start">
 					<Col lg={6}>
-						<h1 className="bold py-4">
-							We presenteren hier onze laatste projecten
-						</h1>
+						<h1 className="bold pt-5">{t("w1")}</h1>
 					</Col>
 				</Row>
 

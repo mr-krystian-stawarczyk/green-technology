@@ -9,17 +9,15 @@ import {
 	CardGroup,
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
-import sanityClient from "@sanity/client";
-import CountUp from "react-countup";
+
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { urlFor } from "../lib/client";
+import { useTranslation } from "react-i18next";
+
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 
 function Solar2N() {
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
@@ -81,7 +79,7 @@ function Solar2N() {
 	});
 	return (
 		<Container
-			className="  text-dark   align-items-center  p-2 mt-2 border-0 "
+			className="  text-dark   align-items-center  p-2 mt-5 border-0 py-5"
 			ref={sectionRef}
 		>
 			<Row
@@ -95,9 +93,7 @@ function Solar2N() {
 				<Row className=" text-start mt-2">
 					<Col lg={7}>
 						{" "}
-						<h1 className="my-5">
-							Mogelijke oplossingen met behulp van fotovoltaïsche cellen
-						</h1>
+						<h1 className="my-5">{t("sl5")}</h1>
 					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
@@ -125,13 +121,8 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Energie Magazijn</Card.Title>
-										<Card.Text>
-											Onafhankelijkheid van elektriciteitsprijzen en
-											stroomuitval huidig. Zorgen voor een meer kosteneffectieve
-											installatie in de aangekondigde dynamische tarieven met
-											Uurtarieven.
-										</Card.Text>
+										<Card.Title> {t("sl6")}</Card.Title>
+										<Card.Text>{t("sl7")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/bateries" className="mx-2">
 										<Button variant="">
@@ -170,13 +161,8 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Warmte Opslag</Card.Title>
-										<Card.Text>
-											Ecologische en efficiënte warmtebron die uw thuis zal
-											maken tegen lage kosten de ideale temperatuur bereikt.
-											Bedankt wijd scala aan apparaten - we zullen zeker de
-											juiste voor u vinden en uw gebouw.
-										</Card.Text>
+										<Card.Title> {t("sl8")}</Card.Title>
+										<Card.Text>{t("sl9")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/warm" className="mx-2">
 										<Button variant="">
@@ -214,12 +200,8 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Verwarming en Koeling</Card.Title>
-										<Card.Text>
-											Zelfstandig goedkoop kunnen verwarmen en comfort bieden
-											van de buitentemperatuur. Ontdek onze effectieve en
-											praktische oplossingen.
-										</Card.Text>
+										<Card.Title> {t("sl10")}</Card.Title>
+										<Card.Text>{t("sl11")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/pumps" className="mx-2">
 										<Button variant="">
@@ -257,12 +239,8 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Opladers voor Voertuigen</Card.Title>
-										<Card.Text>
-											Zelfstandig goedkoop kunnen verwarmen en comfort bieden
-											van de buitentemperatuur. Ontdek onze effectieve en
-											praktische oplossingen.
-										</Card.Text>
+										<Card.Title> {t("sl12")}</Card.Title>
+										<Card.Text>{t("sl13")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>{" "}

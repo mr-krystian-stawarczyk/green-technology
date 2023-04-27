@@ -9,17 +9,11 @@ import {
 	CardGroup,
 } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import sanityClient from "@sanity/client";
-import CountUp from "react-countup";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import { urlFor } from "../lib/client";
-
-import Link from "next/link";
 
 function About4() {
+	const { t } = useTranslation();
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
@@ -120,8 +114,8 @@ function About4() {
 					<animated.div style={animationProps}>
 						<Col lg={8}>
 							{" "}
-							<h1>Voordelen van een lokale installateur</h1>
-							<h3>6 redenen om voor AMGreenergy te kiezen</h3>
+							<h1>{t("ab14")}</h1>
+							<h3>{t("ab15")}</h3>
 						</Col>
 					</animated.div>
 				</Row>{" "}
@@ -135,8 +129,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "39rem",
 									}}
 								>
 									{" "}
@@ -149,21 +143,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>
-											Installaties uitvoeren zonder onderaannemers
-										</Card.Title>
-										<Card.Text>
-											Alle installaties voeren we uit met onze eigen teams
-											montagemedewerkers, d.w.z. werknemers die werkzaam zijn in
-											ons bedrijf bedrijf. We verkopen verworven contracten niet
-											door aan andere bedrijven, waardoor we vanaf het moment de
-											kwaliteit van de uitgevoerde service controleren
-											ondertekening van het contract door onze begeleide montage
-											tot inbedrijfstelling. Service betekent voor ons meer dan
-											prestatie taak die ons is toevertrouwd en het starten van
-											de installatie - dit is ook hulp en advies voor al je
-											vragen al binnen gebruiksduur van de installatie.
-										</Card.Text>
+										<Card.Title>{t("ab16")}</Card.Title>
+										<Card.Text>{t("ab17")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>
 							</animated.div>
@@ -176,8 +157,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "39rem",
 									}}
 								>
 									<Card.Img
@@ -189,12 +170,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Lokale reikwijdte van de activiteit</Card.Title>
-										<h6>
-											We beperken ons actieradius tot ca. 300km van Venlo, dus
-											we hebben een korte maaktijd servicewerkzaamheden indien
-											door ons aangebracht apparaten zullen defect raken.
-										</h6>
+										<Card.Title>{t("ab18")}</Card.Title>
+										<Card.Text>{t("ab19")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>
 							</animated.div>
@@ -207,8 +184,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "35rem",
+										maxWidth: "27rem",
+										height: "39rem",
 									}}
 								>
 									<Card.Img
@@ -220,18 +197,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>
-											Kwalificaties, kennis en vaardigheden
-										</Card.Title>
-										<Card.Text>
-											Al onze medewerkers hebben een passende opleiding genoten
-											(SEP G1, G2, G3 in E+D-reeksen). We hebben ook
-											UDT-certificaat voor fotovoltaïsche installaties
-											(OZE-W/04/000019/19)), evenals voor het installeren van
-											warmtepompen (FGAZ-P/09/0437/21). We doen regelmatig mee
-											aan trainingen om het niveau van onze kwalificaties te
-											verhogen medewerkers.
-										</Card.Text>
+										<Card.Title>{t("ab20")}</Card.Title>
+										<Card.Text>{t("ab22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>
@@ -244,8 +211,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "25rem",
+										maxWidth: "27rem",
+										height: "30rem",
 									}}
 								>
 									<Card.Img
@@ -257,15 +224,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Betrouwbaar advies</Card.Title>
-										<Card.Text>
-											Het uitgangspunt in het verkoopproces is gedegen het
-											onderzoeken van de behoeften van de klant, zowel in termen
-											van vraag energie en warmte van het gebouw. Alleen na
-											betrouwbaar uitgevoerd interview en audit, prestaties
-											visualisatie of simulatie maken wij een offerte op maat
-											volgens de behoeften van de klant.
-										</Card.Text>
+										<Card.Title>{t("ab23")} </Card.Title>
+										<Card.Text> {t("ab22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>
@@ -278,8 +238,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "25rem",
+										maxWidth: "27rem",
+										height: "30rem",
 									}}
 								>
 									<Card.Img
@@ -291,13 +251,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Complex aanbod</Card.Title>
-										<Card.Text>
-											Naast fotovoltaïsche installaties en warmtepompen, we zijn
-											ook gespecialiseerd in het verstrekken van uitgebreide
-											oplossingen op het gebied van airconditioning,
-											recuperatie, magazijnen energie en elektrische voertuigen.
-										</Card.Text>
+										<Card.Title>{t("ab25")}</Card.Title>
+										<Card.Text> {t("ab24")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>
@@ -310,8 +265,8 @@ function About4() {
 										justifyContent: "center",
 										alignContent: "center",
 										alignItems: "center",
-										maxWidth: "26rem",
-										height: "25rem",
+										maxWidth: "27rem",
+										height: "30rem",
 									}}
 								>
 									<Card.Img
@@ -323,11 +278,8 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>Ervaring</Card.Title>
-										<Card.Text>
-											De afgelopen jaren hebben enkele honderden ons hun
-											vertrouwen gegeven klanten.
-										</Card.Text>
+										<Card.Title>{t("ab27")}</Card.Title>
+										<Card.Text>{t("ab28")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
 							</animated.div>

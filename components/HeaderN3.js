@@ -103,59 +103,61 @@ function HeaderN3() {
 				}}
 			>
 				<Row className="py-3 text-start">
-					<animated.div style={animationPropsMiddle}>
-						<Col lg={6}>
-							<h1 style={{ fontWeight: "600" }}>{t("h18")}</h1>
-						</Col>
-					</animated.div>
+					<Col lg={7}>
+						<h1>{t("h18")}</h1>
+					</Col>
 				</Row>{" "}
 				<Col lg={6} className=" p-3 rounded ">
-					<Card
-						style={{
-							border: "none",
-						}}
-						className=""
-					>
-						<Card.Body className=" text-dark text-center">
-							<h5 className="bold">
-								<AiOutlineCheckCircle
-									className="text-green m-1 "
-									style={{ height: "28px", width: "28px" }}
-								/>
-								{t("h19")}
-							</h5>
-							<h5 className="bold">
-								<AiOutlineCheckCircle
-									className="text-green m-1 "
-									style={{ height: "28px", width: "28px" }}
-								/>
-								{t("h20")}
-							</h5>{" "}
-							<h5 className="text-center p-2 bold">
-								<AiOutlineCheckCircle
-									className="text-green m-1 "
-									style={{ height: "28px", width: "28px" }}
-								/>
-								{t("h21")}
-							</h5>
-							<Nav.Link as={Link} href="/products">
-								<Button className=" p-2  text-bold  text-dark shadow-lg hover m-5 nav-blue-bg border-0 text-white ">
-									{t("h22")}
-								</Button>
-							</Nav.Link>{" "}
-						</Card.Body>
-					</Card>
+					<animated.div style={animationProps}>
+						<Card
+							style={{
+								border: "none",
+							}}
+							className=""
+						>
+							<Card.Body className=" text-dark text-center">
+								<h5 className="bold">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("h19")}
+								</h5>
+								<h5 className="bold">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("h20")}
+								</h5>{" "}
+								<h5 className="text-center p-2 bold">
+									<AiOutlineCheckCircle
+										className="text-green m-1 "
+										style={{ height: "28px", width: "28px" }}
+									/>
+									{t("h21")}
+								</h5>
+								<Nav.Link as={Link} href="/products">
+									<Button className=" p-2  text-bold  text-dark shadow-lg hover m-5 nav-blue-bg border-0 text-white ">
+										{t("h22")}
+									</Button>
+								</Nav.Link>{" "}
+							</Card.Body>
+						</Card>{" "}
+					</animated.div>
 				</Col>
 				<Col lg={5} className="p-3 rounded   m-2">
-					{promo.map((item) => (
-						<Card key={item._id} className="rounded-0 border-0">
-							<Card.Img
-								className="d-block w-100 carousel-imgs hover  border-0 rounded-0 shadow-lg"
-								src={urlFor(item.image && item.image[0])}
-								alt={item.name}
-							/>
-						</Card>
-					))}
+					<animated.div style={animationPropsMiddle}>
+						{promo.map((item) => (
+							<Card key={item._id} className="rounded-0 border-0">
+								<Card.Img
+									className="d-block w-100 carousel-imgs hover  border-0 rounded-0 shadow-lg"
+									src={urlFor(item.image && item.image[0])}
+									alt={item.name}
+								/>
+							</Card>
+						))}{" "}
+					</animated.div>
 				</Col>
 			</Row>
 		</Container>

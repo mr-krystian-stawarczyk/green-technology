@@ -113,11 +113,9 @@ function Reviews({}) {
 			>
 				{" "}
 				<Row className="py-3 text-start">
-					<animated.div style={animationPropsMiddle}>
-						<Col lg={7}>
-							<h1 className="bold">{t("h23")}</h1>
-						</Col>
-					</animated.div>
+					<Col lg={7}>
+						<h1>{t("h23")}</h1>
+					</Col>
 				</Row>
 				<Col lg={6} className="p-3 mx-2  rounded ">
 					<animated.div style={animationProps}>
@@ -157,31 +155,33 @@ function Reviews({}) {
 					</animated.div>
 				</Col>
 				<Col lg={5} className="p-3  ">
-					<Carousel indicators={false} controls={false} loop>
-						<Carousel.Item>
-							<Image src="/assets/face1.jpg" alt="me" fluid className="" />
-							<Carousel.Caption>
-								<h3>Yo</h3>
-								<p>100% Proffesional</p>
-							</Carousel.Caption>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Image src="/assets/face2.jpg" alt="me" fluid className="" />
+					<animated.div style={animationPropsMiddle}>
+						<Carousel indicators={false} controls={false} loop>
+							<Carousel.Item>
+								<Image src="/assets/face1.jpg" alt="me" fluid className="" />
+								<Carousel.Caption>
+									<h3>Yo</h3>
+									<p>100% Proffesional</p>
+								</Carousel.Caption>
+							</Carousel.Item>
+							<Carousel.Item>
+								<Image src="/assets/face2.jpg" alt="me" fluid className="" />
 
-							<Carousel.Caption>
-								<h3>Toon</h3>
-								<p>Je kunt op hen rekenen!</p>
-							</Carousel.Caption>
-						</Carousel.Item>
-						<Carousel.Item>
-							<Image src="/assets/face3.jpg" alt="me" fluid className="" />
+								<Carousel.Caption>
+									<h3>Toon</h3>
+									<p>Je kunt op hen rekenen!</p>
+								</Carousel.Caption>
+							</Carousel.Item>
+							<Carousel.Item>
+								<Image src="/assets/face3.jpg" alt="me" fluid className="" />
 
-							<Carousel.Caption>
-								<h3>Anna</h3>
-								<p>Best Service Ever</p>
-							</Carousel.Caption>
-						</Carousel.Item>
-					</Carousel>
+								<Carousel.Caption>
+									<h3>Anna</h3>
+									<p>Best Service Ever</p>
+								</Carousel.Caption>
+							</Carousel.Item>
+						</Carousel>{" "}
+					</animated.div>
 				</Col>
 			</Row>
 		</Container>
