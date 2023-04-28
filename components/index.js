@@ -70,3 +70,4 @@ export { default as Navigation } from "./Navigation";
 export { default as CookieConsent } from "./CookieConsent";
 export { default as Voll1 } from "./Voll1";
 export { default as Voll2 } from "./Voll2";
+export { default as SliderGal } from "./SliderGal";

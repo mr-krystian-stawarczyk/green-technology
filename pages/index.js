@@ -18,6 +18,7 @@ import {
 	HeaderN3,
 	Navigation,
 	CookieConsent,
+	SliderGal,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
 
@@ -29,7 +30,7 @@ export default function Home() {
 			<HeaderN2 />
 			<HeaderN3 />
 			<Reviews />
-			<SanityWork />
+			<SliderGal />
 		</>
 	);
 }
