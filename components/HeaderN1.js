@@ -24,6 +24,7 @@ function HeaderN1() {
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
 	const [animateImg, setAnimateImg] = useState(false);
+	const { t } = useTranslation();
 	const handleIntersection = (entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
@@ -37,7 +38,7 @@ function HeaderN1() {
 			}
 		});
 	};
-	const { t } = useTranslation();
+
 	const client = sanityClient({
 		projectId: process.env.NEXT_PUBLIC_PROJECTID,
 		dataset: "production",

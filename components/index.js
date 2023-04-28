@@ -68,3 +68,5 @@ export { default as Warm1 } from "./Warm1";
 export { default as Warm2 } from "./Warm2";
 export { default as Navigation } from "./Navigation";
 export { default as CookieConsent } from "./CookieConsent";
+export { default as Voll1 } from "./Voll1";
+export { default as Voll2 } from "./Voll2";

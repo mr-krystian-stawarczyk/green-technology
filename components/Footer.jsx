@@ -141,11 +141,8 @@ function Footer() {
 											</a>
 										</Card.Text>
 										<Card.Title className="my-4 bold">Policy</Card.Title>
-										<Nav.Link as={Link} href="/cookies" className="m-1">
-											<h6>Cookies</h6>
-										</Nav.Link>{" "}
-										<Nav.Link as={Link} href="/impressium" className="m-1">
-											<h6>Impressium</h6>
+										<Nav.Link as={Link} href="/policy" className="m-1 hover">
+											<h6>Cookies & Imprint</h6>
 										</Nav.Link>{" "}
 									</Card.Body>
 								</Card>

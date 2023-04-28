@@ -1,10 +1,12 @@
 import React from "react";
+import { Voll1, Voll2 } from "../components";
 
 function voll() {
 	return (
-		<div>
-			<h1>Pelen zestaw</h1>
-		</div>
+		<>
+			<Voll1 />
+			<Voll2 />
+		</>
 	);
 }
 
