@@ -21,10 +21,21 @@ import {
 	SliderGal,
 } from "../components";
 import HeaderN1 from "../components/HeaderN1";
+import Head from "next/head";
 
 export default function Home() {
 	return (
 		<>
+			<Head>
+				<title>
+					AM Greenergy | Solar Panelen en Airconditioning | Nederland
+				</title>
+				<meta
+					name="description"
+					content="AM Green Energy levert hoogwaardige zonnepanelen en airconditioning oplossingen voor bedrijven en particulieren in Nederland. Contacteer ons voor een gratis offerte."
+				/>{" "}
+			</Head>
+
 			<HeaderSlides />
 			<HeaderN1 />
 			<HeaderN2 />

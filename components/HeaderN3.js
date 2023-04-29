@@ -104,7 +104,7 @@ function HeaderN3() {
 			>
 				<Row className="py-3 text-start">
 					<Col lg={7}>
-						<h1>{t("h18")}</h1>
+						<h1 className="bold">{t("h18")}</h1>
 					</Col>
 				</Row>{" "}
 				<Col lg={6} className=" p-3 rounded ">

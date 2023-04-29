@@ -77,7 +77,7 @@ function SanityKlima() {
 				ref={sectionRef}
 			>
 				<Col>
-					<h1 className="py-3 text-start">{t("kl13")}</h1>
+					<h1 className="my-5 text-start bold">{t("kl13")}</h1>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">

@@ -68,7 +68,7 @@ function Warm1() {
 							className="bg-transparent "
 						>
 							<Card.Body>
-								<h2 className=" text-dark text-center bold my-3">{t("wm1")}</h2>
+								<h2 className=" text-dark text-center bold my-5">{t("wm1")}</h2>
 								<h5 className=" text-dark text-start my-3">{t("wm2")}</h5>
 								<h5 className=" text-dark text-start">{t("wm3")}</h5>
 							</Card.Body>{" "}

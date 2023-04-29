@@ -108,9 +108,9 @@ function Klima2() {
 			}}
 			ref={sectionRef}
 		>
-			<Row className="py-3 text-start text-dark">
+			<Row className="my-5 text-start text-dark">
 				<Col lg={7}>
-					<h1>{t("kl4")}</h1>
+					<h1 className="bold">{t("kl4")}</h1>
 				</Col>
 			</Row>
 			<Row className="text-center  justify-content-center align-items-center ">
@@ -139,7 +139,7 @@ function Klima2() {
 									className="my-1"
 								/>
 								<Card.Body>
-									<Card.Title>{t("kl5")}</Card.Title>
+									<Card.Title className="bold">{t("kl5")}</Card.Title>
 									<Card.Text>{t("kl6")}</Card.Text>
 								</Card.Body>{" "}
 							</Card>{" "}
@@ -166,7 +166,7 @@ function Klima2() {
 									className="my-1"
 								/>
 								<Card.Body>
-									<Card.Title>{t("kl7")}</Card.Title>
+									<Card.Title className="bold">{t("kl7")}</Card.Title>
 									<Card.Text>{t("kl8")}</Card.Text>
 								</Card.Body>{" "}
 							</Card>
@@ -193,7 +193,7 @@ function Klima2() {
 									className="my-1"
 								/>
 								<Card.Body>
-									<Card.Title>{t("kl9")}</Card.Title>
+									<Card.Title className="bold">{t("kl9")}</Card.Title>
 									<Card.Text>{t("kl10")}</Card.Text>
 								</Card.Body>{" "}
 							</Card>{" "}
@@ -221,7 +221,7 @@ function Klima2() {
 									className="my-1"
 								/>
 								<Card.Body>
-									<Card.Title>{t("kl11")}</Card.Title>
+									<Card.Title className="bold">{t("kl11")}</Card.Title>
 									<Card.Text>{t("kl12")}</Card.Text>
 								</Card.Body>{" "}
 							</Card>{" "}

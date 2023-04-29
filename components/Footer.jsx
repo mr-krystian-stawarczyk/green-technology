@@ -100,7 +100,6 @@ function Footer() {
 	});
 	return (
 		<Container
-			fluid
 			className="overflow-hidden shadow-md"
 			ref={sectionRef}
 			id="contact"

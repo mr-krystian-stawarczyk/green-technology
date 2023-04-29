@@ -106,11 +106,11 @@ function ProductsPromo() {
 				<Row className="py-3 text-start">
 					<animated.div style={animationPropsMiddle}>
 						<Col lg={6} className="my-3">
-							<h1>{t("p5")}</h1>
+							<h1 className="bold my-5">{t("p5")}</h1>
 						</Col>
 					</animated.div>
 				</Row>{" "}
-				<Col lg={6}>
+				<Col lg={5}>
 					<animated.div style={animationProps}>
 						{promo.map((item) => (
 							<Card key={item._id} className="border-0 rounded-0">
@@ -132,21 +132,21 @@ function ProductsPromo() {
 							className="bg-transparent"
 						>
 							<Card.Body className=" text-dark text-center">
-								<h5 className="text-center p-2">
+								<h5 className="text-center p-2 bold">
 									<AiOutlineCheckCircle
 										className="text-green m-1 "
 										style={{ height: "28px", width: "28px" }}
 									/>
 									{t("p6")}
 								</h5>
-								<h5 className="text-center p-2">
+								<h5 className="text-center p-2 bold">
 									<AiOutlineCheckCircle
 										className="text-green m-1 "
 										style={{ height: "28px", width: "28px" }}
 									/>
 									{t("p7")}
 								</h5>
-								<h5 className="text-center p-2">
+								<h5 className="text-center p-2 bold">
 									<AiOutlineCheckCircle
 										className="text-green m-1 "
 										style={{ height: "28px", width: "28px" }}

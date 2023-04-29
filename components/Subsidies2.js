@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 function Subsidies2() {
 	const { t } = useTranslation();
 	return (
-		<Container className="vh-full">
+		<Container className="">
 			<Row className="justify-content-center align-items-center">
-				<h1 className="text-center my-5">{t("ss6")}</h1>
+				<h1 className="text-center my-5 bold">{t("ss6")}</h1>
 				<h5 className="py-2">
 					{t("ss7")}
 					<a
@@ -53,9 +53,9 @@ function Subsidies2() {
 						{t("ss18")}
 					</a>
 				</h6>
-				<h1 className="text-center my-5"> {t("ss19")}</h1>
+				<h1 className="text-center my-5 bold"> {t("ss19")}</h1>
 				<h5>{t("ss20")}</h5>
-				<h5 className="my-3"> {t("ss21")}</h5>{" "}
+				<h5 className="my-3 bold"> {t("ss21")}</h5>{" "}
 				<Row>
 					{" "}
 					<ListGroup className="rounded-0">
@@ -69,7 +69,7 @@ function Subsidies2() {
 						<ListGroup.Item>{t("ss29")}</ListGroup.Item>
 					</ListGroup>
 				</Row>
-				<h5 className="my-3"> {t("ss30")}</h5>
+				<h5 className="my-3 bold"> {t("ss30")}</h5>
 				<Row>
 					<ListGroup className="rounded-0">
 						<ListGroup.Item>{t("ss31")}</ListGroup.Item>

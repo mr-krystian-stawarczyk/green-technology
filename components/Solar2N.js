@@ -79,7 +79,7 @@ function Solar2N() {
 	});
 	return (
 		<Container
-			className="  text-dark   align-items-center  p-2 mt-5 border-0 py-5"
+			className="  text-dark   align-items-center  p-2 my-5 border-0 py-5"
 			ref={sectionRef}
 		>
 			<Row
@@ -90,10 +90,10 @@ function Solar2N() {
 				}}
 			>
 				{" "}
-				<Row className=" text-start mt-2">
+				<Row className=" text-start my-5">
 					<Col lg={7}>
 						{" "}
-						<h1 className="my-5">{t("sl5")}</h1>
+						<h1 className="my-5 bold">{t("sl5")}</h1>
 					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
@@ -121,7 +121,7 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title> {t("sl6")}</Card.Title>
+										<Card.Title className="bold"> {t("sl6")}</Card.Title>
 										<Card.Text>{t("sl7")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/bateries" className="mx-2">
@@ -161,7 +161,7 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title> {t("sl8")}</Card.Title>
+										<Card.Title className="bold">{t("sl8")}</Card.Title>
 										<Card.Text>{t("sl9")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/warm" className="mx-2">
@@ -200,7 +200,7 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title> {t("sl10")}</Card.Title>
+										<Card.Title className="bold">{t("sl10")}</Card.Title>
 										<Card.Text>{t("sl11")}</Card.Text>
 									</Card.Body>{" "}
 									<Nav.Link as={Link} href="/pumps" className="mx-2">
@@ -239,7 +239,7 @@ function Solar2N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title> {t("sl12")}</Card.Title>
+										<Card.Title className="bold"> {t("sl12")}</Card.Title>
 										<Card.Text>{t("sl13")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}

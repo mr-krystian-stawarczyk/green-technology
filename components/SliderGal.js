@@ -78,27 +78,27 @@ function SliderGal() {
 	};
 
 	return (
-		<Container fluid className="overflow-hidden py-5">
+		<Container className="overflow-hidden  bg-am-green">
 			<Row className="justify-content-center align-items-center text-center  text-dark">
 				<Col className="my-5">
 					{" "}
-					<h1 className=" text-start bold">{t("h27")}</h1>{" "}
+					<h1 className=" text-start text-white bold">{t("h27")}</h1>{" "}
 				</Col>
 			</Row>
-			<Row className="justify-content-center text-center align-items-center py-5">
+			<Row className="justify-content-center text-center text-dark align-items-center py-5">
 				<Slider {...settings}>
 					{all.map((item) => (
 						<div key={item._id}>
 							<img
 								width={300}
 								height={300}
-								className="  mx-auto "
+								className="  mx-auto shadow-lg"
 								src={urlFor(item.image && item.image[0])}
 								alt={item.name}
 							/>
 
-							<h5>{item.name}</h5>
-							<p>{item.details}</p>
+							<h5 className="my-3 bold text-white">{item.name}</h5>
+							<p className="text-white">{item.details}</p>
 						</div>
 					))}
 				</Slider>

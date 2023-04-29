@@ -100,7 +100,7 @@ function Klima1() {
 	});
 	return (
 		<Row
-			className=" justify-content-center align-items-center  my-2  py-5"
+			className=" justify-content-center align-items-center  my-5  py-5"
 			ref={sectionRef}
 		>
 			<Col lg={5} className="p-3">
@@ -124,7 +124,7 @@ function Klima1() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h2 className=" text-dark">{t("kl1")}</h2>{" "}
+							<h2 className=" text-dark bold">{t("kl1")}</h2>{" "}
 							<h5 className="my-3">{t("kl2")}</h5> <h5>{t("kl3")}</h5>
 						</Card.Body>
 					</Card>

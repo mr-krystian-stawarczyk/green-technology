@@ -99,7 +99,7 @@ function About4() {
 	});
 	return (
 		<Container
-			className="  text-dark   align-items-center  p-2 border-0 mt-5 "
+			className="  text-dark   align-items-center  p-2 border-0 my-5 "
 			ref={sectionRef}
 		>
 			<Row
@@ -110,11 +110,11 @@ function About4() {
 				}}
 			>
 				{" "}
-				<Row className="py-3 text-center ">
+				<Row className="py-3 text-start ">
 					<animated.div style={animationProps}>
 						<Col lg={8}>
 							{" "}
-							<h1>{t("ab14")}</h1>
+							<h1 className="bold">{t("ab14")}</h1>
 							<h3>{t("ab15")}</h3>
 						</Col>
 					</animated.div>
@@ -143,7 +143,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab16")}</Card.Title>
+										<Card.Title className="bold">{t("ab16")}</Card.Title>
 										<Card.Text>{t("ab17")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>
@@ -170,7 +170,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab18")}</Card.Title>
+										<Card.Title className="bold">{t("ab18")}</Card.Title>
 										<Card.Text>{t("ab19")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>
@@ -197,7 +197,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab20")}</Card.Title>
+										<Card.Title className="bold">{t("ab20")}</Card.Title>
 										<Card.Text>{t("ab22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -224,7 +224,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab23")} </Card.Title>
+										<Card.Title className="bold">{t("ab23")} </Card.Title>
 										<Card.Text> {t("ab22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -251,7 +251,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab25")}</Card.Title>
+										<Card.Title className="bold">{t("ab25")}</Card.Title>
 										<Card.Text> {t("ab24")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -278,7 +278,7 @@ function About4() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("ab27")}</Card.Title>
+										<Card.Title className="bold">{t("ab27")}</Card.Title>
 										<Card.Text>{t("ab28")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}

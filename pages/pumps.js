@@ -12,16 +12,25 @@ import {
 	SanityPump,
 	SanityWork,
 } from "../components";
-
+import Head from "next/head";
 function pumps() {
 	return (
-		<Container>
-			<Pumps2 />
-			<Pumps3 />
-			<Pumps4 />
-			<Pumps5 />
-			<SanityPump />
-		</Container>
+		<>
+			<Head>
+				<title>Pomp | AM Greenergy | Helmond</title>
+				<meta
+					name="description"
+					content="Ontdek Pomp Product 1 van AM Green Energy, een hoogwaardige pomp voor bedrijven en particulieren in Helmond. Vraag een gratis offerte aan en optimaliseer uw watervoorziening!"
+				/>
+			</Head>
+			<Container>
+				<Pumps2 />
+				<Pumps3 />
+				<Pumps4 />
+				<Pumps5 />
+				<SanityPump />
+			</Container>
+		</>
 	);
 }
 

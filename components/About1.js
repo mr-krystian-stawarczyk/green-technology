@@ -21,11 +21,9 @@ function About1() {
 						className="header-card border-0 bg-transparent text-white p-5"
 					>
 						<Card.Body className="header-card-bg">
-							<Card.Title className="">
-								<span className="display-6">{t("ab1")}</span>
-							</Card.Title>
+							<h2 className="bold">{t("ab1")}</h2>
 
-							<span className="lead">{t("ab2")}</span>
+							<h3 className="my-3">{t("ab2")}</h3>
 						</Card.Body>
 					</Card>
 				</Col>

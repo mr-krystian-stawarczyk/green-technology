@@ -68,7 +68,7 @@ function Bateries2() {
 						className="bg-transparent "
 					>
 						<Card.Body className="text-center">
-							<h2 className=" text-dark text-center">{t("bt4")}</h2>
+							<h2 className=" text-dark text-center bold">{t("bt4")}</h2>
 							<h5 className=" text-dark text-start my-3">{t("bt5")}</h5>
 							<h5 className=" text-dark text-start">{t("bt6")}</h5>
 						</Card.Body>{" "}

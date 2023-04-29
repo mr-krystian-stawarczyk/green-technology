@@ -5,7 +5,8 @@ import { useRouter } from "next/router";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-function HeaderN2() {
+
+function Voll4() {
 	const sectionRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
 	const [animate, setAnimate] = useState(false);
@@ -66,7 +67,7 @@ function HeaderN2() {
 
 	return (
 		<Container
-			className=" text-dark  d-flex align-items-center my-5 py-3 "
+			className=" text-dark  d-flex align-items-center  "
 			ref={sectionRef}
 		>
 			<Row
@@ -76,16 +77,7 @@ function HeaderN2() {
 					justifyContent: "center",
 				}}
 			>
-				<Col lg={5} className="p-3 rounded   m-2">
-					{" "}
-					<Card className="border-0">
-						{" "}
-						<animated.div style={animationProps}>
-							<Card.Img src="/assets/local.png" className="hover" />{" "}
-						</animated.div>
-					</Card>{" "}
-				</Col>
-				<Col lg={5} className="blur p-3 mx-2  rounded m-2">
+				<Col lg={5} className=" p-3 mx-2  rounded m-2">
 					<Card
 						style={{
 							border: "none",
@@ -94,20 +86,24 @@ function HeaderN2() {
 					>
 						<animated.div style={animationPropsMiddle}>
 							<Card.Body className=" text-center">
-								<h2 className="text-center bold py-5">{t("h15")}</h2>
-								<h5 className="text-start">{t("h16")}</h5>
-								<Nav.Link as={Link} href="/about">
-									<Button className=" p-2  text-bold  text-dark shadow-lg hover  nav-blue-bg border-0 text-white text-center my-3">
-										{t("h17")}
-									</Button>
-								</Nav.Link>{" "}
+								<h2 className="text-center bold py-5">{t("vo4")}</h2>
+								<h6 className="text-start">{t("vo5")}</h6>
 							</Card.Body>{" "}
 						</animated.div>
 					</Card>
+				</Col>
+				<Col lg={5} className="p-3 rounded   m-2">
+					{" "}
+					<Card className="border-0">
+						{" "}
+						<animated.div style={animationProps}>
+							<Card.Img src="/assets/voll3.png" className="hover" />{" "}
+						</animated.div>
+					</Card>{" "}
 				</Col>
 			</Row>
 		</Container>
 	);
 }
 
-export default HeaderN2;
+export default Voll4;

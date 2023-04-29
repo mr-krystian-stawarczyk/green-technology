@@ -56,9 +56,9 @@ function Subsidies() {
 	});
 	return (
 		<Container ref={sectionRef}>
-			<Row className="  text-center text-dark justify-content-center align-items-center  my-5 pt-3">
+			<Row className="  text-center text-dark justify-content-center align-items-center  my-5 pt-5">
 				<animated.div style={animationPropsMiddle}>
-					<h1 className="mt-5">{t("ss1")}</h1>
+					<h1 className="my-5 bold">{t("ss1")}</h1>
 					<h5 className="my-2">{t("ss2")}</h5>
 				</animated.div>
 				<Card.Img
@@ -86,7 +86,7 @@ function Subsidies() {
 							>
 								<Card.Body>
 									<span className="display-1"> 1 </span>
-									<Card.Text>{t("ss3")}</Card.Text>
+									<h5 className="">{t("ss3")}</h5>
 								</Card.Body>
 							</Card>
 						</animated.div>{" "}
@@ -107,7 +107,7 @@ function Subsidies() {
 							>
 								<Card.Body>
 									<span className="display-1"> 2 </span>
-									<h6>{t("ss4")}</h6>
+									<h5 className="">{t("ss4")}</h5>
 								</Card.Body>{" "}
 							</Card>{" "}
 						</animated.div>{" "}
@@ -128,7 +128,7 @@ function Subsidies() {
 							>
 								<Card.Body>
 									<span className="display-1"> 3 </span>
-									<Card.Text>{t("ss5")}</Card.Text>
+									<h5 className="">{t("ss5")}</h5>
 								</Card.Body>{" "}
 							</Card>{" "}
 						</animated.div>{" "}

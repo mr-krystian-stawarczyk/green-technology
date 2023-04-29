@@ -17,9 +17,17 @@ import {
 	ProductsPromo,
 	Reviews,
 } from "../components";
+import Head from "next/head";
 function Products() {
 	return (
 		<>
+			<Head>
+				<title>Offerte | AM Green Energy | Helmond</title>
+				<meta
+					name="description"
+					content="Vraag nu een offerte aan bij AM Greenergy voor zonnepanelen, airconditioning of pompen in Helmond. Ons team staat klaar om u te helpen met uw energie- en watervoorziening!"
+				/>
+			</Head>
 			<Offer />
 			<ProductsPromo />
 			<Reviews />

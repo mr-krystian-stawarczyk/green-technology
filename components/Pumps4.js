@@ -84,7 +84,7 @@ function Pumps4() {
 						className="bg-transparent "
 					>
 						<Card.Body>
-							<h2 className=" text-dark text-center">{t("po7")}</h2>{" "}
+							<h2 className=" text-dark text-center bold">{t("po7")}</h2>{" "}
 							<h5 className=" text-dark text-start my-3">{t("po8")}</h5>
 							<h5 className=" text-dark text-start">{t("po9")}</h5>
 						</Card.Body>

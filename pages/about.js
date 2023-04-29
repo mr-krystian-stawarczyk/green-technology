@@ -12,7 +12,7 @@ import {
 	Reviews,
 	SanityWork,
 } from "../components";
-
+import Head from "next/head";
 function About() {
 	const [fade, setFade] = React.useState(false);
 
@@ -22,6 +22,13 @@ function About() {
 
 	return (
 		<>
+			<Head>
+				<title>Over Ons | AM Greenergy | Nederland</title>
+				<meta
+					name="description"
+					content="AM Green Energy is een toonaangevende leverancier van zonnepanelen en airconditioning oplossingen voor bedrijven en particulieren in Nederland. Leer meer over ons team en onze producten."
+				/>
+			</Head>
 			<About1 />
 			<About2 />
 			<About3 />

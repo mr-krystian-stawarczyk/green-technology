@@ -101,7 +101,7 @@ function Reviews({}) {
 	});
 	return (
 		<Container
-			className=" vh-full text-dark  d-flex align-items-center  p-2 border-0 mt-5 "
+			className=" text-dark  d-flex align-items-center  py-3 border-0 my-5 "
 			ref={sectionRef}
 		>
 			<Row
@@ -114,7 +114,7 @@ function Reviews({}) {
 				{" "}
 				<Row className="py-3 text-start">
 					<Col lg={7}>
-						<h1>{t("h23")}</h1>
+						<h1 className="py-3 bold text-start">{t("h23")}</h1>
 					</Col>
 				</Row>
 				<Col lg={6} className="p-3 mx-2  rounded ">
@@ -131,11 +131,11 @@ function Reviews({}) {
 								<Col className="btn-light btn-lg p-2 text-uppercase text-bold text-center  rounded">
 									<span className="lead text-bold">
 										<Card.Title>
-											<span className="lead">+</span>
+											<span className="lead bold">+</span>
 											{isVisible && (
 												<CountUp start={0} end={300} duration={12} delay={0}>
 													{({ countUpRef }) => (
-														<span className="lead" ref={countUpRef} />
+														<span className="lead bold" ref={countUpRef} />
 													)}
 												</CountUp>
 											)}

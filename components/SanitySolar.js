@@ -83,7 +83,7 @@ function SanitySolar() {
 			>
 				<Row className="mt-5 pt-5 text-start">
 					<Col lg={6}>
-						<h1 className="my-5">{t("sl27")}</h1>
+						<h1 className="my-5 bold">{t("sl27")}</h1>
 					</Col>
 				</Row>
 

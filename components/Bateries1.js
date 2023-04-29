@@ -77,7 +77,7 @@ function Bateries1() {
 						className=" "
 					>
 						<Card.Body className="text-center">
-							<h2 className=" text-dark text-center ">{t("bt1")}</h2>
+							<h2 className=" text-dark text-center bold ">{t("bt1")}</h2>
 							<h5 className=" text-dark  text-start my-3">{t("bt2")}</h5>
 							<h5 className=" text-dark text-start">{t("bt3")}</h5>
 						</Card.Body>{" "}

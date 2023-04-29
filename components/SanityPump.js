@@ -74,7 +74,7 @@ function SanityPump() {
 		<Container className=" py-3 " ref={sectionRef}>
 			<Row className="justify-content-center align-items-center text-center mt-5 text-dark">
 				<Col>
-					<h1 className="py-3 text-start">{t("po23")}</h1>
+					<h1 className="my-5 text-start bold">{t("po23")}</h1>
 				</Col>
 			</Row>
 			<Row className="justify-content-center align-items-center text-center">

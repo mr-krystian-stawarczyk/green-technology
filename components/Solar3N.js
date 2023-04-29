@@ -142,7 +142,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl15")}</Card.Title>
+										<Card.Title className="bold">{t("sl15")}</Card.Title>
 										<Card.Text>{t("sl16")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -171,7 +171,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl17")}</Card.Title>
+										<Card.Title className="bold">{t("sl17")}</Card.Title>
 										<Card.Text>{t("sl18")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -200,7 +200,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl19")}</Card.Title>
+										<Card.Title className="bold">{t("sl19")}</Card.Title>
 										<Card.Text>{t("sl20")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -228,7 +228,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl21")}</Card.Title>
+										<Card.Title className="bold">{t("sl21")}</Card.Title>
 										<Card.Text>{t("sl22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -257,7 +257,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl23")}</Card.Title>
+										<Card.Title className="bold">{t("sl23")}</Card.Title>
 										<Card.Text>{t("sl24")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -286,7 +286,7 @@ function Solar3N() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("sl25")}</Card.Title>
+										<Card.Title className="bold">{t("sl25")}</Card.Title>
 										<Card.Text>{t("sl26")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}

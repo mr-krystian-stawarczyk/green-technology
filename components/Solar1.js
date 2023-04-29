@@ -70,7 +70,7 @@ function Solar1() {
 				</Col>
 				<Col lg={5} className=" text-start mx-auto">
 					<animated.div style={animationProps}>
-						<h2 className="text-center"> {t("sl1")} </h2>
+						<h2 className="text-center bold my-3"> {t("sl1")} </h2>
 						<h5>{t("sl2")}</h5>
 						<h5 className="my-3">{t("sl3")}</h5>
 						<h5>{t("sl4")}</h5>{" "}

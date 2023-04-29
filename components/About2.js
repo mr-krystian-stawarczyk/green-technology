@@ -76,11 +76,10 @@ function About2() {
 	});
 	return (
 		<Container
-			fluid
-			className=" vh-full d-flex flex-column justify-content-center  border-0  p-2 "
+			className="  d-flex flex-column justify-content-center  border-0  p-2  my-5 py-5"
 			ref={sectionRef}
 		>
-			<Row className=" text-center justify-content-center align-items-center ">
+			<Row className=" text-center justify-content-center align-items-center my-5">
 				<Col xl={5} lg={5} className="  rounded  rounded m-2">
 					<animated.div style={animationProps}>
 						{" "}
@@ -90,7 +89,7 @@ function About2() {
 								{isVisible && (
 									<CountUp start={300} end={1062} duration={5} delay={0}>
 										{({ countUpRef }) => (
-											<span className="count display-1" ref={countUpRef} />
+											<span className="count bold" ref={countUpRef} />
 										)}
 									</CountUp>
 								)}
@@ -102,7 +101,7 @@ function About2() {
 								{isVisible && (
 									<CountUp start={300} end={15075} duration={5} delay={0}>
 										{({ countUpRef }) => (
-											<span className="count display-1" ref={countUpRef} />
+											<span className="count bold" ref={countUpRef} />
 										)}
 									</CountUp>
 								)}
@@ -120,8 +119,8 @@ function About2() {
 							className=" "
 						>
 							<Card.Body className="text-center">
-								<h1 className=" text-dark ">{t("ab5")}</h1>
-								<h5 className=" text-start">{t("ab6")}</h5>
+								<h2 className=" text-dark bold">{t("ab5")}</h2>
+								<h5 className=" text-start my-3">{t("ab6")}</h5>
 							</Card.Body>{" "}
 						</Card>
 					</animated.div>{" "}

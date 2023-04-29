@@ -52,7 +52,7 @@ function Offer() {
 		<Container ref={sectionRef}>
 			<Row className="mt-5 text-start ">
 				<Col lg={7}>
-					<h1 className="pt-5">{t("p1")}</h1>{" "}
+					<h1 className="pt-5 bold">{t("p1")}</h1>{" "}
 				</Col>
 			</Row>
 
@@ -73,7 +73,7 @@ function Offer() {
 							<animated.div style={animationProps}>
 								<Card.Img
 									src="/assets/solary.jpg"
-									className=" rounded"
+									className=" rounded-0 border-0"
 									style={{ opacity: "0.55" }}
 								/>
 								<Card.Title
@@ -95,12 +95,12 @@ function Offer() {
 					<Nav.Link as={Link} href="/pumps" className="">
 						<Card
 							style={{ border: "none", position: "relative" }}
-							className="bg-amg rounded hover m-1"
+							className="bg-amg rounded-0 hover m-1"
 						>
 							<animated.div style={animationProps}>
 								<Card.Img
 									src="/assets/pompa.jpg"
-									className=" rounded"
+									className=" rounded-0 border-0"
 									style={{ opacity: "0.55" }}
 								/>
 								<Card.Title
@@ -122,12 +122,12 @@ function Offer() {
 					<Nav.Link as={Link} href="/klimatization" className="">
 						<Card
 							style={{ border: "none", position: "relative" }}
-							className="bg-amg rounded hover m-1"
+							className="bg-amg rounded-0 hover m-1"
 						>
 							<animated.div style={animationProps}>
 								<Card.Img
 									src="/assets/klimatyzacje.jpg"
-									className=" rounded"
+									className=" rounded-0 border-0"
 									style={{ opacity: "0.55" }}
 								/>
 								<Card.Title

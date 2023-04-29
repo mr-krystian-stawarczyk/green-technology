@@ -51,7 +51,7 @@ function Pumps3() {
 			className=" justify-content-center align-items-center   my-2 pt-5"
 			ref={sectionRef}
 		>
-			<Col lg={6} className=" p-3 mx-2  ">
+			<Col lg={5} className=" p-3 mx-2  ">
 				<animated.div style={animationProps}>
 					{" "}
 					<Card
@@ -61,14 +61,14 @@ function Pumps3() {
 						className="bg-transparent "
 					>
 						<Card.Body className="">
-							<h2 className="text-center"> {t("po4")}</h2>
-							<h5 className="my-3">{t("po5")}</h5>{" "}
-							<h5 className="">{t("po6")}</h5>
+							<h2 className="text-center bold"> {t("po4")}</h2>
+							<h6 className="my-3">{t("po5")}</h6>{" "}
+							<h6 className="">{t("po6")}</h6>
 						</Card.Body>
 					</Card>
 				</animated.div>
 			</Col>{" "}
-			<Col lg={5} className=" p-3 rounded  rounded ">
+			<Col lg={6} className=" p-3 rounded  rounded ">
 				{" "}
 				<animated.div style={animationProps}>
 					{" "}

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { CSSTransition } from "react-transition-group";
 import { SSRProvider } from "react-bootstrap";
 import { appWithTranslation } from "next-i18next";
-
+import Head from "next/head";
 import i18n from "../i18n";
 
 function App(props) {
@@ -20,6 +20,13 @@ function App(props) {
 	return (
 		<SSRProvider>
 			<Layout>
+				<Head>
+					<title>AM Greenergy | Helmond</title>
+					<meta
+						name="Helmond"
+						content="AM Greenergy is uw partner voor duurzame energieoplossingen in Helmond. Ontdek ons aanbod aan zonnepanelen, airconditioning, pompen, batterijen, en warmtepompen en vraag een gratis offerte aan!"
+					/>
+				</Head>
 				<PageTransition
 					timeout={300}
 					classNames="page-transition"

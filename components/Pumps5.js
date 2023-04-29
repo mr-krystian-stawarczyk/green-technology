@@ -80,7 +80,7 @@ function Pumps5() {
 				<Row className="py-3 text-start ">
 					<Col lg={10}>
 						{" "}
-						<h1 className="my-3">{t("po10")}</h1>
+						<h1 className="my-5 bold">{t("po10")}</h1>
 					</Col>
 				</Row>{" "}
 				<Row className="text-center justify-content-center align-items-center align-self-center">
@@ -109,7 +109,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po11")}</Card.Title>
+										<Card.Title className="bold">{t("po11")}</Card.Title>
 										<Card.Text>{t("po12")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -138,7 +138,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po13")}</Card.Title>
+										<Card.Title className="bold">{t("po13")}</Card.Title>
 										<Card.Text>{t("po22")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -167,7 +167,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po14")}</Card.Title>
+										<Card.Title className="bold">{t("po14")}</Card.Title>
 										<Card.Text>{t("po15")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -196,7 +196,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po16")}</Card.Title>
+										<Card.Title className="bold">{t("po16")}</Card.Title>
 										<Card.Text>{t("po17")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -224,7 +224,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po18")}</Card.Title>
+										<Card.Title className="bold">{t("po18")}</Card.Title>
 										<Card.Text>{t("po19")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}
@@ -252,7 +252,7 @@ function Pumps5() {
 										className="my-1"
 									/>
 									<Card.Body>
-										<Card.Title>{t("po20")}</Card.Title>
+										<Card.Title className="bold">{t("po20")}</Card.Title>
 										<Card.Text>{t("po21")}</Card.Text>
 									</Card.Body>{" "}
 								</Card>{" "}

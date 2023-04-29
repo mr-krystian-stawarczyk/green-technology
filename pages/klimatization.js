@@ -12,14 +12,25 @@ import {
 	SanityKlima,
 	SanityWork,
 } from "../components";
+import Head from "next/head";
+
 function klimatization() {
 	return (
-		<Container className="mt-5 rounded">
-			<Klima1 />
-			<Klima2 />
-			<SanityKlima />
-			<Reviews />
-		</Container>
+		<>
+			<Head>
+				<title>Airconditioning | AM Greenergy | Nederland</title>
+				<meta
+					name="description"
+					content="AM Greenergy levert hoogwaardige airconditioning oplossingen voor bedrijven en particulieren in Nederland. Contacteer ons voor een gratis offerte."
+				/>
+			</Head>
+			<Container className="mt-5 rounded">
+				<Klima1 />
+				<Klima2 />
+				<SanityKlima />
+				<Reviews />
+			</Container>{" "}
+		</>
 	);
 }
 
